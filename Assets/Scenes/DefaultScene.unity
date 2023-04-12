@@ -431,6 +431,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveSpeed: 10
+  _moveSpeedRun: 1
   _body: {fileID: 165222755}
   _player: {fileID: 193066517}
   _gravity: -9.8
