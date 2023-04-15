@@ -358,6 +358,7 @@ GameObject:
   - component: {fileID: 193066524}
   - component: {fileID: 193066523}
   - component: {fileID: 193066522}
+  - component: {fileID: 193066525}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -373,7 +374,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 193066516}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.54, y: 2.62, z: 0}
+  m_LocalPosition: {x: -0.76, y: 4.89, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -396,7 +397,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -430,14 +431,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee76f7dfc687d4be993b76367dc873b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 10
-  _moveSpeedRun: 1
-  _body: {fileID: 165222755}
   _player: {fileID: 193066517}
-  _gravity: -9.8
-  _maxSpeed: 3
+  _moveSpeedWalk: 50
+  _maxSpeedWalk: 5
+  _moveSpeedRun: 1
   _maxSpeedRun: 7
-  _maxSpeedWalk: 4
+  _gravity: -9.8
+  turn: 0
+  input: {fileID: 0}
+  _velocity: {x: 0, y: 0}
 --- !u!114 &193066523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -462,6 +464,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d6a69099073c2243b7384c68f3c1cdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &193066525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193066516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 305b53b27cdd72f3fa784fe65c761295, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _body: {fileID: 165222755}
 --- !u!1 &700113682
 GameObject:
   m_ObjectHideFlags: 0
