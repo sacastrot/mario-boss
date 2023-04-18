@@ -40,10 +40,17 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D _rb;
     private float lastHorizontal = 1;
 
-    private float _jumpForce = 5f;
+    private float _jumpForce = 6f;
 
     private bool _hasRB;
     private float _turnTimer;
+    
+    
+    //Ground Check
+    public Transform feetPos;
+    public float checkRadius;
+    public LayerMask whatIsGround;
+    private float jumpTimeCounter;
 
     // Start is called before the first frame update
     void Start()
@@ -58,24 +65,22 @@ public class PlayerController : MonoBehaviour
     {
         HorizontalMovement(input.Move.x);
 
-        // grounded = Physics.Raycast(transform.position, Vector3.down, 1f);
-        Debug.Log(grounded);
-        grounded = true;
+        grounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
+        //grounded = true;
         if (grounded) {
             GroundedMovement();
         }
 
         
-        ApplyGravity();
-        Debug.Log(_velocity.y);
+        ApplyGravity(); 
 
     }
 
     private void GroundedMovement()
     {
         // prevent gravity from infinitly building up
-        _velocity.y = Mathf.Max(_velocity.y, 0f);
-        jumping = _velocity.y > 0f;
+        // _velocity.y = Mathf.Max(_velocity.y, 0f);
+        // jumping = _velocity.y > 0f;
 
         // perform jump
         if (Input.GetButtonDown("Jump"))
