@@ -344,7 +344,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &193066516
 GameObject:
   m_ObjectHideFlags: 0
@@ -438,7 +437,7 @@ MonoBehaviour:
   _maxSpeedWalk: 5
   _moveSpeedRun: 1
   _maxSpeedRun: 7
-  _gravity: -9.8
+  _gravity: -10
   turn: 0
   input: {fileID: 0}
   _velocity: {x: 0, y: 0}

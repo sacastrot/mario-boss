@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D _rb;
     private float lastHorizontal = 1;
 
-    private float _jumpForce = 6f;
+    private float _jumpForce = 15f;
 
     private bool _hasRB;
     private float _turnTimer;
