@@ -344,7 +344,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &193066516
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,7 +374,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 193066516}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.79, y: 0.13, z: 0}
+  m_LocalPosition: {x: -5.79, y: 4.14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -399,7 +398,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -433,15 +432,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee76f7dfc687d4be993b76367dc873b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 193066517}
-  _moveSpeedWalk: 50
-  _maxSpeedWalk: 5
-  _moveSpeedRun: 1
-  _maxSpeedRun: 7
-  _gravity: -9.8
+  player: {fileID: 193066517}
+  moveSpeedWalk: 1
+  maxSpeedWalk: 5
+  moveSpeedRun: 1
+  maxSpeedRun: 4
+  currentSpeedX: 0
   turn: 0
+  jumping: 0
+  isHeadUp: 0
+  isDuck: 0
+  directionX: 0
+  directionHead: 0
   input: {fileID: 0}
-  _velocity: {x: 0, y: 0}
+  velocity: {x: 0, y: 0}
+  rb: {fileID: 0}
   feetPos: {fileID: 1509113517}
   checkRadius: -2
   whatIsGround:
@@ -730,7 +735,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1372366795}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.84, y: 0.6, z: -10}
+  m_LocalPosition: {x: -3.13, y: 0.6, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3039,7 +3044,9 @@ GameObject:
   - component: {fileID: 1739763694}
   - component: {fileID: 1739763697}
   - component: {fileID: 1739763696}
-  - component: {fileID: 1739763695}
+  - component: {fileID: 1739763698}
+  - component: {fileID: 1739763700}
+  - component: {fileID: 1739763699}
   m_Layer: 6
   m_Name: Tilemap_ground_C
   m_TagString: Untagged
@@ -3062,22 +3069,6 @@ Transform:
   m_Father: {fileID: 1589139607}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!19719996 &1739763695
-TilemapCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1739763693}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0
 --- !u!483693784 &1739763696
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -3961,6 +3952,65 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &1739763698
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739763693}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0
+--- !u!66 &1739763699
+CompositeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739763693}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_GeometryType: 0
+  m_GenerationType: 0
+  m_EdgeRadius: 0
+  m_ColliderPaths: []
+  m_CompositePaths:
+    m_Paths: []
+  m_VertexDistance: 0.0005
+  m_OffsetDistance: 0.00005
+--- !u!50 &1739763700
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739763693}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1840520371
 GameObject:
   m_ObjectHideFlags: 0

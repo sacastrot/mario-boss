@@ -21,6 +21,7 @@ public class CameraFollow : MonoBehaviour
     {
         _threshold = calculateThreshold();
         _hasRB = Player.TryGetComponent(out _rb);
+        Application.targetFrameRate = 60;
     }
 
     // Update is called once per frame
@@ -46,7 +47,7 @@ public class CameraFollow : MonoBehaviour
             newPosition.y = follow.y;
         }
 
-        float moveSpeed = _rb.velocity.x > _speed ? _rb.velocity.x : _speed;
+        float moveSpeed = Mathf.Abs(_rb.velocity.x) > _speed ? Mathf.Abs(_rb.velocity.x) : _speed;
         transform.position = Vector3.MoveTowards(transform.position, newPosition, moveSpeed * Time.deltaTime);
         
     }
