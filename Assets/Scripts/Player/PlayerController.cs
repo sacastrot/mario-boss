@@ -73,7 +73,7 @@ public class PlayerController : MonoBehaviour {
 		directionX = input.Move.x;
 		directionHead = input.Move.y;
 		_isChangingDirection = currentSpeedX > 0 && _moveDirection * directionX < 0;
-		IsGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
+		IsGrounded = Physics2D.Raycast(transform.position, Vector2.down, 1f);
 	}
 
 
@@ -106,8 +106,8 @@ public class PlayerController : MonoBehaviour {
 		else {
 			rb.gravityScale = _normalGravity * _jumpDownGravity;
 		}
-			Debug.Log("Jump Hold " + input.JumpHold);
-		Debug.Log("Jump Release" + input.JumpRelease);
+			//Debug.Log("Jump Hold " + input.JumpHold);
+		//Debug.Log("Jump Release" + input.JumpRelease);
 		
 	}
 
