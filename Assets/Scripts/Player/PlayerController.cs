@@ -85,6 +85,8 @@ public class PlayerController : MonoBehaviour {
 		GroundedMovement();
 		AirMovement();
 		VerticalMovement();
+		rb.velocity = new Vector2(_moveDirection * currentSpeedX, rb.velocity.y);
+
 	}
 
 	private void VerticalMovement() {
@@ -182,7 +184,6 @@ public class PlayerController : MonoBehaviour {
 				isDuck = false;
 				isHeadUp = false;
 			}
-			rb.velocity = new Vector2(_moveDirection * currentSpeedX, rb.velocity.y);
 		}
 
 		if (directionX != 0 && !_isChangingDirection) {

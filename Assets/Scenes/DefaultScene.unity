@@ -374,7 +374,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 193066516}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.59, y: 1.27, z: 0}
+  m_LocalPosition: {x: 3.79, y: 0.86, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -397,7 +397,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 1.3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -432,8 +432,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 193066517}
-  moveSpeedWalk: 1
-  maxSpeedWalk: 5
+  moveSpeedWalk: 3
+  maxSpeedWalk: 2
   moveSpeedRun: 1
   maxSpeedRun: 4
   currentSpeedX: 0
@@ -447,10 +447,10 @@ MonoBehaviour:
   velocity: {x: 0, y: 0}
   rb: {fileID: 0}
   feetPos: {fileID: 0}
-  checkRadius: -2
+  checkRadius: 0
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
 --- !u!114 &193066523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -576,7 +576,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 639369426}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.82751936, y: -1.02, z: 1.9853466}
+  m_LocalPosition: {x: 6.11, y: 4.5, z: 1.9853466}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -601,7 +601,7 @@ MonoBehaviour:
   rb: {fileID: 639369429}
   enemy: {fileID: 639369430}
   currentSpeed: 1
-  moveDirection: -1
+  moveDirection: 1
 --- !u!1 &700113682
 GameObject:
   m_ObjectHideFlags: 0
@@ -4271,7 +4271,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1000
-  m_Sprite: {fileID: -278743608, guid: e9906aacc4052ab4585b787bbed5035c, type: 3}
+  m_Sprite: {fileID: -2030220205, guid: e9906aacc4052ab4585b787bbed5035c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
