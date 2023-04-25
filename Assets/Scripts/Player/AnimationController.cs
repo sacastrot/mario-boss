@@ -24,12 +24,16 @@ public class AnimationController : MonoBehaviour {
 	void Update() {
 
 		if (_hasAnimator) {
+			// _anim.speed = 2f;
 			_anim.SetBool("isTurn", _playerController.turn);
 			_anim.SetFloat("AnimMoveX", _playerController.currentSpeedX);
+			
 			if (_playerController.isHeadUp) {
 				_anim.SetFloat("AnimLookY", _playerController.directionHead);
 			}
 			_anim.SetBool("isDuck", _playerController.isDuck);
+			_anim.SetBool("isJump", _playerController.jumping);
+			_anim.SetBool("isFall", _playerController.falling);
 		}
 		else {
 			Debug.Log("Cargue el body pedazo de basura");

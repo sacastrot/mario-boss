@@ -10,14 +10,14 @@ public class PlayerController : MonoBehaviour {
 	[Header("Player Walk")] [SerializeField]
 	private float moveSpeedWalk = 1f;
 
-	private float _walkAcceleration = 1f;
-	private float _releaseDecelerationX = 0.3f;
-	private float _skidTurnAroundSpeedX = 3f;
-	private float _skidDecelerationX = 0.5f;
-	private float _airAccelerationX = 0.2f;
-	private float _airDecelerationX = 0.15f;
-	private float _jumpUpGravity = 0.8f;
-	private float _jumpDownGravity = 1.3f;
+	private const float WalkAcceleration = 1f;
+	private const float ReleaseDecelerationX = 0.3f;
+	private const float SkidTurnAroundSpeedX = 3f;
+	private const float SkidDecelerationX = 0.5f;
+	private const float AirAccelerationX = 0.2f;
+	private const float AirDecelerationX = 0.15f;
+	private const float JumpUpGravity = 2.7888f;
+	private const float JumpDownGravity = 5f;
 
 	[Header("Max Speed Walk")] [SerializeField]
 	private float maxSpeedWalk = 2f;
@@ -33,20 +33,21 @@ public class PlayerController : MonoBehaviour {
 	private bool _isChangingDirection;
 
 	// Physics
-	private float _normalGravity;
+	private const float NormalGravity = 1;
 
 	// Flags
 	public bool Running => Mathf.Abs(velocity.x) > maxSpeedWalk || Mathf.Abs(input.Move.x) > maxSpeedWalk;
 	public bool turn;
 	private bool IsGrounded { get; set; }
 	public bool jumping;
+	public bool falling;
 	private bool _hasRb;
 	public bool isHeadUp;
 	public bool isDuck;
 
 
-	private float _jumpVelocity = 6f;
-
+	private const float JumpVelocity = 15f;
+	
 	private float _turnTimer;
 	public float directionX;
 	public float directionHead;
@@ -64,8 +65,7 @@ public class PlayerController : MonoBehaviour {
 	void Start() {
 		input = GetComponent<PlayerInput>();
 		_hasRb = player.TryGetComponent(out rb);
-		_normalGravity = rb.gravityScale;
-
+		rb.gravityScale = NormalGravity;
 	}
 
 	// Update is called once per frame
@@ -85,30 +85,31 @@ public class PlayerController : MonoBehaviour {
 		GroundedMovement();
 		AirMovement();
 		VerticalMovement();
+		rb.velocity = new Vector2(_moveDirection * currentSpeedX, rb.velocity.y);
 	}
 
 	private void VerticalMovement() {
 		if (IsGrounded) {
 			jumping = false;
-			rb.gravityScale = _normalGravity;
+			falling = false;
+		}
+		else if (rb.velocity.y < 0) {
+			falling = true;
+			jumping = false;
 		}
 
 		if (!jumping) {
 			if (IsGrounded && input.JumpHold) {
-				rb.velocity = new Vector2(rb.velocity.x, _jumpVelocity);
+				rb.velocity = new Vector2(rb.velocity.x, JumpVelocity);
 				jumping = true;
 			}
 		}
-
 		if (rb.velocity.y > 0 && input.JumpHold) {
-			rb.gravityScale = _normalGravity * _jumpUpGravity;
+			rb.gravityScale = NormalGravity * JumpUpGravity;
 		}
-		else {
-			rb.gravityScale = _normalGravity * _jumpDownGravity;
+		else if(!IsGrounded) {
+			rb.gravityScale = NormalGravity * JumpDownGravity;
 		}
-			//Debug.Log("Jump Hold " + input.JumpHold);
-		//Debug.Log("Jump Release" + input.JumpRelease);
-		
 	}
 
 	private void AirMovement() {
@@ -119,45 +120,43 @@ public class PlayerController : MonoBehaviour {
 					currentSpeedX = moveSpeedWalk;
 				}
 				else if (currentSpeedX < maxSpeedWalk) {
-					currentSpeedX = IncreaseWithinBound(currentSpeedX, _airAccelerationX, maxSpeedWalk);
+					currentSpeedX = IncreaseWithinBound(currentSpeedX, AirAccelerationX, maxSpeedWalk);
 				}
 				//TODO: Implement speed x if player is running
 			}
 			else if (currentSpeedX > 0) {
-				currentSpeedX = DecreaseWithinBound(currentSpeedX, _releaseDecelerationX, 0);
+				currentSpeedX = DecreaseWithinBound(currentSpeedX, ReleaseDecelerationX, 0);
 			}
-
+			turn = false;
 			if (_isChangingDirection) {
 				directionX = _moveDirection;
-				turn = false;
-				currentSpeedX = DecreaseWithinBound(currentSpeedX, _airDecelerationX, 0);
+				currentSpeedX = DecreaseWithinBound(currentSpeedX, AirDecelerationX, 0);
 			}
-			
 		}
-		
 	}
 
 	private void GroundedMovement() {
 		if (IsGrounded) {
+			rb.gravityScale = NormalGravity;
 			if (directionX != 0) {
 				if (currentSpeedX == 0) {
 					currentSpeedX = moveSpeedWalk;
 				}
 				else if (currentSpeedX < maxSpeedWalk) {
-					currentSpeedX = IncreaseWithinBound(currentSpeedX, _walkAcceleration, maxSpeedWalk);
+					currentSpeedX = IncreaseWithinBound(currentSpeedX, WalkAcceleration, maxSpeedWalk);
 				}
 				//TODO: Dashing key (run)
 				
 			}
 			else if (currentSpeedX > 0) {
-				currentSpeedX = DecreaseWithinBound(currentSpeedX, _releaseDecelerationX, 0);
+				currentSpeedX = DecreaseWithinBound(currentSpeedX, ReleaseDecelerationX, 0);
 			}
 
 			if (_isChangingDirection) {
-				if (currentSpeedX > _skidTurnAroundSpeedX) {
+				if (currentSpeedX > SkidTurnAroundSpeedX) {
 					_moveDirection = directionX;
 					turn = true;
-					currentSpeedX = DecreaseWithinBound(currentSpeedX, _skidDecelerationX, 0);
+					currentSpeedX = DecreaseWithinBound(currentSpeedX, SkidDecelerationX, 0);
 				}
 				else {
 					_moveDirection = directionX;
@@ -182,7 +181,6 @@ public class PlayerController : MonoBehaviour {
 				isDuck = false;
 				isHeadUp = false;
 			}
-			rb.velocity = new Vector2(_moveDirection * currentSpeedX, rb.velocity.y);
 		}
 
 		if (directionX != 0 && !_isChangingDirection) {

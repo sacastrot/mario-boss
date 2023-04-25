@@ -47,7 +47,7 @@ public class CameraFollow : MonoBehaviour
             newPosition.y = follow.y;
         }
 
-        float moveSpeed = Mathf.Abs(_rb.velocity.x) > _speed ? Mathf.Abs(_rb.velocity.x) : _speed;
+        float moveSpeed = _rb.velocity.magnitude > _speed ? _rb.velocity.magnitude : _speed;
         transform.position = Vector3.MoveTowards(transform.position, newPosition, moveSpeed * Time.deltaTime);
         
     }
