@@ -21,6 +21,7 @@ public class CameraFollow : MonoBehaviour
     {
         _threshold = calculateThreshold();
         _hasRB = Player.TryGetComponent(out _rb);
+        Application.targetFrameRate = 60;
     }
 
     // Update is called once per frame
