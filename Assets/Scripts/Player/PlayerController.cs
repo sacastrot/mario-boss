@@ -1,149 +1,212 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-public class PlayerController : MonoBehaviour
-{
-    // Player
-    [Header("RigiBody2D")] [SerializeField]
-    private Transform _player;
-    
-    // Movement
-    [Header("Player Walk")] [SerializeField] 
-    private float _moveSpeedWalk = 1f;
-    [Header("Max Speed Walk")] [SerializeField] 
-    private float _maxSpeedWalk = 4f;
-    [Header("Player Run")] [SerializeField]
-    private float _moveSpeedRun = 1f;
-    [Header("Max Speed Run")] [SerializeField] 
-    private float _maxSpeedRun = 4f;
-    
-    // Physics
-    [Header("Gravity")] [SerializeField] 
-    private float _gravity = -9.8f;
-    
-    // Flags
-    public bool walking => Mathf.Abs(_velocity.x) > 0f || Mathf.Abs(input.Move.x) > 0f;
-    public bool runing => Mathf.Abs(_velocity.x) > _maxSpeedWalk || Mathf.Abs(input.Move.x) > _maxSpeedWalk;
+public class PlayerController : MonoBehaviour {
+	// Player
+	[Header("RigidBody2D")] [SerializeField]
+	private Transform player;
 
-    public bool turn;
-    
-    // [Header("Components")] [SerializeField] private Rigidbody2D _rb;
-    public PlayerInput input;
-    public Vector2 _velocity;
-    public bool grounded { get; private set; }
-    public bool jumping { get; private set; }
+	// Movement
+	[Header("Player Walk")] [SerializeField]
+	private float moveSpeedWalk = 1f;
 
-    private Rigidbody2D _rb;
-    private float lastHorizontal = 1;
+	private const float WalkAcceleration = 1f;
+	private const float ReleaseDecelerationX = 0.3f;
+	private const float SkidTurnAroundSpeedX = 3f;
+	private const float SkidDecelerationX = 0.5f;
+	private const float AirAccelerationX = 0.2f;
+	private const float AirDecelerationX = 0.15f;
+	private const float JumpUpGravity = 2.7888f;
+	private const float JumpDownGravity = 5f;
 
-    private float _jumpForce = 15f;
+	[Header("Max Speed Walk")] [SerializeField]
+	private float maxSpeedWalk = 2f;
 
-    private bool _hasRB;
-    private float _turnTimer;
-    
-    
-    //Ground Check
-    public Transform feetPos;
-    public float checkRadius;
-    public LayerMask whatIsGround;
-    private float jumpTimeCounter;
+	[Header("Player Run")] [SerializeField]
+	private float moveSpeedRun = 1f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        input = GetComponent<PlayerInput>();
-        
-        _hasRB = _player.TryGetComponent(out _rb);
-    }
+	[Header("Max Speed Run")] [SerializeField]
+	private float maxSpeedRun = 4f;
 
-    // Update is called once per frame
-    void Update()
-    {
-        HorizontalMovement(input.Move.x);
+	public float currentSpeedX;
+	private float _moveDirection;
+	private bool _isChangingDirection;
 
-        grounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
-        //grounded = true;
-        if (grounded) {
-            GroundedMovement();
-        }
+	// Physics
+	private const float NormalGravity = 1;
 
-        
-        ApplyGravity(); 
+	// Flags
+	public bool Running => Mathf.Abs(velocity.x) > maxSpeedWalk || Mathf.Abs(input.Move.x) > maxSpeedWalk;
+	public bool turn;
+	private bool IsGrounded { get; set; }
+	public bool jumping;
+	public bool falling;
+	private bool _hasRb;
+	public bool isHeadUp;
+	public bool isDuck;
 
-    }
 
-    private void GroundedMovement()
-    {
-        // prevent gravity from infinitly building up
-        // _velocity.y = Mathf.Max(_velocity.y, 0f);
-        // jumping = _velocity.y > 0f;
+	private const float JumpVelocity = 15f;
+	
+	private float _turnTimer;
+	public float directionX;
+	public float directionHead;
 
-        // perform jump
-        if (Input.GetButtonDown("Jump"))
-        {
-            _velocity.y = _jumpForce;
-            jumping = true;
-        }
-    }
+	public PlayerInput input;
+	public Vector2 velocity;
+	public Rigidbody2D rb;
 
-    private void OnEnable()
-    {
-        _velocity = Vector2.zero;
-    }
+	//Ground Check
+	public Transform feetPos;
+	public float checkRadius;
+	public LayerMask whatIsGround;
+	private float _jumpTimeCounter;
 
-    void FixedUpdate()
-    {
-        Vector2 position = _rb.position;
-        position += _velocity * Time.fixedDeltaTime;
-        _rb.MovePosition(position);
-    }
+	void Start() {
+		input = GetComponent<PlayerInput>();
+		_hasRb = player.TryGetComponent(out rb);
+		rb.gravityScale = NormalGravity;
+	}
 
-    private void HorizontalMovement(float moveX)
-    {
-        _velocity.x = Mathf.MoveTowards(_velocity.x, moveX * _maxSpeedWalk, _moveSpeedWalk * Time.deltaTime);
-        
-        // flip sprite to face direction
-        if (moveX != 0 && Mathf.Abs(_velocity.x)>1f)
-        {
-            turn = lastHorizontal != moveX;
-            lastHorizontal = moveX;
-            if (turn)
-            {
-                _turnTimer = 0.33333f;
-            }
-        }
+	// Update is called once per frame
+	void Update() {
+		directionX = input.Move.x;
+		directionHead = input.Move.y;
+		_isChangingDirection = currentSpeedX > 0 && _moveDirection * directionX < 0;
+		IsGrounded = Physics2D.Raycast(transform.position, Vector2.down, 1f);
+	}
 
-        if (_turnTimer > 0)
-        {
-            _turnTimer -= Time.deltaTime;
 
-        } else if (_velocity.x > 0f)
-        {
-            transform.eulerAngles = Vector3.zero;
-                
-        } else if (_velocity.x < 0f)
-        {
-            transform.eulerAngles = new Vector3(0f, 180f, 0f);
-                
-        }
-    }
-    private void ApplyGravity()
-    {
-        // check if falling
-        bool falling = _velocity.y < 0f || !input.Jump;
-        float multiplier = falling ? 2f : 1f;
+	private void OnEnable() {
+		velocity = Vector2.zero;
+	}
 
-        // apply gravity and terminal velocity
-        _velocity.y += _gravity * multiplier * Time.deltaTime;
-        _velocity.y = Mathf.Max(_velocity.y, _gravity / 2f);
-    }
+	void FixedUpdate() {
+		GroundedMovement();
+		AirMovement();
+		VerticalMovement();
+		rb.velocity = new Vector2(_moveDirection * currentSpeedX, rb.velocity.y);
+	}
 
-    private void OnCollisionEnter(Collision other)
-    {
-        Debug.Log("Floor");
-    }
+	private void VerticalMovement() {
+		if (IsGrounded) {
+			jumping = false;
+			falling = false;
+		}
+		else if (rb.velocity.y < 0) {
+			falling = true;
+			jumping = false;
+		}
+
+		if (!jumping) {
+			if (IsGrounded && input.JumpHold) {
+				rb.velocity = new Vector2(rb.velocity.x, JumpVelocity);
+				jumping = true;
+			}
+		}
+		if (rb.velocity.y > 0 && input.JumpHold) {
+			rb.gravityScale = NormalGravity * JumpUpGravity;
+		}
+		else if(!IsGrounded) {
+			rb.gravityScale = NormalGravity * JumpDownGravity;
+		}
+	}
+
+	private void AirMovement() {
+		if (!IsGrounded) {
+			//TODO: Set parameters air movement
+			if (directionX != 0) {
+				if (currentSpeedX == 0) {
+					currentSpeedX = moveSpeedWalk;
+				}
+				else if (currentSpeedX < maxSpeedWalk) {
+					currentSpeedX = IncreaseWithinBound(currentSpeedX, AirAccelerationX, maxSpeedWalk);
+				}
+				//TODO: Implement speed x if player is running
+			}
+			else if (currentSpeedX > 0) {
+				currentSpeedX = DecreaseWithinBound(currentSpeedX, ReleaseDecelerationX, 0);
+			}
+			turn = false;
+			if (_isChangingDirection) {
+				directionX = _moveDirection;
+				currentSpeedX = DecreaseWithinBound(currentSpeedX, AirDecelerationX, 0);
+			}
+		}
+	}
+
+	private void GroundedMovement() {
+		if (IsGrounded) {
+			rb.gravityScale = NormalGravity;
+			if (directionX != 0) {
+				if (currentSpeedX == 0) {
+					currentSpeedX = moveSpeedWalk;
+				}
+				else if (currentSpeedX < maxSpeedWalk) {
+					currentSpeedX = IncreaseWithinBound(currentSpeedX, WalkAcceleration, maxSpeedWalk);
+				}
+				//TODO: Dashing key (run)
+				
+			}
+			else if (currentSpeedX > 0) {
+				currentSpeedX = DecreaseWithinBound(currentSpeedX, ReleaseDecelerationX, 0);
+			}
+
+			if (_isChangingDirection) {
+				if (currentSpeedX > SkidTurnAroundSpeedX) {
+					_moveDirection = directionX;
+					turn = true;
+					currentSpeedX = DecreaseWithinBound(currentSpeedX, SkidDecelerationX, 0);
+				}
+				else {
+					_moveDirection = directionX;
+					turn = false;
+				}
+			}
+			else {
+				turn = false;
+			}
+
+			if (directionHead != 0) {
+				isHeadUp = directionHead > 0 && currentSpeedX == 0;
+				if (directionHead < 0) {
+					currentSpeedX = 0;
+					isDuck = true;
+				}
+				else {
+					isDuck = false;
+				}
+			}
+			else {
+				isDuck = false;
+				isHeadUp = false;
+			}
+		}
+
+		if (directionX != 0 && !_isChangingDirection) {
+			_moveDirection = directionX;
+		}
+
+
+		if (directionX > 0) {
+			transform.localScale = new Vector2(1, 1);
+		}
+		else if (directionX < 0) {
+			transform.localScale = new Vector2(-1, 1);
+		}
+	}
+	private float DecreaseWithinBound(float actual, float delta, int target) {
+		actual -= delta;
+		if (actual < target) {
+			actual = target;
+		}
+		return actual;
+	}
+	private float IncreaseWithinBound(float actual, float delta, float max) {
+		actual += delta;
+		if (actual > max) {
+			actual = max;
+		}
+		return actual;
+	}
 }
