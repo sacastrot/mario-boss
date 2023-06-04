@@ -34,6 +34,9 @@ public class AnimationController : MonoBehaviour {
 			_anim.SetBool("isDuck", _playerController.isDuck);
 			_anim.SetBool("isJump", _playerController.jumping);
 			_anim.SetBool("isFall", _playerController.falling);
+			_anim.SetBool("isRunNormal", _playerController.runningNormalSpeed);
+			_anim.SetBool("isRunMax", _playerController.runningMaxSpeed);
+			// _anim.speed = 
 		}
 		else {
 			Debug.Log("Cargue el body pedazo de basura");

@@ -9,8 +9,15 @@ public class PlayerController : MonoBehaviour {
 	// Movement
 	[Header("Player Walk")] [SerializeField]
 	private float moveSpeedWalk = 1f;
+	[Header("Max Speed Walk")] [SerializeField]
+	private float maxSpeedWalk = 5f;
+	[Header("Player Run")] [SerializeField]
+	private float moveSpeedRun = 7f;
+	[Header("Max Speed Run")] [SerializeField]
+	private float maxSpeedRun = 10f;
 
 	private const float WalkAcceleration = 1f;
+	private const float SpeedAcceleration = 0.04f;
 	private const float ReleaseDecelerationX = 0.3f;
 	private const float SkidTurnAroundSpeedX = 3f;
 	private const float SkidDecelerationX = 0.5f;
@@ -18,16 +25,7 @@ public class PlayerController : MonoBehaviour {
 	private const float AirDecelerationX = 0.15f;
 	private const float JumpUpGravity = 2.7888f;
 	private const float JumpDownGravity = 5f;
-
-	[Header("Max Speed Walk")] [SerializeField]
-	private float maxSpeedWalk = 2f;
-
-	[Header("Player Run")] [SerializeField]
-	private float moveSpeedRun = 1f;
-
-	[Header("Max Speed Run")] [SerializeField]
-	private float maxSpeedRun = 4f;
-
+	
 	public float currentSpeedX;
 	private float _moveDirection;
 	private bool _isChangingDirection;
@@ -36,7 +34,10 @@ public class PlayerController : MonoBehaviour {
 	private const float NormalGravity = 1;
 
 	// Flags
-	public bool Running => Mathf.Abs(velocity.x) > maxSpeedWalk || Mathf.Abs(input.Move.x) > maxSpeedWalk;
+	// public bool Running => Mathf.Abs(velocity.x) > maxSpeedWalk || Mathf.Abs(input.Move.x) > maxSpeedWalk;
+	[FormerlySerializedAs("runnig")] public bool running;
+	public bool runningNormalSpeed;
+	public bool runningMaxSpeed;
 	public bool turn;
 	private bool IsGrounded { get; set; }
 	public bool jumping;
@@ -51,6 +52,8 @@ public class PlayerController : MonoBehaviour {
 	private float _turnTimer;
 	public float directionX;
 	public float directionHead;
+	public bool jumpDown;
+	
 
 	public PlayerInput input;
 	public Vector2 velocity;
@@ -72,8 +75,12 @@ public class PlayerController : MonoBehaviour {
 	void Update() {
 		directionX = input.Move.x;
 		directionHead = input.Move.y;
+		jumpDown = input.JumpDown;
+		running = input.RunOn && directionX != 0;
 		_isChangingDirection = currentSpeedX > 0 && _moveDirection * directionX < 0;
 		IsGrounded = Physics2D.Raycast(transform.position, Vector2.down, 1f);
+		//This lines were in FixedUpdate
+		VerticalMovement();
 	}
 
 
@@ -82,9 +89,9 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void FixedUpdate() {
-		GroundedMovement();
-		AirMovement();
-		VerticalMovement();
+		if(IsGrounded) GroundedMovement();
+		if(!IsGrounded) AirMovement();
+		setDirection(); //New Function 
 		rb.velocity = new Vector2(_moveDirection * currentSpeedX, rb.velocity.y);
 	}
 
@@ -95,15 +102,17 @@ public class PlayerController : MonoBehaviour {
 		}
 		else if (rb.velocity.y < 0) {
 			falling = true;
-			jumping = false;
+			// jumping = false;
+		}
+		
+		if (IsGrounded && jumpDown) {
+			rb.velocity = new Vector2(rb.velocity.x, JumpVelocity);
+			jumping = true;
+			//New lines
+			runningNormalSpeed = false;
+			runningMaxSpeed = false;	
 		}
 
-		if (!jumping) {
-			if (IsGrounded && input.JumpHold) {
-				rb.velocity = new Vector2(rb.velocity.x, JumpVelocity);
-				jumping = true;
-			}
-		}
 		if (rb.velocity.y > 0 && input.JumpHold) {
 			rb.gravityScale = NormalGravity * JumpUpGravity;
 		}
@@ -113,80 +122,105 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	private void AirMovement() {
-		if (!IsGrounded) {
-			//TODO: Set parameters air movement
-			if (directionX != 0) {
-				if (currentSpeedX == 0) {
-					currentSpeedX = moveSpeedWalk;
-				}
-				else if (currentSpeedX < maxSpeedWalk) {
-					currentSpeedX = IncreaseWithinBound(currentSpeedX, AirAccelerationX, maxSpeedWalk);
-				}
-				//TODO: Implement speed x if player is running
+	//TODO: Set parameters air movement
+		if (directionX != 0) {
+			if (currentSpeedX == 0) {
+				currentSpeedX = moveSpeedWalk;
 			}
-			else if (currentSpeedX > 0) {
-				currentSpeedX = DecreaseWithinBound(currentSpeedX, ReleaseDecelerationX, 0);
+			else if (currentSpeedX < maxSpeedWalk) {
+				currentSpeedX = IncreaseWithinBound(currentSpeedX, AirAccelerationX, maxSpeedWalk);
 			}
-			turn = false;
-			if (_isChangingDirection) {
-				directionX = _moveDirection;
-				currentSpeedX = DecreaseWithinBound(currentSpeedX, AirDecelerationX, 0);
-			}
+			//TODO: Implement speed x if player is running
+		}
+		else if (currentSpeedX > 0) {
+			currentSpeedX = DecreaseWithinBound(currentSpeedX, ReleaseDecelerationX, 0);
+		}
+		turn = false;
+		if (_isChangingDirection) {
+			directionX = _moveDirection;
+			currentSpeedX = DecreaseWithinBound(currentSpeedX, currentSpeedX, 0);
 		}
 	}
 
 	private void GroundedMovement() {
-		if (IsGrounded) {
-			rb.gravityScale = NormalGravity;
-			if (directionX != 0) {
-				if (currentSpeedX == 0) {
-					currentSpeedX = moveSpeedWalk;
-				}
-				else if (currentSpeedX < maxSpeedWalk) {
-					currentSpeedX = IncreaseWithinBound(currentSpeedX, WalkAcceleration, maxSpeedWalk);
-				}
-				//TODO: Dashing key (run)
+		rb.gravityScale = NormalGravity;
+		if (directionX != 0) {
+			if (currentSpeedX == 0 && !running) {
+				currentSpeedX = moveSpeedWalk;
+			}
+			else if (currentSpeedX < maxSpeedWalk && !running) {
+				currentSpeedX = IncreaseWithinBound(currentSpeedX, WalkAcceleration, maxSpeedWalk);
+			}
+			//TODO: Dashing key (run)
+			else if (running && currentSpeedX <= maxSpeedWalk)
+			{
+				currentSpeedX = moveSpeedRun;
+				// runningMaxSpeed = false;
+				runningNormalSpeed = true;
+			}
+			else if (running && currentSpeedX < maxSpeedRun)
+			{
+				currentSpeedX = IncreaseWithinBound(currentSpeedX, SpeedAcceleration, maxSpeedRun);
+				runningNormalSpeed = true;
 				
 			}
-			else if (currentSpeedX > 0) {
-				currentSpeedX = DecreaseWithinBound(currentSpeedX, ReleaseDecelerationX, 0);
+			else if (running && currentSpeedX == maxSpeedRun)
+			{
+				// runningNormalSpeed = false;
+				runningMaxSpeed = true;
 			}
+			else if (currentSpeedX >= moveSpeedRun && !running)
+			{
+				currentSpeedX = moveSpeedWalk;
+			}
+			
+		}
+		else if (currentSpeedX > 0) {
+			currentSpeedX = DecreaseWithinBound(currentSpeedX, ReleaseDecelerationX, 0);
+		}
 
-			if (_isChangingDirection) {
-				if (currentSpeedX > SkidTurnAroundSpeedX) {
-					_moveDirection = directionX;
-					turn = true;
-					currentSpeedX = DecreaseWithinBound(currentSpeedX, SkidDecelerationX, 0);
-				}
-				else {
-					_moveDirection = directionX;
-					turn = false;
-				}
+		if (!running)
+		{
+			runningMaxSpeed = false;
+			runningNormalSpeed = false;
+		}
+		
+		if (_isChangingDirection) {
+			if (currentSpeedX > SkidTurnAroundSpeedX) {
+				_moveDirection = directionX;
+				turn = true;
+				currentSpeedX = DecreaseWithinBound(currentSpeedX, SkidDecelerationX, 0);
 			}
 			else {
+				_moveDirection = directionX;
 				turn = false;
 			}
+		}
+		else {
+			turn = false;
+		}
 
-			if (directionHead != 0) {
-				isHeadUp = directionHead > 0 && currentSpeedX == 0;
-				if (directionHead < 0) {
-					currentSpeedX = 0;
-					isDuck = true;
-				}
-				else {
-					isDuck = false;
-				}
+		if (directionHead != 0) {
+			isHeadUp = directionHead > 0 && currentSpeedX == 0;
+			if (directionHead < 0) {
+				currentSpeedX = 0;
+				isDuck = true;
 			}
 			else {
 				isDuck = false;
-				isHeadUp = false;
 			}
 		}
+		else {
+			isDuck = false;
+			isHeadUp = false;
+		}
+	}
 
+	private void setDirection()
+	{
 		if (directionX != 0 && !_isChangingDirection) {
 			_moveDirection = directionX;
 		}
-
 
 		if (directionX > 0) {
 			transform.localScale = new Vector2(1, 1);
@@ -195,6 +229,7 @@ public class PlayerController : MonoBehaviour {
 			transform.localScale = new Vector2(-1, 1);
 		}
 	}
+
 	private float DecreaseWithinBound(float actual, float delta, int target) {
 		actual -= delta;
 		if (actual < target) {
