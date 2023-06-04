@@ -434,10 +434,12 @@ MonoBehaviour:
   player: {fileID: 193066517}
   moveSpeedWalk: 1
   maxSpeedWalk: 5
-  moveSpeedRun: 10
-  maxSpeedRun: 4
+  moveSpeedRun: 7
+  maxSpeedRun: 10
   currentSpeedX: 0
-  runnig: 0
+  running: 0
+  runningNormalSpeed: 0
+  runningMaxSpeed: 0
   turn: 0
   jumping: 0
   falling: 0

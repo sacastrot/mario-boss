@@ -79,6 +79,7 @@ public class PlayerController : MonoBehaviour {
 		running = input.RunOn && directionX != 0;
 		_isChangingDirection = currentSpeedX > 0 && _moveDirection * directionX < 0;
 		IsGrounded = Physics2D.Raycast(transform.position, Vector2.down, 1f);
+		Debug.Log(runningMaxSpeed);
 		//This lines were in FixedUpdate
 		VerticalMovement();
 	}
@@ -166,8 +167,11 @@ public class PlayerController : MonoBehaviour {
 			}
 			else if (running && currentSpeedX == maxSpeedRun)
 			{
-				// runningNormalSpeed = false;
-				runningMaxSpeed = true;
+				if (!jumping)
+				{
+					runningMaxSpeed = true;
+					// runningNormalSpeed = true;
+				}
 			}
 			else if (currentSpeedX >= moveSpeedRun && !running)
 			{
