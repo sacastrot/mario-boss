@@ -11,6 +11,9 @@ TagManager:
   - 
   - Water
   - UI
+  - ground
+  - enemy
+  - pipe
   - 
   - 
   - 
@@ -32,11 +35,8 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - player
+  - camera
   m_SortingLayers:
   - name: Default
     uniqueID: 0

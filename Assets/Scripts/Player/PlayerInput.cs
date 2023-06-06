@@ -6,7 +6,11 @@ public class PlayerInput : MonoBehaviour
 {
     public Vector2 Move { get; private set; }
     public bool keyZ { get; private set; }
-    public bool Jump { get; private set; }
+    public bool JumpRelease { get; private set; }
+    
+    public bool JumpHold { get; private set;}
+    
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +26,7 @@ public class PlayerInput : MonoBehaviour
     {
         Move = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         keyZ = Input.GetKey(KeyCode.Z);
-        Jump = Input.GetButtonDown("Jump");
-
+        JumpRelease = Input.GetButtonUp("Jump");
+        JumpHold = Input.GetButton("Jump");
     }
 }
