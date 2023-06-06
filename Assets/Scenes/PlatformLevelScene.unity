@@ -453,9 +453,11 @@ MonoBehaviour:
   player: {fileID: 95024870}
   moveSpeedWalk: 1
   maxSpeedWalk: 5
-  moveSpeedRun: 1
+  moveSpeedRun: 7
   maxSpeedRun: 4
   currentSpeedX: 0
+  running: 0
+  runningNormalSpeed: 0
   turn: 0
   jumping: 0
   falling: 0
@@ -463,6 +465,7 @@ MonoBehaviour:
   isDuck: 0
   directionX: 0
   directionHead: 0
+  jumpDown: 0
   input: {fileID: 95024866}
   velocity: {x: 0, y: 0}
   rb: {fileID: 95024869}
