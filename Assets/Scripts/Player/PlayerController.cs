@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour {
 	[Header("Max Speed Run")] [SerializeField]
 	private float maxSpeedRun = 10f;
 
-	private const float WalkAcceleration = 1f;
+	private const float WalkAcceleration = 0.2f;
 	private const float SpeedAcceleration = 0.04f;
 	private const float ReleaseDecelerationX = 0.3f;
 	private const float SkidTurnAroundSpeedX = 3f;
@@ -37,7 +37,6 @@ public class PlayerController : MonoBehaviour {
 	// public bool Running => Mathf.Abs(velocity.x) > maxSpeedWalk || Mathf.Abs(input.Move.x) > maxSpeedWalk;
 	[FormerlySerializedAs("runnig")] public bool running;
 	public bool runningNormalSpeed;
-	public bool runningMaxSpeed;
 	public bool turn;
 	private bool IsGrounded { get; set; }
 	public bool jumping;
@@ -79,8 +78,9 @@ public class PlayerController : MonoBehaviour {
 		running = input.RunOn && directionX != 0;
 		_isChangingDirection = currentSpeedX > 0 && _moveDirection * directionX < 0;
 		IsGrounded = Physics2D.Raycast(transform.position, Vector2.down, 1f);
-		Debug.Log(runningMaxSpeed);
-		//This lines were in FixedUpdate
+		// Debug.Log(turn);
+		Debug.Log("IsGrounded " + IsGrounded);
+		//This lines was in FixedUpdate
 		VerticalMovement();
 	}
 
@@ -107,14 +107,16 @@ public class PlayerController : MonoBehaviour {
 		}
 		
 		if (IsGrounded && jumpDown) {
-			rb.velocity = new Vector2(rb.velocity.x, JumpVelocity);
-			jumping = true;
 			//New lines
-			runningNormalSpeed = false;
-			runningMaxSpeed = false;	
+			// runningNormalSpeed = false;
+			// runningMaxSpeed = false;
+			//---
+			jumping = true;
+			rb.velocity = new Vector2(rb.velocity.x, JumpVelocity);
 		}
 
 		if (rb.velocity.y > 0 && input.JumpHold) {
+			jumping = true;
 			rb.gravityScale = NormalGravity * JumpUpGravity;
 		}
 		else if(!IsGrounded) {
@@ -146,36 +148,30 @@ public class PlayerController : MonoBehaviour {
 	private void GroundedMovement() {
 		rb.gravityScale = NormalGravity;
 		if (directionX != 0) {
-			if (currentSpeedX == 0 && !running) {
-				currentSpeedX = moveSpeedWalk;
-			}
-			else if (currentSpeedX < maxSpeedWalk && !running) {
-				currentSpeedX = IncreaseWithinBound(currentSpeedX, WalkAcceleration, maxSpeedWalk);
-			}
 			//TODO: Dashing key (run)
-			else if (running && currentSpeedX <= maxSpeedWalk)
+			if (running)
 			{
-				currentSpeedX = moveSpeedRun;
-				// runningMaxSpeed = false;
-				runningNormalSpeed = true;
-			}
-			else if (running && currentSpeedX < maxSpeedRun)
-			{
-				currentSpeedX = IncreaseWithinBound(currentSpeedX, SpeedAcceleration, maxSpeedRun);
-				runningNormalSpeed = true;
-				
-			}
-			else if (running && currentSpeedX == maxSpeedRun)
-			{
-				if (!jumping)
+				if (currentSpeedX < moveSpeedRun)
 				{
-					runningMaxSpeed = true;
-					// runningNormalSpeed = true;
+					currentSpeedX = IncreaseWithinBound(currentSpeedX, 0.2f, moveSpeedRun);
+				}
+				else if (running && currentSpeedX == moveSpeedRun)
+				{
+					runningNormalSpeed = !jumping;
 				}
 			}
-			else if (currentSpeedX >= moveSpeedRun && !running)
+			else
 			{
-				currentSpeedX = moveSpeedWalk;
+				if (currentSpeedX == 0) {
+					currentSpeedX = moveSpeedWalk;
+				}
+				else if (currentSpeedX <= maxSpeedWalk) {
+					currentSpeedX = IncreaseWithinBound(currentSpeedX, WalkAcceleration, maxSpeedWalk);
+				}
+				else if (currentSpeedX > maxSpeedWalk)
+				{
+					currentSpeedX = DecreaseWithinBound(currentSpeedX, ReleaseDecelerationX, 0);
+				}
 			}
 			
 		}
@@ -185,7 +181,7 @@ public class PlayerController : MonoBehaviour {
 
 		if (!running)
 		{
-			runningMaxSpeed = false;
+			// runningMaxSpeed = false;
 			runningNormalSpeed = false;
 		}
 		
