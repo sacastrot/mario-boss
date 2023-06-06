@@ -1,0 +1,5315 @@
+fileFormatVersion: 2
+guid: 14a55d785faee3c42af220d6d442f509
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 632
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0187ee5fbdba1924cb7beb2fe889ba29
+      internalID: -2106120167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_1
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 632
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6cd39d4d1beed2429672581f79589ee
+      internalID: -252697722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_2
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 632
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bfd7d14b6882304190c79704e2ccd47
+      internalID: -312263459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_3
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 632
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4afe7db0f141ee64e9a3bb00df6be6cb
+      internalID: -740957728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_4
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 638
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf96e0f674f6c39498f97e2b2d4024c1
+      internalID: 1882046479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_5
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 638
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c97de80d1a5c8c4b909ab267483a621
+      internalID: -1773487567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_6
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 638
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bce51f14ef9c0b46ac8a090dc52e411
+      internalID: 1881713776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_7
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 638
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15fd2ff10436af941b70e3f0cb219afd
+      internalID: 436567252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_8
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 638
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a157c953f8941db4eb5160193259281f
+      internalID: -907315976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_9
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 638
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d7411da37cf5ed4e94177dd65a97cb1
+      internalID: -722961098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_10
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 638
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f65bcf2bd8cea54e93bbdd2e5bfb5d0
+      internalID: -2028896850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_11
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 621
+        width: 49
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4d27f3cafe54f94280c69911efa2b38
+      internalID: -2029199257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_12
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 600
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec633d04fa0bbd24d9227139d0a3cc5d
+      internalID: 1481621045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_13
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 605
+        width: 32
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a7c824518f257b4a8fcb6c164b4654e
+      internalID: 1554064857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_14
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 600
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 577dabf2fd4ad8148a7968b224dc6100
+      internalID: 996207652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_15
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 605
+        width: 32
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5bd3038748d04f45ba2ba0248ba3d07
+      internalID: 940433517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_16
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 603
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 274ff20b23c0dfb4a91ed2430b0ddde8
+      internalID: -577251158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_17
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 600
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f80723b6491876d44ad04aeb7dfddb1f
+      internalID: 2006876756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_18
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 600
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fff280d9fd59ecf4c87dd8cdff4c6f69
+      internalID: -239168369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_19
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 600
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e8f6c06f177f604382d48f77d08f1ec
+      internalID: 958423089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_20
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 600
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f59fc1e63a471142b436fc473577e35
+      internalID: -355317598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_21
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 600
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aec60c67a1a60ad45ac11c28cd27cc2e
+      internalID: 601992261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_22
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 600
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f048088e21d4a84ca49e44a6de56b61
+      internalID: 2016068928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_23
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 600
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7ce14f3a257d2d4b9ddfc16430de6dd
+      internalID: -515072379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_24
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 589
+        width: 49
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ba9d30b7998f8b4b8a77b32e7804245
+      internalID: -178461166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_25
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 538
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35437eb63899ed94b94ca678e398ab90
+      internalID: 550970253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_26
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 568
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8213623bce56a354ea9155adcb589550
+      internalID: -180880818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_27
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 568
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf8b6472d4f2671468cb23b8d7056abc
+      internalID: -490056799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_28
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 566
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d567e2c59c7b200449ce56ae4ec3f07f
+      internalID: 1752634288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_29
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 576
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 262c9fa6e5b918b48b74633a6a440826
+      internalID: -1660408742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_30
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 525
+        width: 49
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd7292a1650d7b74ebe91f9a22329a41
+      internalID: 2127199021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_31
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 488
+        width: 75
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90b9679b340c5d14c938d9170be7643b
+      internalID: -1956007286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_32
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 490
+        width: 53
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc511231268bb5e43a087720b7a6d6c0
+      internalID: 559578951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_33
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 504
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91a5b1d7017f9f24391db69e9a9111e0
+      internalID: -1864334989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_34
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 491
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97459a21587c8414586b8f6cee098193
+      internalID: -1697973105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_35
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 504
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10509c2fdd936714fb5b5c1b95635d7f
+      internalID: -1511656646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_36
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 512
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a3397a88b2407648a6fdd6ab0881754
+      internalID: 224587253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_37
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 477
+        width: 49
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 561f61f1bad02154d88ec94d1ef7192a
+      internalID: -1225823838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_38
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 440
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dc5afff119ccc54f98302e6d2fdc723
+      internalID: -149263344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_39
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 440
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a127cb6784f0b3d4aa9dec7878a2d604
+      internalID: -725626337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_40
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 456
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4af7a4993081964c851ba7d3e581cd4
+      internalID: -2108088305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_41
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 461
+        width: 32
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 224b818e6e514ee408827a0f199c83ff
+      internalID: 2027937453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_42
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 461
+        width: 32
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 497d59f3a65a6364cb28a4edd8b3dc9b
+      internalID: -195470289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_43
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 456
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ed6edceb563e3240bc35f2de10885d6
+      internalID: -1429019352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_44
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 456
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6e5811c4ea4b034a9c7d77539343265
+      internalID: 564108004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_45
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 464
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 307913e896c6fed40bc07e6b4c9fc9e5
+      internalID: 1738321098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_46
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 464
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a188ef307ed23b4abfe219d2c36f775
+      internalID: -1023814792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_47
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 464
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc633b05ca6da4a409a32c051ac7a46c
+      internalID: -476904842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_48
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 455
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67d48661f6e4a5e47953788868e2f0e7
+      internalID: 1607742532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_49
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 455
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de55f9204e4e00e4ba3fedecbfda65ea
+      internalID: -1668801343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_50
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 455
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86f9f19224c604345bc8ed5159e8fd9f
+      internalID: 1800071902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_51
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 455
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98f2a6b1e064ed74899e895c99396081
+      internalID: -254593566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_52
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 455
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40e89caa27cc7ed4c81755342443c462
+      internalID: 2074523736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_53
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 455
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6670878246e3c274b8c1e442fd42136e
+      internalID: 1046833898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_54
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 429
+        width: 49
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 148193f2cf56e62498773f9476db60f2
+      internalID: 522859395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_55
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 392
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f230863d2a489a4cb13dd8fe3efcd76
+      internalID: -2085238162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_56
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 392
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb1ba832118b86948a37e19b3d9f10e1
+      internalID: 190159733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_57
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 408
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2630a7ce136c65f4b94fb9d0b910f1db
+      internalID: 1353937375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_58
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 408
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cfa16f0c1bd9e64193a93f8b2a9505c
+      internalID: 907191188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_59
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 408
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54d5a19d690cc66418f5da2f9d630e48
+      internalID: 581337723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_60
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 408
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7df6049f8cead374a8b4555f0ad0b0ac
+      internalID: 1888575945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_61
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 408
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dd72bc2e6ac31749a694136e790c8a2
+      internalID: -1689132035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_62
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 408
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ebf9349c5648cc428d07e1b4b2efb61
+      internalID: -1298298424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_63
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 408
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc13fe2023f5c8440952bc6822b05b21
+      internalID: -1033165929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_64
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 416
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15dce417ad8ff7348ae18f32b53680b4
+      internalID: -1657203508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_65
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 381
+        width: 49
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b8e22f4bacedd04e87d9defdc0abc56
+      internalID: 326896219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_66
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 344
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ac61fcffad947546a447ea0d3c34f04
+      internalID: 1430976758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_67
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 344
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d552aad3c07748544ad256811899d427
+      internalID: -940668528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_68
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 360
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 994110792c6843349bd29944c8144141
+      internalID: -1553147146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_69
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 360
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4283351b99dc19b459073f9392b1f633
+      internalID: 522496229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_70
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 360
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1015291b0209b9b41b4e76342d3e61ee
+      internalID: -1930719926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_71
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 368
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6456c05ac4e7cf8448c9fa202add8626
+      internalID: 518486372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_72
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 368
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b27565d10d99c0449964bcffcaea874
+      internalID: -426244041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_73
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 368
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d04e8d5fc4bbce043b27c1886f0f72a5
+      internalID: 1256880156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_74
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 368
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82acaa8a3c0d27c4aafb361bec11994b
+      internalID: 715168879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_75
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 368
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5d3f8c17f2c3b647a076e4f4ac094ad
+      internalID: 623386166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_76
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 368
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dbd1428569465c4b81082112bcc4441
+      internalID: -1026240443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_77
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 368
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73e7e14ea73ed344197db0f7a436de13
+      internalID: 2117584950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_78
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 333
+        width: 49
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eab9d738eb8aefe4a9e072123bbb51d4
+      internalID: -807592167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_79
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 292
+        width: 30
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3289a146e5a963f42a718e403a5cfe79
+      internalID: -2110563048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_80
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 321
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c62f7630c549109418e252553838baae
+      internalID: -1248887634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_81
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 324
+        width: 7
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cb27884fe596524393fc46c1a1030ee
+      internalID: -776249556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_82
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 321
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af767ad4b35a8594a8bf4e77ae7663d0
+      internalID: -1108159335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_83
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 312
+        width: 30
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7f2437f65477314885c545ce9f45123
+      internalID: -876497967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_84
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 313
+        width: 31
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0041cbdbbfa495249936ce6908a0ef45
+      internalID: -640666642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_85
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 312
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bbbbab1a13927a4fb163697f763e2de
+      internalID: 1684924252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_86
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 312
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee74fe5a4a1783748ae1d75b5f70fb88
+      internalID: 1613649359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_87
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 313
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebfb9c34874f2f94bbb0303d54340b04
+      internalID: 1669032220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_88
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 313
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c12cdca5b99527c40be9efd771db8a16
+      internalID: 225256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_89
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 312
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a4ecac180613d54d9115f9f77d3b34d
+      internalID: 1977911438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_90
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 284
+        width: 30
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4fe45530aa73b3498d121b184023f6d
+      internalID: 230231241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_91
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 280
+        width: 28
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87873f2352a1d5546ba1930226fcf7d9
+      internalID: -463537279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_92
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 269
+        width: 49
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 278ac519172eaa04fb09ce92425ed0a9
+      internalID: -716255388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_93
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 269
+        width: 49
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3a236e79eb68ef418bba878c5af131e
+      internalID: -30400725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_94
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 269
+        width: 49
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82456139333bfd84ab8544518d0d3091
+      internalID: 1355014489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_95
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 269
+        width: 49
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d4bb2a2249064849ba56dd104c1db50
+      internalID: -899073176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_96
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 250
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 334b5e8644b9f134a84ccc4b95075716
+      internalID: -322368832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_97
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 250
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4e38f3a42d3b6840a657b6cbd5cac82
+      internalID: 1396216772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_98
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 250
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3daf631ebe8638245bafc73c2c97bd42
+      internalID: 3501191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_99
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 256
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36ba812ff20e2da4b867841838f81d54
+      internalID: -353191644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_100
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 237
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f4ca7ee972d0eb4982c24cf63d51131
+      internalID: 2146262562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_101
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 235
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6ac3421b87fc1b45a42fa03532c0daf
+      internalID: 780864764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_102
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 237
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12f44befd7675b042977471911c11e71
+      internalID: -497089397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_103
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 237
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6500b7807eaff834f9acf96f9a2f2046
+      internalID: 1030467227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_104
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 237
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13ac103c83a7ce44d872df3f76088067
+      internalID: 1567912443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_105
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 200
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88fdb9c65982fd84c8abbbe49eda5cec
+      internalID: -980894152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_106
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 221
+        width: 48
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 674beb89144f18a41a8d934a6e05d890
+      internalID: -444202868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_107
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 221
+        width: 64
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5851b152996c58342971d7566f47b77c
+      internalID: 780938388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_108
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 152
+        width: 32
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e475d51333142540af1c5a55a534262
+      internalID: -367675974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_109
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 200
+        width: 80
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40c51669622cbf944872bc62c3ad76bc
+      internalID: -637829974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_110
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 190a0f359977240428ae2088beaaba76
+      internalID: -977622635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_111
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 197
+        width: 80
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fda3a93c4cd8227408a6665797982daa
+      internalID: -1282414378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_112
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 176
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3359f6853108f6e45bc3b831b4f743e4
+      internalID: 35857734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_113
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 190
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db7e47d3fd9c8004fb14452c75e07ea0
+      internalID: 1181092138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_114
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 190
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b467e7f1398364e40840a42282db9b1c
+      internalID: 1092238484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_115
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 190
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: accebdc64a8a628469ce68724835d61e
+      internalID: -267190180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_116
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 190
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b8d2954b49cd414db04d72a28a9941a
+      internalID: 1891511333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_117
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 190
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04e0489a74ef4464ca83bf2a49dde9a6
+      internalID: -1193063393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_118
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 190
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b738c2d6a3e284049abce52814a1d056
+      internalID: -1746149495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_119
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 190
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86589b0af0a94d54e9a27364447c6fe8
+      internalID: 1704152325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_120
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 190
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7496c6b43305d62419b5a95ec356c0f2
+      internalID: 1481074297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_121
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 190
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 224ec27cd188b754185d57d476f21f83
+      internalID: -1756051627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_122
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 190
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43ab2f0cc4d024c4ebf9f556e9cdbbb5
+      internalID: -340362400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_123
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 188
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be5474c7f91f3ae46a008549263f593a
+      internalID: -54707204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_124
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 173
+        width: 48
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f6261c1fa5ad924d90cfda9ccc622f0
+      internalID: 1743674719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_125
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 173
+        width: 80
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3b63d40f1c86394fab7df6a1a96ab4c
+      internalID: -139770653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_126
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 179
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b55e1e2c6efd5224e90456f86ad14e4a
+      internalID: -2098951847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_127
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 179
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc52e041577846449a0a697d96e940a5
+      internalID: -1373581438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_128
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 179
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65a78f8e5b7d2ba4683c621b4f4883b4
+      internalID: 1087547553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_129
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 179
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81909dad582bd814fa701aadaa28c4e9
+      internalID: 1617313428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_130
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 168
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 202591033d6dec645aa1055f51c6fc8f
+      internalID: 609286341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_131
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 168
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbafaa6ea0e6856478366eb9a04f9391
+      internalID: -459583937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_132
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 166
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de0c878f92c46cb489640ab41e921652
+      internalID: 226077625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_133
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 168
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07ae80852acf7554b8c91e415c61dee3
+      internalID: 690076328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_134
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 168
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b3c6bd742a385c43a08e0612292d11b
+      internalID: 785975681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_135
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 168
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e67f4ae1259e4e74aa14251e835095a4
+      internalID: 59664126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_136
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 168
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88e3b27f93501c140bc8c1d9bd16f0c8
+      internalID: 1781336210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_137
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 168
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c22ac8910649b5b40acf9b2d48230dd0
+      internalID: -764470248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_138
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 168
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ec1f0781e1a7004f9c16b235e07cfb9
+      internalID: -715399131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_139
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 168
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 432335f2ae6c1354ab3cadef410b84cb
+      internalID: 1631731912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_140
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 144
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db38ca81fb52d0140be1ec5f3cad1d28
+      internalID: -1182246267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_141
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 152
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d5b3fe6371957c4b9766de02421db2f
+      internalID: -1413696698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_142
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 152
+        width: 40
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f2b8c1143ade5c488a8f78fb3baa4da
+      internalID: 1270814903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_143
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 152
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fd6e2870e3f07d4dab7751ecbd2b568
+      internalID: 2122739213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_144
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 152
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29cc2a7435eee35459d60bc23bb3669a
+      internalID: -1945334141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_145
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 152
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81e081d3aa3df7a48b7fc1a45232e683
+      internalID: 802913679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_146
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 152
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a5c0d7d78e7fe348bcb365c2ab8c2ee
+      internalID: -984785083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_147
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 128
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04d18aacbafca894bac978076ac9c9c3
+      internalID: -1107083694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_148
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 136
+        width: 24
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33d2b4eff267fd441ad2353ad7f2728b
+      internalID: 1291331544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_149
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 136
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aca2a2e47a2adf4c9d0793f3833f308
+      internalID: -2066076013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_150
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 136
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64840fe3d515dcd4786298f6a69de604
+      internalID: 102334362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_151
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 136
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27d96c51261ce674d910174e0891b1c6
+      internalID: 978587665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_152
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 136
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31a86beb0a9aee942a51607cb79ac9f5
+      internalID: 895063246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_153
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 82
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bb4dab810ee26d43a42c5dd7658e92e
+      internalID: -12745719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_154
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 112
+        width: 128
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e50d35b4f6030f642907a5cf445bc1b2
+      internalID: -89785057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_155
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 82
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbe9b525a74d7ca4aa7a735679f89a54
+      internalID: 591395678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_156
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 117
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2a7dc45a7c6bc240a1a04cef286cb28
+      internalID: 1902595684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_157
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 117
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0811019ed24b24646a69ff03a1d2109d
+      internalID: -2089864519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_158
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 117
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6ff9fc7fd6a40342a9e62582196170f
+      internalID: -1616630396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_159
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 117
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3737a7810af73a743a3670df107d4409
+      internalID: -155689591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_160
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 117
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edf465de2e435d04786ea6645e46d133
+      internalID: 1242367698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_161
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 117
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d3ad3391a72db842988f48f4837e268
+      internalID: -1932058946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_162
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 117
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afb7824e559d9ca41a4570a12e7531f7
+      internalID: -1550476240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_163
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 117
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8ce5cca8e7b50940ae28556cce1c4aa
+      internalID: 1885340357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_164
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 117
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00e4f19e0e17331429ad449bde560d68
+      internalID: 1559140007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_165
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 115
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06858bfa18e81e84fbd4b508ce7b838e
+      internalID: -2120701626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_166
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 106
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdcc7c2325c2937468f1da4c9df6ef76
+      internalID: -739987882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_167
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 106
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a63e64306847d344ca393745ec495273
+      internalID: -824851178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_168
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 106
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10510d8efcd7ede4fa8b051c4395f004
+      internalID: 941072837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_169
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 106
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d2b7b46c490cdd43b89963a55e9f872
+      internalID: 234557612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_170
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 104
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fc179d38cfd5424bb23c3a1b3d6d839
+      internalID: -1957683331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_171
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 106
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b820e98524f28244c92c5fb22e00e198
+      internalID: -1516076397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_172
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 106
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8643afcbbcf36c449d76a565ac150d5
+      internalID: -1546190020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_173
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 106
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ab69cbe8c6beeb4cab0be24badae5f1
+      internalID: 2027965809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_174
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 106
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59d7fb2974c29dc42979ee3082bbc277
+      internalID: 649847156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_175
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 8
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d925931d58abfe44bb512ec6fe45fd0
+      internalID: 1659390836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_176
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 24
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3c1e89368e628f4fb3bf1f73267a318
+      internalID: -401577670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_177
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 56
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3007359e545021145929f8312705b953
+      internalID: 283375569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_178
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 56
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a55167b940125f04faf399d05dd7f423
+      internalID: 1985055784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_179
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 40
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 730e136fc7db37143897e10e3d5c0779
+      internalID: -1033703429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_180
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 56
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07839bcdccb07c6489eee7bdbbe0f029
+      internalID: 315133567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_181
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 27
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 181ef896cc6d2ae45987c478f150c0ac
+      internalID: 811505127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_182
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 27
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67850f928680c504699a745b60160fa6
+      internalID: -1722573202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_183
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 25
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: defebb2d5e290d94aafb56d9cca3ed6d
+      internalID: 2139240722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_184
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 27
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 457efe80a9b059e46998c8dd301a741c
+      internalID: -1769474925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_185
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 27
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9a3fc651b64dae4989d5959f91d1282
+      internalID: -793699278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_186
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 27
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7945f4083bffff64a923c5545f6e462f
+      internalID: 729595983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_187
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 27
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8375d6001cd59d479f480c3cad341d0
+      internalID: 1399378293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_188
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 27
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3626be824d3fdc74f80314d49cbc2f3a
+      internalID: -1125602031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_189
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 27
+        width: 8
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70878243ba39cbe47a207994b4646e24
+      internalID: 1689415136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_190
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 27
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf2052f90a4a9474fa79559091055ee9
+      internalID: -811432171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_191
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 27
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1288f47f230e9149b1ccb257922ffc7
+      internalID: -621466581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_192
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 27
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d6e18b23c0800a4f8b2827654f7480f
+      internalID: 1229526971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_193
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 27
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8160cbac243754845a17cd08c5a03f03
+      internalID: 921324663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_194
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 27
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5571285e0244fe54eb0acc726ac212c9
+      internalID: 1993319169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_195
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 25
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6df2ce6284ff7648bc4e995e27f9750
+      internalID: 1281992354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_196
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 27
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b3b9a1b7e03beb46a41262d70086e85
+      internalID: -479208732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_197
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 27
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3969ac2134f8ed4dbe503d8ea2c6a88
+      internalID: -1757782625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_198
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 25
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 912e607c2f7e8f4429cf95c7003a944c
+      internalID: 536924037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_199
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 27
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48f82027d68ddb646b0115e89e33f4b4
+      internalID: 2020986366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_200
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 27
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac06609c51d4dea4581840e393cb8023
+      internalID: -1128053329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_201
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 27
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab7e40ecf0ff3814aa4c7964b840c4d0
+      internalID: -802632740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_202
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 16
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a64461314f0c96e4bab2f3e43e5b02ab
+      internalID: -624782126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_203
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 16
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11ea52450b625644a824ad7e6da0ff16
+      internalID: -1223013007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_204
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 16
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33335b15bedcc2d4abd0472dfe5bb5fd
+      internalID: 1945352977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_205
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 16
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f3a809ab01c77244a2734766cf20a7f
+      internalID: 33630254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_206
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 16
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6872b0470fe0a6342addb6f5a49a78f8
+      internalID: -996316930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_207
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 16
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fded3030994ebf46acc81ea9d312e40
+      internalID: 177022144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_208
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 16
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a4b549a0c6f46b45971ae2645bf31c0
+      internalID: -96213581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_209
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 16
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17a958d0d4a4ffe468f9c0ccfe61735d
+      internalID: -2274223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_210
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 16
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1addebc4e642de140976261df32db830
+      internalID: -1927119820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_211
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 16
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4030e2164452ff348aeb10c22eba9b62
+      internalID: -1253408806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_212
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 16
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99e7eb628808e8c4cbac96f8fa32e546
+      internalID: -2054813058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_213
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 16
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaec5e6f8c33f924eb90930a1e5195b5
+      internalID: -1698491335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_214
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 15
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5451496d75c76e4e8a1eacbd91faa86
+      internalID: -1919225952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_215
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 16
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 045cbedbde4e9174690e5e36bfa457d2
+      internalID: 1130569512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_216
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 16
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62983e897f00b06488090ba2dbd63aae
+      internalID: 2057916884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_217
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 16
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f8844095139c334183b065ec3dc6446
+      internalID: 1876891565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_218
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 16
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fdb2476c5fb13341927aad7bc9a1a83
+      internalID: -2026198477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_219
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 16
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53401185dfae233409c47ba16fbafe10
+      internalID: -2077619286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_220
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 5
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 723bd3bea64afa3448b31bee408e1a76
+      internalID: 469483137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_221
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 3
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ab8c078ca14c0a4eb78f6285ebf80cf
+      internalID: 2053003845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_222
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 3
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f63b8cdbe877dae4989e792e42f37e81
+      internalID: 1522078180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_223
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 5
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c19aa00d0ad10e94eaa52d21a680689f
+      internalID: 1558139424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_224
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 5
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71086f9410795454fa4699a918efd66e
+      internalID: 1982982568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_225
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 3
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45c6c6de69bddf344a73177ffd1a41e4
+      internalID: -1987488919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_226
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 5
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b88692ea6d53c2d488d434693b6b78be
+      internalID: -2040303334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_227
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 5
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e48e11b1f126624a8da2aa237b7f0ae
+      internalID: 1956297819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_228
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 5
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 192996020f51fc3479a0fb78ddf41f75
+      internalID: 2004792347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_229
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 5
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2802cc9de48357e43bc6b5304876befe
+      internalID: 1533561359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_230
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 5
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca7a1d72471320b479b6ad0adac7c3bc
+      internalID: -1018046050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_231
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 5
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb96dd28833b3984bbfa2443eb29b664
+      internalID: 222301594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_232
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 5
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 169f5db3d268e554388e3a419125f6a7
+      internalID: 2048614526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_233
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 5
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fd4dcfb318aea0408eb73232affecb3
+      internalID: 557794298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_234
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 5
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed7f34c44f60b0e4eacceb3a942dfa4a
+      internalID: -1558679267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SNES - Super Mario World - Static Objects_235
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 5
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 463e91c351e82104b8356b72d0e64179
+      internalID: 1209790787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      SNES - Super Mario World - Static Objects_65: 326896219
+      SNES - Super Mario World - Static Objects_95: -899073176
+      SNES - Super Mario World - Static Objects_162: -1550476240
+      SNES - Super Mario World - Static Objects_81: -776249556
+      SNES - Super Mario World - Static Objects_132: 226077625
+      SNES - Super Mario World - Static Objects_57: 1353937375
+      SNES - Super Mario World - Static Objects_140: -1182246267
+      SNES - Super Mario World - Static Objects_221: 2053003845
+      SNES - Super Mario World - Static Objects_5: -1773487567
+      SNES - Super Mario World - Static Objects_94: 1355014489
+      SNES - Super Mario World - Static Objects_14: 996207652
+      SNES - Super Mario World - Static Objects_204: 1945352977
+      SNES - Super Mario World - Static Objects_89: 1977911438
+      SNES - Super Mario World - Static Objects_108: -367675974
+      SNES - Super Mario World - Static Objects_119: 1704152325
+      SNES - Super Mario World - Static Objects_120: 1481074297
+      SNES - Super Mario World - Static Objects_67: -940668528
+      SNES - Super Mario World - Static Objects_192: 1229526971
+      SNES - Super Mario World - Static Objects_153: -12745719
+      SNES - Super Mario World - Static Objects_170: -1957683331
+      SNES - Super Mario World - Static Objects_218: -2026198477
+      SNES - Super Mario World - Static Objects_179: -1033703429
+      SNES - Super Mario World - Static Objects_8: -907315976
+      SNES - Super Mario World - Static Objects_168: 941072837
+      SNES - Super Mario World - Static Objects_177: 283375569
+      SNES - Super Mario World - Static Objects_181: 811505127
+      SNES - Super Mario World - Static Objects_16: -577251158
+      SNES - Super Mario World - Static Objects_101: 780864764
+      SNES - Super Mario World - Static Objects_169: 234557612
+      SNES - Super Mario World - Static Objects_127: -1373581438
+      SNES - Super Mario World - Static Objects_229: 1533561359
+      SNES - Super Mario World - Static Objects_97: 1396216772
+      SNES - Super Mario World - Static Objects_176: -401577670
+      SNES - Super Mario World - Static Objects_72: -426244041
+      SNES - Super Mario World - Static Objects_199: 2020986366
+      SNES - Super Mario World - Static Objects_29: -1660408742
+      SNES - Super Mario World - Static Objects_174: 649847156
+      SNES - Super Mario World - Static Objects_182: -1722573202
+      SNES - Super Mario World - Static Objects_96: -322368832
+      SNES - Super Mario World - Static Objects_23: -515072379
+      SNES - Super Mario World - Static Objects_130: 609286341
+      SNES - Super Mario World - Static Objects_234: -1558679267
+      SNES - Super Mario World - Static Objects_196: -479208732
+      SNES - Super Mario World - Static Objects_198: 536924037
+      SNES - Super Mario World - Static Objects_59: 581337723
+      SNES - Super Mario World - Static Objects_231: 222301594
+      SNES - Super Mario World - Static Objects_165: -2120701626
+      SNES - Super Mario World - Static Objects_227: 1956297819
+      SNES - Super Mario World - Static Objects_15: 940433517
+      SNES - Super Mario World - Static Objects_232: 2048614526
+      SNES - Super Mario World - Static Objects_18: -239168369
+      SNES - Super Mario World - Static Objects_49: -1668801343
+      SNES - Super Mario World - Static Objects_160: 1242367698
+      SNES - Super Mario World - Static Objects_79: -2110563048
+      SNES - Super Mario World - Static Objects_187: 1399378293
+      SNES - Super Mario World - Static Objects_93: -30400725
+      SNES - Super Mario World - Static Objects_115: -267190180
+      SNES - Super Mario World - Static Objects_77: 2117584950
+      SNES - Super Mario World - Static Objects_91: -463537279
+      SNES - Super Mario World - Static Objects_233: 557794298
+      SNES - Super Mario World - Static Objects_71: 518486372
+      SNES - Super Mario World - Static Objects_110: -977622635
+      SNES - Super Mario World - Static Objects_200: -1128053329
+      SNES - Super Mario World - Static Objects_210: -1927119820
+      SNES - Super Mario World - Static Objects_51: -254593566
+      SNES - Super Mario World - Static Objects_205: 33630254
+      SNES - Super Mario World - Static Objects_230: -1018046050
+      SNES - Super Mario World - Static Objects_88: 225256
+      SNES - Super Mario World - Static Objects_195: 1281992354
+      SNES - Super Mario World - Static Objects_123: -54707204
+      SNES - Super Mario World - Static Objects_220: 469483137
+      SNES - Super Mario World - Static Objects_131: -459583937
+      SNES - Super Mario World - Static Objects_125: -139770653
+      SNES - Super Mario World - Static Objects_80: -1248887634
+      SNES - Super Mario World - Static Objects_20: -355317598
+      SNES - Super Mario World - Static Objects_212: -2054813058
+      SNES - Super Mario World - Static Objects_53: 1046833898
+      SNES - Super Mario World - Static Objects_167: -824851178
+      SNES - Super Mario World - Static Objects_156: 1902595684
+      SNES - Super Mario World - Static Objects_222: 1522078180
+      SNES - Super Mario World - Static Objects_188: -1125602031
+      SNES - Super Mario World - Static Objects_13: 1554064857
+      SNES - Super Mario World - Static Objects_9: -722961098
+      SNES - Super Mario World - Static Objects_157: -2089864519
+      SNES - Super Mario World - Static Objects_178: 1985055784
+      SNES - Super Mario World - Static Objects_175: 1659390836
+      SNES - Super Mario World - Static Objects_143: 2122739213
+      SNES - Super Mario World - Static Objects_144: -1945334141
+      SNES - Super Mario World - Static Objects_206: -996316930
+      SNES - Super Mario World - Static Objects_107: 780938388
+      SNES - Super Mario World - Static Objects_208: -96213581
+      SNES - Super Mario World - Static Objects_121: -1756051627
+      SNES - Super Mario World - Static Objects_219: -2077619286
+      SNES - Super Mario World - Static Objects_19: 958423089
+      SNES - Super Mario World - Static Objects_226: -2040303334
+      SNES - Super Mario World - Static Objects_44: 564108004
+      SNES - Super Mario World - Static Objects_66: 1430976758
+      SNES - Super Mario World - Static Objects_76: -1026240443
+      SNES - Super Mario World - Static Objects_21: 601992261
+      SNES - Super Mario World - Static Objects_78: -807592167
+      SNES - Super Mario World - Static Objects_40: -2108088305
+      SNES - Super Mario World - Static Objects_32: 559578951
+      SNES - Super Mario World - Static Objects_145: 802913679
+      SNES - Super Mario World - Static Objects_148: 1291331544
+      SNES - Super Mario World - Static Objects_87: 1669032220
+      SNES - Super Mario World - Static Objects_161: -1932058946
+      SNES - Super Mario World - Static Objects_216: 2057916884
+      SNES - Super Mario World - Static Objects_224: 1982982568
+      SNES - Super Mario World - Static Objects_124: 1743674719
+      SNES - Super Mario World - Static Objects_193: 921324663
+      SNES - Super Mario World - Static Objects_146: -984785083
+      SNES - Super Mario World - Static Objects_171: -1516076397
+      SNES - Super Mario World - Static Objects_185: -793699278
+      SNES - Super Mario World - Static Objects_92: -716255388
+      SNES - Super Mario World - Static Objects_61: -1689132035
+      SNES - Super Mario World - Static Objects_197: -1757782625
+      SNES - Super Mario World - Static Objects_103: 1030467227
+      SNES - Super Mario World - Static Objects_33: -1864334989
+      SNES - Super Mario World - Static Objects_2: -312263459
+      SNES - Super Mario World - Static Objects_41: 2027937453
+      SNES - Super Mario World - Static Objects_214: -1919225952
+      SNES - Super Mario World - Static Objects_60: 1888575945
+      SNES - Super Mario World - Static Objects_126: -2098951847
+      SNES - Super Mario World - Static Objects_135: 59664126
+      SNES - Super Mario World - Static Objects_39: -725626337
+      SNES - Super Mario World - Static Objects_113: 1181092138
+      SNES - Super Mario World - Static Objects_3: -740957728
+      SNES - Super Mario World - Static Objects_56: 190159733
+      SNES - Super Mario World - Static Objects_75: 623386166
+      SNES - Super Mario World - Static Objects_50: 1800071902
+      SNES - Super Mario World - Static Objects_38: -149263344
+      SNES - Super Mario World - Static Objects_70: -1930719926
+      SNES - Super Mario World - Static Objects_46: -1023814792
+      SNES - Super Mario World - Static Objects_166: -739987882
+      SNES - Super Mario World - Static Objects_184: -1769474925
+      SNES - Super Mario World - Static Objects_183: 2139240722
+      SNES - Super Mario World - Static Objects_180: 315133567
+      SNES - Super Mario World - Static Objects_34: -1697973105
+      SNES - Super Mario World - Static Objects_217: 1876891565
+      SNES - Super Mario World - Static Objects_152: 895063246
+      SNES - Super Mario World - Static Objects_173: 2027965809
+      SNES - Super Mario World - Static Objects_111: -1282414378
+      SNES - Super Mario World - Static Objects_139: 1631731912
+      SNES - Super Mario World - Static Objects_11: -2029199257
+      SNES - Super Mario World - Static Objects_52: 2074523736
+      SNES - Super Mario World - Static Objects_58: 907191188
+      SNES - Super Mario World - Static Objects_223: 1558139424
+      SNES - Super Mario World - Static Objects_186: 729595983
+      SNES - Super Mario World - Static Objects_26: -180880818
+      SNES - Super Mario World - Static Objects_202: -624782126
+      SNES - Super Mario World - Static Objects_190: -811432171
+      SNES - Super Mario World - Static Objects_10: -2028896850
+      SNES - Super Mario World - Static Objects_73: 1256880156
+      SNES - Super Mario World - Static Objects_154: -89785057
+      SNES - Super Mario World - Static Objects_37: -1225823838
+      SNES - Super Mario World - Static Objects_7: 436567252
+      SNES - Super Mario World - Static Objects_203: -1223013007
+      SNES - Super Mario World - Static Objects_74: 715168879
+      SNES - Super Mario World - Static Objects_215: 1130569512
+      SNES - Super Mario World - Static Objects_117: -1193063393
+      SNES - Super Mario World - Static Objects_104: 1567912443
+      SNES - Super Mario World - Static Objects_158: -1616630396
+      SNES - Super Mario World - Static Objects_45: 1738321098
+      SNES - Super Mario World - Static Objects_163: 1885340357
+      SNES - Super Mario World - Static Objects_84: -640666642
+      SNES - Super Mario World - Static Objects_142: 1270814903
+      SNES - Super Mario World - Static Objects_164: 1559140007
+      SNES - Super Mario World - Static Objects_4: 1882046479
+      SNES - Super Mario World - Static Objects_85: 1684924252
+      SNES - Super Mario World - Static Objects_17: 2006876756
+      SNES - Super Mario World - Static Objects_30: 2127199021
+      SNES - Super Mario World - Static Objects_209: -2274223
+      SNES - Super Mario World - Static Objects_149: -2066076013
+      SNES - Super Mario World - Static Objects_68: -1553147146
+      SNES - Super Mario World - Static Objects_35: -1511656646
+      SNES - Super Mario World - Static Objects_28: 1752634288
+      SNES - Super Mario World - Static Objects_100: 2146262562
+      SNES - Super Mario World - Static Objects_129: 1617313428
+      SNES - Super Mario World - Static Objects_194: 1993319169
+      SNES - Super Mario World - Static Objects_207: 177022144
+      SNES - Super Mario World - Static Objects_141: -1413696698
+      SNES - Super Mario World - Static Objects_42: -195470289
+      SNES - Super Mario World - Static Objects_189: 1689415136
+      SNES - Super Mario World - Static Objects_62: -1298298424
+      SNES - Super Mario World - Static Objects_159: -155689591
+      SNES - Super Mario World - Static Objects_83: -876497967
+      SNES - Super Mario World - Static Objects_54: 522859395
+      SNES - Super Mario World - Static Objects_118: -1746149495
+      SNES - Super Mario World - Static Objects_172: -1546190020
+      SNES - Super Mario World - Static Objects_213: -1698491335
+      SNES - Super Mario World - Static Objects_43: -1429019352
+      SNES - Super Mario World - Static Objects_133: 690076328
+      SNES - Super Mario World - Static Objects_0: -2106120167
+      SNES - Super Mario World - Static Objects_1: -252697722
+      SNES - Super Mario World - Static Objects_27: -490056799
+      SNES - Super Mario World - Static Objects_47: -476904842
+      SNES - Super Mario World - Static Objects_102: -497089397
+      SNES - Super Mario World - Static Objects_191: -621466581
+      SNES - Super Mario World - Static Objects_55: -2085238162
+      SNES - Super Mario World - Static Objects_137: -764470248
+      SNES - Super Mario World - Static Objects_31: -1956007286
+      SNES - Super Mario World - Static Objects_122: -340362400
+      SNES - Super Mario World - Static Objects_112: 35857734
+      SNES - Super Mario World - Static Objects_138: -715399131
+      SNES - Super Mario World - Static Objects_69: 522496229
+      SNES - Super Mario World - Static Objects_114: 1092238484
+      SNES - Super Mario World - Static Objects_90: 230231241
+      SNES - Super Mario World - Static Objects_211: -1253408806
+      SNES - Super Mario World - Static Objects_6: 1881713776
+      SNES - Super Mario World - Static Objects_48: 1607742532
+      SNES - Super Mario World - Static Objects_155: 591395678
+      SNES - Super Mario World - Static Objects_201: -802632740
+      SNES - Super Mario World - Static Objects_105: -980894152
+      SNES - Super Mario World - Static Objects_134: 785975681
+      SNES - Super Mario World - Static Objects_12: 1481621045
+      SNES - Super Mario World - Static Objects_116: 1891511333
+      SNES - Super Mario World - Static Objects_82: -1108159335
+      SNES - Super Mario World - Static Objects_25: 550970253
+      SNES - Super Mario World - Static Objects_86: 1613649359
+      SNES - Super Mario World - Static Objects_109: -637829974
+      SNES - Super Mario World - Static Objects_106: -444202868
+      SNES - Super Mario World - Static Objects_150: 102334362
+      SNES - Super Mario World - Static Objects_151: 978587665
+      SNES - Super Mario World - Static Objects_235: 1209790787
+      SNES - Super Mario World - Static Objects_147: -1107083694
+      SNES - Super Mario World - Static Objects_228: 2004792347
+      SNES - Super Mario World - Static Objects_22: 2016068928
+      SNES - Super Mario World - Static Objects_225: -1987488919
+      SNES - Super Mario World - Static Objects_24: -178461166
+      SNES - Super Mario World - Static Objects_36: 224587253
+      SNES - Super Mario World - Static Objects_136: 1781336210
+      SNES - Super Mario World - Static Objects_64: -1657203508
+      SNES - Super Mario World - Static Objects_128: 1087547553
+      SNES - Super Mario World - Static Objects_99: -353191644
+      SNES - Super Mario World - Static Objects_98: 3501191
+      SNES - Super Mario World - Static Objects_63: -1033165929
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
