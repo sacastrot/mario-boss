@@ -9,47 +9,50 @@ public class PlayerController : MonoBehaviour {
 	// Movement
 	[Header("Player Walk")] [SerializeField]
 	private float moveSpeedWalk = 1f;
-
-	private float _walkAcceleration = 1f;
-	private float _releaseDecelerationX = 0.3f;
-	private float _skidTurnAroundSpeedX = 3f;
-	private float _skidDecelerationX = 0.5f;
-	private float _airAccelerationX = 0.2f;
-	private float _airDecelerationX = 0.15f;
-	private float _jumpUpGravity = 0.8f;
-	private float _jumpDownGravity = 1.3f;
-
 	[Header("Max Speed Walk")] [SerializeField]
-	private float maxSpeedWalk = 2f;
-
+	private float maxSpeedWalk = 5f;
 	[Header("Player Run")] [SerializeField]
-	private float moveSpeedRun = 1f;
-
+	private float moveSpeedRun = 7f;
 	[Header("Max Speed Run")] [SerializeField]
-	private float maxSpeedRun = 4f;
+	private float maxSpeedRun = 10f;
 
+	private const float WalkAcceleration = 0.2f;
+	private const float SpeedAcceleration = 0.04f;
+	private const float ReleaseDecelerationX = 0.3f;
+	private const float SkidTurnAroundSpeedX = 3f;
+	private const float SkidDecelerationX = 0.5f;
+	private const float AirAccelerationX = 0.2f;
+	private const float AirDecelerationX = 0.15f;
+	private const float JumpUpGravity = 2.7888f;
+	private const float JumpDownGravity = 5f;
+	
 	public float currentSpeedX;
 	private float _moveDirection;
 	private bool _isChangingDirection;
 
 	// Physics
-	private float _normalGravity;
+	private const float NormalGravity = 1;
 
 	// Flags
-	public bool Running => Mathf.Abs(velocity.x) > maxSpeedWalk || Mathf.Abs(input.Move.x) > maxSpeedWalk;
+	// public bool Running => Mathf.Abs(velocity.x) > maxSpeedWalk || Mathf.Abs(input.Move.x) > maxSpeedWalk;
+	[FormerlySerializedAs("runnig")] public bool running;
+	public bool runningNormalSpeed;
 	public bool turn;
 	private bool IsGrounded { get; set; }
 	public bool jumping;
+	public bool falling;
 	private bool _hasRb;
 	public bool isHeadUp;
 	public bool isDuck;
 
 
-	private float _jumpVelocity = 6f;
-
+	private const float JumpVelocity = 15f;
+	
 	private float _turnTimer;
 	public float directionX;
 	public float directionHead;
+	public bool jumpDown;
+	
 
 	public PlayerInput input;
 	public Vector2 velocity;
@@ -64,16 +67,21 @@ public class PlayerController : MonoBehaviour {
 	void Start() {
 		input = GetComponent<PlayerInput>();
 		_hasRb = player.TryGetComponent(out rb);
-		_normalGravity = rb.gravityScale;
-
+		rb.gravityScale = NormalGravity;
 	}
 
 	// Update is called once per frame
 	void Update() {
 		directionX = input.Move.x;
 		directionHead = input.Move.y;
+		jumpDown = input.JumpDown;
+		running = input.RunOn && directionX != 0;
 		_isChangingDirection = currentSpeedX > 0 && _moveDirection * directionX < 0;
 		IsGrounded = Physics2D.Raycast(transform.position, Vector2.down, 1f);
+		// Debug.Log(turn);
+		Debug.Log("IsGrounded " + IsGrounded);
+		//This lines was in FixedUpdate
+		VerticalMovement();
 	}
 
 
@@ -82,114 +90,137 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void FixedUpdate() {
-		GroundedMovement();
-		AirMovement();
-		VerticalMovement();
+		if(IsGrounded) GroundedMovement();
+		if(!IsGrounded) AirMovement();
+		setDirection(); //New Function 
 		rb.velocity = new Vector2(_moveDirection * currentSpeedX, rb.velocity.y);
-
 	}
 
 	private void VerticalMovement() {
 		if (IsGrounded) {
 			jumping = false;
-			rb.gravityScale = _normalGravity;
+			falling = false;
 		}
-
-		if (!jumping) {
-			if (IsGrounded && input.JumpHold) {
-				rb.velocity = new Vector2(rb.velocity.x, _jumpVelocity);
-				jumping = true;
-			}
+		else if (rb.velocity.y < 0) {
+			falling = true;
+			// jumping = false;
+		}
+		
+		if (IsGrounded && jumpDown) {
+			//New lines
+			// runningNormalSpeed = false;
+			// runningMaxSpeed = false;
+			//---
+			jumping = true;
+			rb.velocity = new Vector2(rb.velocity.x, JumpVelocity);
 		}
 
 		if (rb.velocity.y > 0 && input.JumpHold) {
-			rb.gravityScale = _normalGravity * _jumpUpGravity;
+			jumping = true;
+			rb.gravityScale = NormalGravity * JumpUpGravity;
 		}
-		else {
-			rb.gravityScale = _normalGravity * _jumpDownGravity;
+		else if(!IsGrounded) {
+			rb.gravityScale = NormalGravity * JumpDownGravity;
 		}
-			//Debug.Log("Jump Hold " + input.JumpHold);
-		//Debug.Log("Jump Release" + input.JumpRelease);
-		
 	}
 
 	private void AirMovement() {
-		if (!IsGrounded) {
-			//TODO: Set parameters air movement
-			if (directionX != 0) {
-				if (currentSpeedX == 0) {
-					currentSpeedX = moveSpeedWalk;
-				}
-				else if (currentSpeedX < maxSpeedWalk) {
-					currentSpeedX = IncreaseWithinBound(currentSpeedX, _airAccelerationX, maxSpeedWalk);
-				}
-				//TODO: Implement speed x if player is running
+	//TODO: Set parameters air movement
+		if (directionX != 0) {
+			if (currentSpeedX == 0) {
+				currentSpeedX = moveSpeedWalk;
 			}
-			else if (currentSpeedX > 0) {
-				currentSpeedX = DecreaseWithinBound(currentSpeedX, _releaseDecelerationX, 0);
+			else if (currentSpeedX < maxSpeedWalk) {
+				currentSpeedX = IncreaseWithinBound(currentSpeedX, AirAccelerationX, maxSpeedWalk);
 			}
-
-			if (_isChangingDirection) {
-				directionX = _moveDirection;
-				turn = false;
-				currentSpeedX = DecreaseWithinBound(currentSpeedX, _airDecelerationX, 0);
-			}
-			
+			//TODO: Implement speed x if player is running
 		}
-		
+		else if (currentSpeedX > 0) {
+			currentSpeedX = DecreaseWithinBound(currentSpeedX, ReleaseDecelerationX, 0);
+		}
+		turn = false;
+		if (_isChangingDirection) {
+			directionX = _moveDirection;
+			currentSpeedX = DecreaseWithinBound(currentSpeedX, currentSpeedX, 0);
+		}
 	}
 
 	private void GroundedMovement() {
-		if (IsGrounded) {
-			if (directionX != 0) {
+		rb.gravityScale = NormalGravity;
+		if (directionX != 0) {
+			//TODO: Dashing key (run)
+			if (running)
+			{
+				if (currentSpeedX < moveSpeedRun)
+				{
+					currentSpeedX = IncreaseWithinBound(currentSpeedX, 0.2f, moveSpeedRun);
+				}
+				else if (running && currentSpeedX == moveSpeedRun)
+				{
+					runningNormalSpeed = !jumping;
+				}
+			}
+			else
+			{
 				if (currentSpeedX == 0) {
 					currentSpeedX = moveSpeedWalk;
 				}
-				else if (currentSpeedX < maxSpeedWalk) {
-					currentSpeedX = IncreaseWithinBound(currentSpeedX, _walkAcceleration, maxSpeedWalk);
+				else if (currentSpeedX <= maxSpeedWalk) {
+					currentSpeedX = IncreaseWithinBound(currentSpeedX, WalkAcceleration, maxSpeedWalk);
 				}
-				//TODO: Dashing key (run)
-				
+				else if (currentSpeedX > maxSpeedWalk)
+				{
+					currentSpeedX = DecreaseWithinBound(currentSpeedX, ReleaseDecelerationX, 0);
+				}
 			}
-			else if (currentSpeedX > 0) {
-				currentSpeedX = DecreaseWithinBound(currentSpeedX, _releaseDecelerationX, 0);
-			}
+			
+		}
+		else if (currentSpeedX > 0) {
+			currentSpeedX = DecreaseWithinBound(currentSpeedX, ReleaseDecelerationX, 0);
+		}
 
-			if (_isChangingDirection) {
-				if (currentSpeedX > _skidTurnAroundSpeedX) {
-					_moveDirection = directionX;
-					turn = true;
-					currentSpeedX = DecreaseWithinBound(currentSpeedX, _skidDecelerationX, 0);
-				}
-				else {
-					_moveDirection = directionX;
-					turn = false;
-				}
+		if (!running)
+		{
+			// runningMaxSpeed = false;
+			runningNormalSpeed = false;
+		}
+		
+		if (_isChangingDirection) {
+			if (currentSpeedX > SkidTurnAroundSpeedX) {
+				_moveDirection = directionX;
+				turn = true;
+				currentSpeedX = DecreaseWithinBound(currentSpeedX, SkidDecelerationX, 0);
 			}
 			else {
+				_moveDirection = directionX;
 				turn = false;
 			}
+		}
+		else {
+			turn = false;
+		}
 
-			if (directionHead != 0) {
-				isHeadUp = directionHead > 0 && currentSpeedX == 0;
-				if (directionHead < 0) {
-					currentSpeedX = 0;
-					isDuck = true;
-				}
-				else {
-					isDuck = false;
-				}
+		if (directionHead != 0) {
+			isHeadUp = directionHead > 0 && currentSpeedX == 0;
+			if (directionHead < 0) {
+				currentSpeedX = 0;
+				isDuck = true;
 			}
 			else {
 				isDuck = false;
-				isHeadUp = false;
 			}
 		}
+		else {
+			isDuck = false;
+			isHeadUp = false;
+		}
+	}
 
+	private void setDirection()
+	{
 		if (directionX != 0 && !_isChangingDirection) {
 			_moveDirection = directionX;
 		}
-
 
 		if (directionX > 0) {
 			transform.localScale = new Vector2(1, 1);
@@ -198,6 +229,7 @@ public class PlayerController : MonoBehaviour {
 			transform.localScale = new Vector2(-1, 1);
 		}
 	}
+
 	private float DecreaseWithinBound(float actual, float delta, int target) {
 		actual -= delta;
 		if (actual < target) {

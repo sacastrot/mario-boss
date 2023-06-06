@@ -33,21 +33,27 @@ public class CameraFollow : MonoBehaviour
     private void FixedUpdate()
     {
         Vector2 follow = Player.transform.position;
-        float xDifference = Vector2.Distance(Vector2.right * transform.position.x, Vector2.right * follow.x);
-        float yDifference = Vector2.Distance(Vector2.up * transform.position.y, Vector2.up * follow.y);
+        Vector2 positon = transform.position;
+        Vector2 xDifferenceVector = Vector2.right * follow.x - Vector2.right * positon.x;
+        float xDifference = xDifferenceVector.x;
+        Vector2 yDifferenceVector = Vector2.up * follow.y - Vector2.up * positon.y;
+        float yDifference = yDifferenceVector.y;
 
-        Vector3 newPosition = transform.position;
-        if (Mathf.Abs(xDifference) >= _threshold.x)
+        Vector3 newPosition = positon;
+
+        if (xDifference >= _threshold.x)
         {
             newPosition.x = follow.x;
         }
         
-        if (Mathf.Abs(yDifference) >= _threshold.y)
+        if (Math.Abs(yDifference) >= _threshold.y)
         {
             newPosition.y = follow.y;
         }
 
-        float moveSpeed = Mathf.Abs(_rb.velocity.x) > _speed ? Mathf.Abs(_rb.velocity.x) : _speed;
+        newPosition.z = -10;
+
+        float moveSpeed = _rb.velocity.magnitude > _speed ? _rb.velocity.magnitude : _speed;
         transform.position = Vector3.MoveTowards(transform.position, newPosition, moveSpeed * Time.deltaTime);
         
     }
