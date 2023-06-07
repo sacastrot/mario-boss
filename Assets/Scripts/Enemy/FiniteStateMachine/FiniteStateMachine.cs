@@ -8,17 +8,20 @@ public class FiniteStateMachine : MonoBehaviour
     
     [Space(10)]
     [SerializeField] private Transform _target;
+
+    private int _layerCollision;
+    public int _currentLayerCollision;
     
     [Space(10)]
     [SerializeField] public Rigidbody2D rb;
-
+    
     [Space(10)]
     [SerializeField] public Transform enemy;
-    
 
     public Transform Target => _target;
     public EnemyConfig Config => _config;
-
+    public int LayerCollision => _layerCollision;
+    public int CurrentLayerCollision => _currentLayerCollision;
     private bool _hasRb;
 
     
@@ -50,6 +53,16 @@ public class FiniteStateMachine : MonoBehaviour
         if (_anim)
         {
             //TODO manage animator 
+        }
+
+        if (_currentLayerCollision != _layerCollision)
+        {
+            _currentLayerCollision = _layerCollision;
+        }
+        else
+        {
+            _currentLayerCollision = 0;
+            _layerCollision = 0;
         }
     }
 
@@ -100,9 +113,10 @@ public class FiniteStateMachine : MonoBehaviour
     
     private void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.collider.gameObject.layer == 8) // 8 is the layer of pipes
-        {
-            moveDirection *= -1;
-        }
+        _layerCollision = col.collider.gameObject.layer;
+    }
+    
+    private void OnCollisionExit2D(Collision2D col)
+    {
     }
 }
