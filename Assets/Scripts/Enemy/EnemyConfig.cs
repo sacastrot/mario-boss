@@ -5,7 +5,7 @@ public class EnemyConfig: MonoBehaviour
     public int Health = 2;
     
     [Header("Movement")] 
-    public float Speed = 1.0f;
+    public float Speed = 5.0f;
     public float ChaseSpeed = 2.7f;
 
     [Header("Detection Range")]

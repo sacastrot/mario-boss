@@ -5,15 +5,13 @@ public class PatrolState : State
 {
     public override StateType Type { get; }
     public float currentSpeed;
-    public float moveDirection = 1;
+    public int moveDirection = 1;
 
 
     public PatrolState() : base("Patrol")
     {
     }
-
-    private float _moveDirection;
-
+    
     protected override void OnEnterState(FiniteStateMachine fsm)
     {
         SetMovementSpeed(fsm.Config.Speed);
@@ -26,7 +24,7 @@ public class PatrolState : State
 
     protected override void OnUpdateState(FiniteStateMachine fsm, float deltaTime)
     {
-        if (fsm.CurrentLayerCollision == 10) // 8 is the pipes layer
+        if (fsm.CurrentLayerCollision == 10) 
         {
             moveDirection *= -1;
         }

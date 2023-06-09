@@ -10,7 +10,7 @@ public class FiniteStateMachine : MonoBehaviour
     [SerializeField] private Transform _target;
 
     private int _layerCollision;
-    public int _currentLayerCollision;
+    private int _currentLayerCollision;
     
     [Space(10)]
     [SerializeField] public Rigidbody2D rb;
@@ -20,17 +20,13 @@ public class FiniteStateMachine : MonoBehaviour
 
     public Transform Target => _target;
     public EnemyConfig Config => _config;
-    public int LayerCollision => _layerCollision;
     public int CurrentLayerCollision => _currentLayerCollision;
-    private bool _hasRb;
-
     
+    private bool _hasRb;
     private EnemyConfig _config;
     private Dictionary<StateType, State> _statesDic = new();
     private StateType _currentState;
-    public float currentSpeed = 1;
-    public float moveDirection = 1;
-
+    
     void Start()
     {
         _config = GetComponent<EnemyConfig>();
@@ -52,9 +48,9 @@ public class FiniteStateMachine : MonoBehaviour
         
         if (_anim)
         {
-            //TODO manage animator 
+            _anim.SetFloat("IsWalking", rb.velocity.x);
         }
-
+        
         if (_currentLayerCollision != _layerCollision)
         {
             _currentLayerCollision = _layerCollision;
@@ -64,16 +60,12 @@ public class FiniteStateMachine : MonoBehaviour
             _currentLayerCollision = 0;
             _layerCollision = 0;
         }
+
     }
 
     public void TriggerAnimation(string animation)
     {
         _anim.SetTrigger(animation);
-    }
-
-    public void SetMovementSpeed(float speed)
-    {
-        currentSpeed = speed;
     }
     
     public void ToState(StateType newState)
@@ -116,7 +108,6 @@ public class FiniteStateMachine : MonoBehaviour
         _layerCollision = col.collider.gameObject.layer;
     }
     
-    private void OnCollisionExit2D(Collision2D col)
-    {
-    }
+    
+    
 }
