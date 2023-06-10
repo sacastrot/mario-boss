@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class FiniteStateMachine : MonoBehaviour
@@ -46,9 +47,21 @@ public class FiniteStateMachine : MonoBehaviour
             _statesDic[_currentState].CheckTransition(this, Time.deltaTime);
         }
         
+        Debug.Log("x velocity"+Mathf.Abs(rb.velocity.x));
+        Debug.Log("y velocity"+Mathf.Abs(rb.velocity.y));
+        Debug.Log(_currentLayerCollision);
+        
         if (_anim)
         {
-            _anim.SetFloat("IsWalking", rb.velocity.x);
+            if (rb.velocity.y != 0)
+            {
+                _anim.SetFloat("isFalling", rb.velocity.y);
+            }
+            else
+            {
+                _anim.SetFloat("isWalking", rb.velocity.x);
+            }
+            
         }
         
         if (_currentLayerCollision != _layerCollision)

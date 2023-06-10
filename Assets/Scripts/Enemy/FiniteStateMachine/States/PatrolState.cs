@@ -1,4 +1,5 @@
-﻿using Unity.VisualScripting.FullSerializer;
+﻿using System;
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 
 public class PatrolState : State
