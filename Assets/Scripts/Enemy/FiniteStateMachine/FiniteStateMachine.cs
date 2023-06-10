@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class FiniteStateMachine : MonoBehaviour
@@ -12,6 +13,8 @@ public class FiniteStateMachine : MonoBehaviour
 
     private int _layerCollision;
     private int _currentLayerCollision;
+
+    
     
     [Space(10)]
     [SerializeField] public Rigidbody2D rb;
@@ -47,22 +50,12 @@ public class FiniteStateMachine : MonoBehaviour
             _statesDic[_currentState].CheckTransition(this, Time.deltaTime);
         }
         
-        Debug.Log("x velocity"+Mathf.Abs(rb.velocity.x));
-        Debug.Log("y velocity"+Mathf.Abs(rb.velocity.y));
-        Debug.Log(_currentLayerCollision);
-        
-        if (_anim)
-        {
-            if (rb.velocity.y != 0)
-            {
-                _anim.SetFloat("isFalling", rb.velocity.y);
-            }
-            else
-            {
-                _anim.SetFloat("isWalking", rb.velocity.x);
-            }
-            
-        }
+        Debug.Log("isGrounded" + IsGrounded());
+
+        // if (_anim)
+        // {
+        //     _anim.SetFloat("isWalking", rb.velocity.x);
+        // }
         
         if (_currentLayerCollision != _layerCollision)
         {
@@ -121,6 +114,18 @@ public class FiniteStateMachine : MonoBehaviour
         _layerCollision = col.collider.gameObject.layer;
     }
     
+    public bool IsGrounded()
+    {
+        RaycastHit2D hit;
+        float raycastDistance = 1.5f; // Adjust this distance based on your player's size
+        hit = Physics2D.Raycast(enemy.position, Vector2.down, raycastDistance);
+        if (hit.collider != null && hit.collider.gameObject.CompareTag("Ground"))
+        {
+            // Player is touching the ground
+            return true;
+        }
+        return false;
+    }
     
     
 }

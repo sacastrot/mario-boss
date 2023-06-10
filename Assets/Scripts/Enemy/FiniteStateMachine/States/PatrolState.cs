@@ -38,6 +38,16 @@ public class PatrolState : State
             fsm.enemy.localScale = new Vector2(1, 1);
         }
         fsm.rb.velocity = new Vector2(currentSpeed * moveDirection, fsm.rb.velocity.y);
+
+        if (!fsm.IsGrounded())
+        {
+            fsm.TriggerAnimation("isFalling");
+        }
+        else
+        {
+            fsm.TriggerAnimation("isWalking");
+
+        }
     }
 
     

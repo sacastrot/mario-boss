@@ -79,7 +79,7 @@ public class PlayerController : MonoBehaviour {
 		_isChangingDirection = currentSpeedX > 0 && _moveDirection * directionX < 0;
 		IsGrounded = Physics2D.Raycast(transform.position, Vector2.down, 1f);
 		// Debug.Log(turn);
-		Debug.Log("IsGrounded " + IsGrounded);
+		// Debug.Log("IsGrounded " + IsGrounded);
 		//This lines was in FixedUpdate
 		VerticalMovement();
 	}
