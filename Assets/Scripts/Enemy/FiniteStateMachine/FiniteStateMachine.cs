@@ -57,6 +57,7 @@ public class FiniteStateMachine : MonoBehaviour
         //     _anim.SetFloat("isWalking", rb.velocity.x);
         // }
         
+        
         if (_currentLayerCollision != _layerCollision)
         {
             _currentLayerCollision = _layerCollision;
