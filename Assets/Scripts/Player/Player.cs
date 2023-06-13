@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class Player : LivingEntity
 {
-   
-    // Start is called before the first frame update
     void Start()
     {
-        
+        InitHealth();
     }
 
-    // Update is called once per frame
-    void Update()
+    protected override void OnDeath()
     {
-        
+        base.OnDeath();
+        //TODO: Trigger Death animation
+        gameObject.SetActive(false);
     }
 }

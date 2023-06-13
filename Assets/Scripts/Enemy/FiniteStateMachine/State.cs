@@ -83,8 +83,8 @@ public abstract class State
             //     return new IdleState();
             // case StateType.Chase:
             //     return new ChaseState();
-            // case StateType.Attack:
-            //     return new AttackState();
+            case StateType.Attack:
+                return new AttackState();
             // case StateType.Taunt:
             //     return new TauntState();
             // case StateType.Dead:

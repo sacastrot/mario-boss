@@ -14,6 +14,8 @@ public class EnemyConfig: MonoBehaviour
     
     [Header("Attack")]
     public int AttackDamage = 1;
+    public float AttackRange = 2.2f;
+    public float AttackDuration = 0;
 
     [Header("Finite-State Machine")]
     public StateType InitialState;
