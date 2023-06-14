@@ -132,7 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 10172167}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -250,7 +250,7 @@ GameObject:
   - component: {fileID: 165222755}
   - component: {fileID: 165222756}
   - component: {fileID: 165222757}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Character Animation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -353,7 +353,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 191581465}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -391,7 +391,7 @@ GameObject:
   - component: {fileID: 193066523}
   - component: {fileID: 193066522}
   - component: {fileID: 193066525}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -814,10 +814,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1335390622}
   - component: {fileID: 1335390625}
+  - component: {fileID: 1335390626}
   - component: {fileID: 1335390624}
   - component: {fileID: 1335390623}
-  - component: {fileID: 1335390626}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Monty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -853,13 +853,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 2
-  Speed: 5
-  ChaseSpeed: 2.7
-  DetectionRange: 5
-  TauntDuration: 2
-  AttackDamage: 1
-  InitialState: 6
-  FSMData:
+  speed: 5
+  maximumChaseSpeed: 6
+  chaseAcceleration: 2
+  jumpVelocity: 15
+  detectionRange: 5
+  tauntDuration: 2
+  attackDamage: 1
+  attackDuration: 2
+  initialState: 6
+  fsmData:
     States:
     - StateType: 6
       Transition:
@@ -874,7 +877,13 @@ MonoBehaviour:
       - TargetState: 2
         Decision: {fileID: 11400000, guid: 6c60dccd4cee99241b119dcac73b2291, type: 2}
     - StateType: 2
-      Transition: []
+      Transition:
+      - TargetState: 3
+        Decision: {fileID: 11400000, guid: a247feba571cf714cbfcdf18ebdde8eb, type: 2}
+    - StateType: 3
+      Transition:
+      - TargetState: 0
+        Decision: {fileID: 0}
 --- !u!114 &1335390624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -926,7 +935,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0065159798, y: 0.000000029802322}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -937,7 +946,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.9152899, y: 0.8631614}
   m_EdgeRadius: 0
 --- !u!1 &1372366795
 GameObject:
@@ -988,12 +997,12 @@ Camera:
     x: 0
     y: 0
     width: 1
-    height: 1.9
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1037,7 +1046,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 193066516}
-  _offset: {x: 10, y: 1.92}
+  _offset: {x: 11, y: 0.68}
 --- !u!1 &1382950600
 GameObject:
   m_ObjectHideFlags: 0
@@ -1049,7 +1058,7 @@ GameObject:
   - component: {fileID: 1382950601}
   - component: {fileID: 1382950603}
   - component: {fileID: 1382950602}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Character Animation
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -6,7 +6,7 @@ public class LivingEntity : MonoBehaviour, IDamageable
     [field: SerializeField] public int TotalHealthPoints { get; protected set; } = 1;
     public int HealthPoints { get; private set; }
     
-    public void TakeHit(int damage = 1)
+    public void TakeHit(int damage)
     {
         if(HealthPoints <= 0)
             return;

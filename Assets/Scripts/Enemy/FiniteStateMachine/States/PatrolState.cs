@@ -15,7 +15,7 @@ public class PatrolState : State
     
     protected override void OnEnterState(FiniteStateMachine fsm)
     {
-        SetMovementSpeed(fsm.Config.Speed);
+        SetMovementSpeed(fsm.Config.speed);
     }
 
     private void SetMovementSpeed(float configSpeed)

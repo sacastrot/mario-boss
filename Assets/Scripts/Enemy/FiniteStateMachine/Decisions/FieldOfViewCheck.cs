@@ -7,7 +7,7 @@ public class FieldOfViewCheck: StateDecision
     {
         Vector3 direction = (fms.Target.position - fms.transform.position);
         float distance = direction.magnitude;
-        if (distance <= fms.Config.DetectionRange)
+        if (distance <= fms.Config.detectionRange)
         {
             return true;
         }

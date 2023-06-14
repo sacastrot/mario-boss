@@ -1,28 +1,22 @@
-﻿
-using System.Numerics;
-using UnityEngine;
-using Vector2 = UnityEngine.Vector2;
+﻿using UnityEngine;
 
-public class TauntExitState: State
-{
+public class TauntExitState : State {
     public TauntExitState() : base("TauntExit") { }
     public override StateType Type { get; }
-    private Rigidbody2D _rb;
-    protected override void OnEnterState(FiniteStateMachine fsm)
-    {
+
+    protected override void OnEnterState(FiniteStateMachine fsm) {
+        // Trigger animation of jump, with this animation exit of taunt state
         fsm.TriggerAnimation("isJump");
-        _rb = fsm.transform.GetComponent<Rigidbody2D>();
-        
-        _rb.bodyType = RigidbodyType2D.Dynamic;
-        _rb.AddForce(Vector2.up * 15f, ForceMode2D.Impulse);
-        _rb.gravityScale = 1.5f;
+
+        if (fsm.hasRb) {
+            fsm.rb.bodyType = RigidbodyType2D.Dynamic;
+            fsm.rb.AddForce(Vector2.up * fsm.Config.jumpVelocity, ForceMode2D.Impulse);
+            fsm.rb.gravityScale = 3f;
+            fsm.rb.freezeRotation = true;
+        }
     }
 
-    protected override void OnUpdateState(FiniteStateMachine fsm, float deltaTime)
-    {
-    }
+    protected override void OnUpdateState(FiniteStateMachine fsm, float deltaTime) { }
 
-    protected override void OnExitState(FiniteStateMachine fms)
-    {
-    }
+    protected override void OnExitState(FiniteStateMachine fms) { }
 }
