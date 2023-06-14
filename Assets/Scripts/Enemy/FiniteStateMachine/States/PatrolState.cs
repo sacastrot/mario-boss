@@ -6,7 +6,7 @@ public class PatrolState : State
 {
     public override StateType Type { get; }
     public float currentSpeed;
-    public int moveDirection = 1;
+    public int moveDirection = -1;
 
 
     public PatrolState() : base("Patrol")
