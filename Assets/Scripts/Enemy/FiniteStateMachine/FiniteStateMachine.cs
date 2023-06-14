@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class FiniteStateMachine : MonoBehaviour
 {
@@ -26,7 +27,7 @@ public class FiniteStateMachine : MonoBehaviour
     public EnemyConfig Config => _config;
     public int CurrentLayerCollision => _currentLayerCollision;
     
-    private bool _hasRb;
+    public bool hasRb;
     private EnemyConfig _config;
     private Dictionary<StateType, State> _statesDic = new();
     private StateType _currentState;
@@ -35,7 +36,7 @@ public class FiniteStateMachine : MonoBehaviour
     {
         _config = GetComponent<EnemyConfig>();
 
-        _hasRb = TryGetComponent<Rigidbody2D>(out rb);
+        hasRb = TryGetComponent<Rigidbody2D>(out rb);
         
         Bind(_config.FSMData);
 
@@ -44,6 +45,7 @@ public class FiniteStateMachine : MonoBehaviour
     
     void Update()
     {
+        Debug.Log("FSM");
         if (_statesDic.ContainsKey(_currentState))
         {
             _statesDic[_currentState].OnUpdate(this, Time.deltaTime);
@@ -117,7 +119,7 @@ public class FiniteStateMachine : MonoBehaviour
     public bool IsGrounded()
     {
         RaycastHit2D hit;
-        float raycastDistance = 1.5f; // Adjust this distance based on your player's size
+        float raycastDistance = 1f; // Adjust this distance based on your player's size
         hit = Physics2D.Raycast(enemy.position, Vector2.down, raycastDistance);
         if (hit.collider != null && hit.collider.gameObject.CompareTag("Ground"))
         {

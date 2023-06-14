@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum StateType {None, Patrol, Chase, Attack, Taunt, Idle, Dead, Wound}
+public enum StateType {None, Patrol, Chase, Attack, Taunt, TauntExit, Idle, Dead, Wound}
 
 public abstract class State
 {
@@ -79,14 +79,16 @@ public abstract class State
         {
             case StateType.Patrol:
                 return new PatrolState();
-            // case StateType.Idle:
-            //     return new IdleState();
-            // case StateType.Chase:
-            //     return new ChaseState();
+            case StateType.Idle:
+                return new IdleState();
+            case StateType.Chase:
+                return new ChaseState();
             // case StateType.Attack:
             //     return new AttackState();
-            // case StateType.Taunt:
-            //     return new TauntState();
+            case StateType.Taunt:
+                return new TauntState();
+            case StateType.TauntExit:
+                return new TauntExitState();
             // case StateType.Dead:
             //     return new DeadState();
             // case StateType.Wound:
