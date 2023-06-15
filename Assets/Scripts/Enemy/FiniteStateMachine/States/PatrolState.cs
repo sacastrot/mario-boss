@@ -15,8 +15,7 @@ public class PatrolState : State
     
     protected override void OnEnterState(FiniteStateMachine fsm)
     {
-        SetMovementSpeed(fsm.Config.Speed);
-        Debug.Log("In Patrol");
+        SetMovementSpeed(fsm.Config.speed);
     }
 
     private void SetMovementSpeed(float configSpeed)
@@ -32,14 +31,6 @@ public class PatrolState : State
             fsm.TriggerAnimation("isTurning");
             fsm.enemy.localScale = new Vector2(moveDirection, 1);
         }
-        // if (moveDirection < 0)
-        // {
-        //     fsm.enemy.localScale = new Vector2(-1, 1);
-        // }
-        // else if (moveDirection > 0)
-        // {
-        //     fsm.enemy.localScale = new Vector2(1, 1);
-        // }
         fsm.rb.velocity = new Vector2(currentSpeed * moveDirection, fsm.rb.velocity.y);
 
         if (!fsm.IsGrounded())
@@ -52,6 +43,8 @@ public class PatrolState : State
 
         }
     }
+
+    
     
     protected override void OnExitState(FiniteStateMachine fms)
     {

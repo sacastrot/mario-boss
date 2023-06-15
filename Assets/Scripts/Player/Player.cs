@@ -8,11 +8,12 @@ public class Player : LivingEntity
     {
         InitHealth();
     }
-
-    protected override void OnDeath()
+    void Update()
     {
+        
+    }
+    protected override void OnDeath() {
         base.OnDeath();
-        //TODO: Trigger Death animation
         gameObject.SetActive(false);
     }
 }

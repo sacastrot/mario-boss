@@ -5,19 +5,21 @@ public class EnemyConfig: MonoBehaviour
     public int Health = 2;
     
     [Header("Movement")] 
-    public float Speed = 5.0f;
-    public float ChaseSpeed = 2.7f;
+    public float speed = 5.0f;
+    public float maximumChaseSpeed = 6f;
+    public float chaseAcceleration = 2f;
+    public float jumpVelocity = 15f;
 
     [Header("Detection Range")]
-    public float DetectionRange = 5.0f;
-    public float TauntDuration = 2.0f;
+    public float detectionRange = 5.0f;
+    public float tauntDuration = 2.0f;
     
     [Header("Attack")]
-    public int AttackDamage = 1;
-    public float AttackRange = 2.2f;
-    public float AttackDuration = 0;
+    public int attackDamage = 1;
+    // Temp
+    public float attackDuration = 2f;
 
     [Header("Finite-State Machine")]
-    public StateType InitialState;
-    public FSMData FSMData;
+    public StateType initialState;
+    public FSMData fsmData;
 }
