@@ -5,7 +5,7 @@ public class PatrolPingPongState: State
 {
     public override StateType Type { get; }
     public float currentSpeed;
-    public int moveDirection = 1;
+    public int moveDirection;
     private Vector3 _initPos;
     private Vector3 _endPos;
     private bool _turn;
@@ -14,10 +14,11 @@ public class PatrolPingPongState: State
 
     protected override void OnEnterState(FiniteStateMachine fsm)
     {
-        SetMovementSpeed(fsm.Config.Speed);
+        SetMovementSpeed(fsm.Config.speed);
         _initPos = fsm.enemy.position;
-        _endPos = _initPos + new Vector3(fsm.Config.PingPongDistance, 0, 0);
-        _turnTimer = fsm.Config.PingPongTime;  
+        _endPos = _initPos + new Vector3(fsm.Config.pingPongDistance, 0, 0);
+        _turnTimer = fsm.Config.pingPongTime;
+        moveDirection = fsm.Config.moveDirection;
     }
 
     protected override void OnUpdateState(FiniteStateMachine fsm, float deltaTime)
@@ -27,7 +28,7 @@ public class PatrolPingPongState: State
             moveDirection *= -1;
             fsm.rb.velocity = new Vector2(0, fsm.rb.velocity.y);
             _initPos = fsm.enemy.position;
-            _endPos = _initPos + new Vector3(fsm.Config.PingPongDistance*moveDirection, 0, 0);
+            _endPos = _initPos + new Vector3(fsm.Config.pingPongDistance*moveDirection, 0, 0);
             _turn = true;
             fsm.TriggerAnimation("isTurningPP");
         }
@@ -43,7 +44,7 @@ public class PatrolPingPongState: State
             if (_turnTimer <= 0)
             {
                 _turn = false;
-                _turnTimer = fsm.Config.PingPongTime;
+                _turnTimer = fsm.Config.pingPongTime;
             }
         }
     }
@@ -61,7 +62,7 @@ public class PatrolPingPongState: State
     // private void Move(Transform rb)
     // {
     //     float d = (_initPos - _endPos).magnitude;
-    //     float delta = Mathf.PingPong(Time.time * currentSpeed, d*1.3f);
+    //     float delta = Mathf.pingPong(Time.time * currentSpeed, d*1.3f);
     //     enemy.position = Vector3.Lerp(_initPos, _endPos, (delta / d));
     // }
 

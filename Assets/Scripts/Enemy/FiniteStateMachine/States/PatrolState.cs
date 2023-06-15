@@ -6,7 +6,7 @@ public class PatrolState : State
 {
     public override StateType Type { get; }
     public float currentSpeed;
-    public int moveDirection = 1;
+    public int moveDirection;
 
 
     public PatrolState() : base("Patrol")
@@ -16,6 +16,7 @@ public class PatrolState : State
     protected override void OnEnterState(FiniteStateMachine fsm)
     {
         SetMovementSpeed(fsm.Config.speed);
+        moveDirection = fsm.Config.moveDirection;
     }
 
     private void SetMovementSpeed(float configSpeed)

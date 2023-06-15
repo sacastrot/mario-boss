@@ -9,8 +9,9 @@ public class EnemyConfig: MonoBehaviour
     public float maximumChaseSpeed = 6f;
     public float chaseAcceleration = 2f;
     public float jumpVelocity = 15f;
-    public float PingPongDistance = 5.0f;
-    public float PingPongTime = 4.5f;
+    public float pingPongDistance = 5.0f;
+    public float pingPongTime = 2.45f;
+    public int moveDirection = 1;
 
     [Header("Detection Range")]
     public float detectionRange = 5.0f;
