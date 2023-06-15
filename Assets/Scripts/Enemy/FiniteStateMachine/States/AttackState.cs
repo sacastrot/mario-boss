@@ -8,7 +8,6 @@ public class AttackState: State
 
     protected override void OnEnterState(FiniteStateMachine fsm)
     {
-        Debug.Log("Im here");
     }
 
     protected override void OnUpdateState(FiniteStateMachine fsm, float deltaTime)
@@ -17,7 +16,6 @@ public class AttackState: State
         if (fsm.Target.TryGetComponent(out IDamageable target))
         {
             target.TakeHit(fsm.Config.AttackDamage);
-            Debug.Log("Damage");
         }
         //These lines must be deleted
         fsm.TriggerAnimation("isFalling"); 

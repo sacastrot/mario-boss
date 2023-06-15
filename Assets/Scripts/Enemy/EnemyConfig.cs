@@ -7,6 +7,8 @@ public class EnemyConfig: MonoBehaviour
     [Header("Movement")] 
     public float Speed = 5.0f;
     public float ChaseSpeed = 2.7f;
+    public float PingPongDistance = 5.0f;
+    public float PingPongTime = 4.5f;
 
     [Header("Detection Range")]
     public float DetectionRange = 5.0f;
@@ -20,4 +22,5 @@ public class EnemyConfig: MonoBehaviour
     [Header("Finite-State Machine")]
     public StateType InitialState;
     public FSMData FSMData;
+
 }

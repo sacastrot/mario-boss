@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -24,6 +25,8 @@ public class FiniteStateMachine : MonoBehaviour
 
     public Transform Target => _target;
     public EnemyConfig Config => _config;
+    public Animator Anim => _anim;
+    
     public int CurrentLayerCollision => _currentLayerCollision;
     
     private bool _hasRb;
@@ -44,18 +47,12 @@ public class FiniteStateMachine : MonoBehaviour
     
     void Update()
     {
+
         if (_statesDic.ContainsKey(_currentState))
         {
             _statesDic[_currentState].OnUpdate(this, Time.deltaTime);
             _statesDic[_currentState].CheckTransition(this, Time.deltaTime);
         }
-        
-        Debug.Log("isGrounded" + IsGrounded());
-
-        // if (_anim)
-        // {
-        //     _anim.SetFloat("isWalking", rb.velocity.x);
-        // }
         
         if (_currentLayerCollision != _layerCollision)
         {
@@ -126,6 +123,25 @@ public class FiniteStateMachine : MonoBehaviour
         }
         return false;
     }
+
+    public void StartTimer(Animator anim)
+    {
+        StartCoroutine(Timer(anim));
+    }
     
+    private IEnumerator Timer(Animator anim)
+    {
+        // while (anim.GetCurrentAnimatorStateInfo(0).IsTag("turn_pp") && anim.GetCurrentAnimatorStateInfo(0).normalizedTime <= 3.0f)
+        // {
+        //     yield return null;
+        // }
+        // Debug.Log("Hereeee");
+        //
+        while (true)
+        {
+            Debug.Log("WaitAndPrint " + Time.time);
+            yield return new WaitForSeconds(3.0f);
+        }
+    } 
     
 }
