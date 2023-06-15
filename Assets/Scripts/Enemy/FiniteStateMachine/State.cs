@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum StateType {None, Patrol, Chase, Attack, Taunt, Idle, Dead, Wound, PatrolPingPong}
+public enum StateType {None, Patrol, Chase, Attack, Taunt, TauntExit, Idle, Dead, Wound, PatrolPingPong}
 
 public abstract class State
 {
@@ -13,34 +13,29 @@ public abstract class State
     private float _stateTimer;
 
     public State(string name) => this.name = name;
-
-    protected State()
-    {
-        throw new System.NotImplementedException();
-    }
-
+    
     public abstract StateType Type { get; }
     protected abstract void OnEnterState(FiniteStateMachine fsm);
-    protected abstract void OnUpdateState(FiniteStateMachine fms, float deltaTime);
-    protected abstract void OnExitState(FiniteStateMachine fms);
+    protected abstract void OnUpdateState(FiniteStateMachine fsm, float deltaTime);
+    protected abstract void OnExitState(FiniteStateMachine fsm);
     
-    public void OnEnter(FiniteStateMachine fms)
+    public void OnEnter(FiniteStateMachine fsm)
     {
-        OnEnterState(fms);
+        OnEnterState(fsm);
         _stateTimer = _stateDuration;
     }
     
-    public void OnUpdate(FiniteStateMachine fms, float deltaTime)
+    public void OnUpdate(FiniteStateMachine fsm, float deltaTime)
     {
-        OnUpdateState(fms, deltaTime);
+        OnUpdateState(fsm, deltaTime);
     }
     
-    public void OnExit(FiniteStateMachine fms)
+    public void OnExit(FiniteStateMachine fsm)
     {
-        OnExitState(fms);
+        OnExitState(fsm);
     }
 
-    public void CheckTransition(FiniteStateMachine fms, float deltaTime)
+    public void CheckTransition(FiniteStateMachine fsm, float deltaTime)
     {
         _stateTimer -= deltaTime;
         
@@ -51,9 +46,9 @@ public abstract class State
         
         for (int i = 0; i < _transitions.Count; i++)
         {
-            if (_transitions[i].Check(fms))
+            if (_transitions[i].Check(fsm))
             {
-                fms.ToState(_transitions[i].TargetState);
+                fsm.ToState(_transitions[i].TargetState);
                 break;
             }
         }
@@ -79,14 +74,16 @@ public abstract class State
         {
             case StateType.Patrol:
                 return new PatrolState();
-            // case StateType.Idle:
-            //     return new IdleState();
-            // case StateType.Chase:
-            //     return new ChaseState();
+            case StateType.Idle:
+                return new IdleState();
+            case StateType.Chase:
+                return new ChaseState();
             case StateType.Attack:
                 return new AttackState();
-            // case StateType.Taunt:
-            //     return new TauntState();
+            case StateType.Taunt:
+                return new TauntState();
+            case StateType.TauntExit:
+                return new TauntExitState();
             // case StateType.Dead:
             //     return new DeadState();
             // case StateType.Wound:

@@ -15,4 +15,6 @@
     {
         throw new System.NotImplementedException();
     }
+
+    public DeadState(string name) : base("Dead") { }
 }

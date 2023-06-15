@@ -1,28 +1,20 @@
 ﻿using UnityEngine;
 
-public class AttackState: State
-{
+public class AttackState : State {
     public override StateType Type { get; }
-    
     public AttackState() : base("Attack") { }
 
-    protected override void OnEnterState(FiniteStateMachine fsm)
-    {
+    protected override void OnEnterState(FiniteStateMachine fsm) {
+        
+        Debug.Log("Enter attack state");
+        SetStateDuration(fsm.Config.attackDuration);
     }
 
-    protected override void OnUpdateState(FiniteStateMachine fsm, float deltaTime)
-    {
-        //Apply Damage
-        if (fsm.Target.TryGetComponent(out IDamageable target))
-        {
-            target.TakeHit(fsm.Config.AttackDamage);
+    protected override void OnUpdateState(FiniteStateMachine fms, float deltaTime) {
+        if (fms.Target.TryGetComponent(out IDamageable target)) {
+            target.TakeHit(fms.Config.attackDamage);
         }
-        //These lines must be deleted
-        fsm.TriggerAnimation("isFalling"); 
-        fsm.rb.velocity = new Vector2(0, fsm.rb.velocity.y);
     }
 
-    protected override void OnExitState(FiniteStateMachine fsm)
-    {
-    }
+    protected override void OnExitState(FiniteStateMachine fms) { }
 }
