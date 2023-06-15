@@ -324,8 +324,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
-    type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -349,7 +348,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &141672795
 GameObject:
@@ -436,8 +435,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
-    type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -912,17 +910,9 @@ MonoBehaviour:
   tauntDuration: 2
   attackDamage: 1
   attackDuration: 2
-  initialState: 1
+  initialState: 0
   fsmData:
-    States:
-    - StateType: 1
-      Transition:
-      - TargetState: 3
-        Decision: {fileID: 11400000, guid: a247feba571cf714cbfcdf18ebdde8eb, type: 2}
-    - StateType: 3
-      Transition:
-      - TargetState: 0
-        Decision: {fileID: 0}
+    States: []
 --- !u!68 &325343465
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -990,7 +980,7 @@ Transform:
   m_Children:
   - {fileID: 1454151779}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &497616833
 GameObject:
@@ -1109,8 +1099,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
-    type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1475,7 +1464,7 @@ Transform:
   m_Children:
   - {fileID: 191581465}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1335390623
 MonoBehaviour:
@@ -1498,29 +1487,9 @@ MonoBehaviour:
   tauntDuration: 2
   attackDamage: 1
   attackDuration: 2
-  initialState: 6
+  initialState: 0
   fsmData:
-    States:
-    - StateType: 6
-      Transition:
-      - TargetState: 4
-        Decision: {fileID: 11400000, guid: e1e79d8f0c5cf31439a5921b0b65c542, type: 2}
-    - StateType: 4
-      Transition:
-      - TargetState: 5
-        Decision: {fileID: 0}
-    - StateType: 5
-      Transition:
-      - TargetState: 2
-        Decision: {fileID: 11400000, guid: 6c60dccd4cee99241b119dcac73b2291, type: 2}
-    - StateType: 2
-      Transition:
-      - TargetState: 3
-        Decision: {fileID: 11400000, guid: a247feba571cf714cbfcdf18ebdde8eb, type: 2}
-    - StateType: 3
-      Transition:
-      - TargetState: 0
-        Decision: {fileID: 0}
+    States: []
 --- !u!114 &1335390624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1874,8 +1843,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
-    type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1899,7 +1867,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1454151778
 GameObject:
@@ -4365,7 +4333,7 @@ Transform:
   m_Children:
   - {fileID: 497616834}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1739763693
 GameObject:
@@ -5370,7 +5338,7 @@ Transform:
   m_Children:
   - {fileID: 1016084181}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!68 &1900257683
 EdgeCollider2D:
@@ -5442,17 +5410,9 @@ MonoBehaviour:
   tauntDuration: 2
   attackDamage: 1
   attackDuration: 2
-  initialState: 1
+  initialState: 0
   fsmData:
-    States:
-    - StateType: 1
-      Transition:
-      - TargetState: 3
-        Decision: {fileID: 11400000, guid: a247feba571cf714cbfcdf18ebdde8eb, type: 2}
-    - StateType: 3
-      Transition:
-      - TargetState: 0
-        Decision: {fileID: 0}
+    States: []
 --- !u!1 &1939567306
 GameObject:
   m_ObjectHideFlags: 0
@@ -5534,8 +5494,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
-    type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.0754717, g: 0.0754717, b: 0.0754717, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5939,7 +5898,7 @@ Transform:
   m_Children:
   - {fileID: 1795515156}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2073108375
 GameObject:
