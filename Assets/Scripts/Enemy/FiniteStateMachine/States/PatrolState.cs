@@ -6,7 +6,7 @@ public class PatrolState : State
 {
     public override StateType Type { get; }
     public float currentSpeed;
-    public int moveDirection = 1;
+    public int moveDirection;
 
 
     public PatrolState() : base("Patrol")
@@ -15,7 +15,8 @@ public class PatrolState : State
     
     protected override void OnEnterState(FiniteStateMachine fsm)
     {
-        SetMovementSpeed(fsm.Config.Speed);
+        SetMovementSpeed(fsm.Config.speed);
+        moveDirection = fsm.Config.moveDirection;
     }
 
     private void SetMovementSpeed(float configSpeed)
@@ -28,14 +29,8 @@ public class PatrolState : State
         if (fsm.CurrentLayerCollision == 10) 
         {
             moveDirection *= -1;
-        }
-        if (moveDirection < 0)
-        {
-            fsm.enemy.localScale = new Vector2(-1, 1);
-        }
-        else if (moveDirection > 0)
-        {
-            fsm.enemy.localScale = new Vector2(1, 1);
+            fsm.TriggerAnimation("isTurning");
+            fsm.enemy.localScale = new Vector2(moveDirection, 1);
         }
         fsm.rb.velocity = new Vector2(currentSpeed * moveDirection, fsm.rb.velocity.y);
 
