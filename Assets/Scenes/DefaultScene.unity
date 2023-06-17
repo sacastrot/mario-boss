@@ -250,7 +250,7 @@ GameObject:
   - component: {fileID: 49381547}
   - component: {fileID: 49381549}
   - component: {fileID: 49381548}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CharacterAnimation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -733,7 +733,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 193066516}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.4, y: 9.5, z: 0}
+  m_LocalPosition: {x: -0.01, y: 0.63, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1335,7 +1335,7 @@ GameObject:
   - component: {fileID: 418418292}
   - component: {fileID: 418418291}
   - component: {fileID: 418418290}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CharginChuck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1448,7 +1448,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 418418289}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.83, y: 9.4, z: 0.12998201}
+  m_LocalPosition: {x: 18.24, y: -1.07, z: 0.12998201}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1640,7 +1640,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 633283152}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2285,7 +2285,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1372366795}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7, y: 9.2, z: -10}
+  m_LocalPosition: {x: -3.79, y: -0.26, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2304,7 +2304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54efb79436b4bc398950732f805cc192, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 418418289}
+  Player: {fileID: 193066516}
   _offset: {x: 11, y: 0.68}
 --- !u!1 &1382950600
 GameObject:
