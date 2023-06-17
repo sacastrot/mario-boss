@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class FiniteStateMachine : MonoBehaviour {
@@ -9,11 +10,12 @@ public class FiniteStateMachine : MonoBehaviour {
     [Space(10)] [SerializeField] public Rigidbody2D rb;
 
     [Space(10)] [SerializeField] public Transform enemy;
-
+    
     private int _layerCollision;
     private int _currentLayerCollision;
     public Transform Target => _target;
     public EnemyConfig Config => _config;
+    public Animator Anim => _anim;
     public int CurrentLayerCollision => _currentLayerCollision;
 
     public bool hasRb;
@@ -48,6 +50,10 @@ public class FiniteStateMachine : MonoBehaviour {
     public void TriggerAnimation(string animation) {
         _anim.SetTrigger(animation);
     }
+    
+    public void BoolAnimation(string animation, bool state) {
+        _anim.SetBool(animation, state);
+    }
 
     public void ToState(StateType newState) {
         if (newState == _currentState)
@@ -81,7 +87,7 @@ public class FiniteStateMachine : MonoBehaviour {
     private void OnCollisionEnter2D(Collision2D col) {
         _layerCollision = col.collider.gameObject.layer;
     }
-
+    
     public bool IsGrounded() {
         float raycastDistance = 1f;
         RaycastHit2D hit = Physics2D.Raycast(enemy.position, Vector2.down, raycastDistance);

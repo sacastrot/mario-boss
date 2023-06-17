@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum StateType {None, Patrol, Chase, Attack, Taunt, TauntExit, Idle, Dead, Wound}
+public enum StateType {None, Patrol, Chase, Attack, Taunt, TauntExit, Idle, Dead, Wound, PatrolPingPong}
 
 public abstract class State
 {
@@ -14,7 +14,6 @@ public abstract class State
 
     public State(string name) => this.name = name;
     
-
     public abstract StateType Type { get; }
     protected abstract void OnEnterState(FiniteStateMachine fsm);
     protected abstract void OnUpdateState(FiniteStateMachine fsm, float deltaTime);
@@ -89,6 +88,8 @@ public abstract class State
             //     return new DeadState();
             // case StateType.Wound:
             //     return new WoundState();
+            case StateType.PatrolPingPong:
+                return new PatrolPingPongState();
         }
 
         return null;

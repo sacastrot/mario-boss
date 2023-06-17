@@ -5,8 +5,6 @@ public class AttackState : State {
     public AttackState() : base("Attack") { }
 
     protected override void OnEnterState(FiniteStateMachine fsm) {
-        
-        Debug.Log("Enter attack state");
         SetStateDuration(fsm.Config.attackDuration);
     }
 

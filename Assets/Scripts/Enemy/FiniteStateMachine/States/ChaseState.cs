@@ -5,27 +5,46 @@ public class ChaseState : State {
     public override StateType Type { get; }
     public ChaseState() : base("Chase") { }
     private float _chaseSpeed;
-    protected override void OnEnterState(FiniteStateMachine fsm) { }
+    private float _moveDirection;
+    private bool _turn;
+    private float _turnTimer;
+    
+    protected override void OnEnterState(FiniteStateMachine fsm)
+    {
+        Vector3 position = (fsm.Target.position - fsm.transform.position).normalized;
+        _moveDirection = position.x;
+        _turnTimer = fsm.Config.turnTimerChase;
+        fsm.BoolAnimation("isTurningPP", false);
+    }
 
     protected override void OnUpdateState(FiniteStateMachine fsm, float deltaTime) {
-        // Animation of chaseState
-        fsm.TriggerAnimation("isWalking");
-
         //Chase
         Vector3 position = (fsm.Target.position - fsm.transform.position).normalized;
         _chaseSpeed = IncreaseWithinBound(Mathf.Abs(fsm.rb.velocity.x), fsm.Config.chaseAcceleration,
             fsm.Config.maximumChaseSpeed);
-
-
-        if (fsm.hasRb) {
-            fsm.rb.velocity =
-                new Vector2(position.x * _chaseSpeed, fsm.rb.velocity.y);
+        _turn = _moveDirection * position.x < 0;
+        if (!_turn)
+        { 
+            
+            if (fsm.hasRb) {
+                fsm.enemy.localScale = new Vector2((int)(_moveDirection/Mathf.Abs(_moveDirection)), 1);
+                fsm.rb.velocity = new Vector2(position.x * _chaseSpeed, fsm.rb.velocity.y);
+            }
+        
+            // Animation of chaseState
+            fsm.TriggerAnimation("isWalking");
         }
-
-        if (position.x < 0) {
-            fsm.enemy.localScale = new Vector2(-1, 1);
-        } else if (position.x > 0) {
-            fsm.enemy.localScale = new Vector2(1, 1);
+        else
+        {
+            fsm.rb.velocity = Vector2.zero;
+            _turnTimer -= Time.deltaTime;
+            if (_turnTimer <= 0)
+            {
+                _turn = false;
+                _moveDirection = position.x;
+                _turnTimer = fsm.Config.turnTimerChase;;
+            }
+            fsm.BoolAnimation("isTurningChase", _turn);
         }
     }
 
