@@ -254,69 +254,55 @@ public class PlayerController : MonoBehaviour
 		return actual;
 	}
 	
-	private bool groundedCollision;
-	private bool checkGrounded()
-	{
-		RaycastHit2D hit, hit2, hit3;
-		return rb.IsTouchingLayers(Ground);
-		// float raycastDistance = 1f; // Adjust this distance based on your player's size
-		// float raycastDistance45 = 1.5f;
-		// Vector2 vector45 = new Vector2(0.2f, -1f);
-		// Vector2 vector45Negative = new Vector2(-0.2f, -1f);
-		// hit = Physics2D.Raycast(player.position, Vector2.down, raycastDistance);
-		// hit2 = Physics2D.Raycast(player.position, vector45, raycastDistance45);
-		// hit3 = Physics2D.Raycast(player.position, vector45Negative, raycastDistance45);
-		//
-		// lineRend.enabled = true;
-		// lineRend.SetPosition(0, transform.position);
-		// lineRend.SetPosition(1, hit.point);
-		// if ((hit.collider != null || hit2.collider != null || hit3.collider != null) &&
-		//     (hit.collider.gameObject.CompareTag("Ground") || hit2.collider.gameObject.CompareTag("Ground") || hit3.collider.gameObject.CompareTag("Ground")))
-		// {
-		// 	// Player is touching the ground
-		// 	Debug.DrawRay(transform.position, Vector2.down, Color.red); print("Hit");
-		// 	Debug.DrawRay(transform.position, vector45, Color.cyan); print("Hit");
-		// 	Debug.DrawRay(transform.position, vector45Negative, Color.magenta); print("Hit");
-		// 	return true;
-		// }
-		// return false;
+	private CollisionSide collisionType;
+	private int currentStayCollision;
+	
+	private bool checkGrounded() {
+		RaycastHit2D hit;
+		hit = Physics2D.Raycast(player.position, Vector2.down, 1f, Ground);
+		return rb.IsTouchingLayers(Ground) && hit;
 	}
 
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
-		// Get the collision normal vector
 		Vector2 collisionNormal = collision.contacts[0].normal;
 
-		// Calculate the angle between the collision normal and up vector
 		float angle = Vector2.Angle(collisionNormal, Vector2.up);
 
-		// Determine the side of the collision based on the angle
 		if (angle < 45f)
 		{
 			// Top collision
-			Debug.Log("Top collision");
-			groundedCollision = true;
+			Debug.Log("Bottom collision");
+			collisionType =  CollisionSide.Bottom;
 		}
 		else if (angle > 135f)
 		{
 			// Bottom collision
-			Debug.Log("Bottom collision");
-			groundedCollision = false;
+			Debug.Log("Top collision");
+			collisionType = CollisionSide.Top;
 		}
 		else if (collisionNormal.x > 0f)
 		{
 			// Right collision
-			Debug.Log("Right collision");
-			groundedCollision = false;
+			Debug.Log("Left collision");
+			collisionType = CollisionSide.Left;
 
 		}
 		else
 		{
 			// Left collision
-			Debug.Log("Left collision");
-			groundedCollision = false;
+			Debug.Log("Right collision");
+			collisionType = CollisionSide.Right;
 		}
-		Debug.Log("Collision " + groundedCollision);
+
+		currentStayCollision = collision.gameObject.layer;
 	}
-	
+
+	private void OnCollisionStay2D(Collision2D other) {
+		if (other.gameObject.layer == 6 && currentStayCollision != 6) {
+			if (collisionType != CollisionSide.Bottom) {
+				collisionType = CollisionSide.Bottom;
+			}
+		}
+	}
 }
