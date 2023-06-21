@@ -89,7 +89,7 @@ public class FiniteStateMachine : MonoBehaviour {
     }
     
     public bool IsGrounded() {
-        float raycastDistance = 1f;
+        float raycastDistance = 1.5f;
         RaycastHit2D hit = Physics2D.Raycast(enemy.position, Vector2.down, raycastDistance);
         return hit.collider != null && hit.collider.gameObject.CompareTag("Ground");
     }

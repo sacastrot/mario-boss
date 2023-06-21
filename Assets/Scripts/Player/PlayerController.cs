@@ -1,11 +1,19 @@
+using System;
+using System.Text.RegularExpressions;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class PlayerController : MonoBehaviour {
+public enum CollisionSide { None, Top, Bottom, Right, Left }
+public class PlayerController : MonoBehaviour
+{
+
+	public LayerMask Ground;
+	
 	// Player
 	[Header("RigidBody2D")] [SerializeField]
 	private Transform player;
-
+	
 	// Movement
 	[Header("Player Walk")] [SerializeField]
 	private float moveSpeedWalk = 1f;
@@ -16,6 +24,11 @@ public class PlayerController : MonoBehaviour {
 	[Header("Max Speed Run")] [SerializeField]
 	private float maxSpeedRun = 10f;
 
+	[Header("Line Ray")]
+	[SerializeField]
+	public LineRenderer lineRend;
+	
+	
 	private const float WalkAcceleration = 0.2f;
 	private const float SpeedAcceleration = 0.04f;
 	private const float ReleaseDecelerationX = 0.3f;
@@ -78,13 +91,11 @@ public class PlayerController : MonoBehaviour {
 		running = input.RunOn && directionX != 0;
 		_isChangingDirection = currentSpeedX > 0 && _moveDirection * directionX < 0;
 		IsGrounded = checkGrounded();
-		// Debug.Log(turn);
-		// Debug.Log("IsGrounded " + IsGrounded);
 		//This lines was in FixedUpdate
 		VerticalMovement();
 		if(IsGrounded) GroundedMovement();
 		if(!IsGrounded) AirMovement();
-		Debug.Log("Mario " + IsGrounded);
+		Debug.Log("Grounded" + IsGrounded);
 	}
 
 
@@ -243,16 +254,69 @@ public class PlayerController : MonoBehaviour {
 		return actual;
 	}
 	
+	private bool groundedCollision;
 	private bool checkGrounded()
 	{
-		RaycastHit2D hit;
-		float raycastDistance = 1.5f; // Adjust this distance based on your player's size
-		hit = Physics2D.Raycast(player.position, Vector2.down, raycastDistance);
-		if (hit.collider != null && hit.collider.gameObject.CompareTag("Ground"))
-		{
-			// Player is touching the ground
-			return true;
-		}
-		return false;
+		RaycastHit2D hit, hit2, hit3;
+		return rb.IsTouchingLayers(Ground);
+		// float raycastDistance = 1f; // Adjust this distance based on your player's size
+		// float raycastDistance45 = 1.5f;
+		// Vector2 vector45 = new Vector2(0.2f, -1f);
+		// Vector2 vector45Negative = new Vector2(-0.2f, -1f);
+		// hit = Physics2D.Raycast(player.position, Vector2.down, raycastDistance);
+		// hit2 = Physics2D.Raycast(player.position, vector45, raycastDistance45);
+		// hit3 = Physics2D.Raycast(player.position, vector45Negative, raycastDistance45);
+		//
+		// lineRend.enabled = true;
+		// lineRend.SetPosition(0, transform.position);
+		// lineRend.SetPosition(1, hit.point);
+		// if ((hit.collider != null || hit2.collider != null || hit3.collider != null) &&
+		//     (hit.collider.gameObject.CompareTag("Ground") || hit2.collider.gameObject.CompareTag("Ground") || hit3.collider.gameObject.CompareTag("Ground")))
+		// {
+		// 	// Player is touching the ground
+		// 	Debug.DrawRay(transform.position, Vector2.down, Color.red); print("Hit");
+		// 	Debug.DrawRay(transform.position, vector45, Color.cyan); print("Hit");
+		// 	Debug.DrawRay(transform.position, vector45Negative, Color.magenta); print("Hit");
+		// 	return true;
+		// }
+		// return false;
 	}
+
+	private void OnCollisionEnter2D(Collision2D collision)
+	{
+		// Get the collision normal vector
+		Vector2 collisionNormal = collision.contacts[0].normal;
+
+		// Calculate the angle between the collision normal and up vector
+		float angle = Vector2.Angle(collisionNormal, Vector2.up);
+
+		// Determine the side of the collision based on the angle
+		if (angle < 45f)
+		{
+			// Top collision
+			Debug.Log("Top collision");
+			groundedCollision = true;
+		}
+		else if (angle > 135f)
+		{
+			// Bottom collision
+			Debug.Log("Bottom collision");
+			groundedCollision = false;
+		}
+		else if (collisionNormal.x > 0f)
+		{
+			// Right collision
+			Debug.Log("Right collision");
+			groundedCollision = false;
+
+		}
+		else
+		{
+			// Left collision
+			Debug.Log("Left collision");
+			groundedCollision = false;
+		}
+		Debug.Log("Collision " + groundedCollision);
+	}
+	
 }
