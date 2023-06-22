@@ -12,6 +12,13 @@ public class Player : LivingEntity
     {
         
     }
+
+    protected override void OnTakeDamage()
+    {
+        base.OnTakeDamage();
+        //TODO: 
+    }
+
     protected override void OnDeath() {
         base.OnDeath();
         gameObject.SetActive(false);

@@ -8,26 +8,25 @@ public class DeadState : State
 
     public override StateType Type => StateType.Dead;
     
-    protected override void OnEnterState(FiniteStateMachine fms)
+    protected override void OnEnterState(FiniteStateMachine fsm)
     {
-        _deadDuration = fms.Config.DeathDuration;
-        fms.TriggerAnimation("Death");
-        Debug.Log("Hereee");
+        _deadDuration = fsm.Config.DeathDuration;
+        fsm.TriggerAnimation("Death");
     }
 
-    protected override void OnUpdateState(FiniteStateMachine fms, float deltaTime)
+    protected override void OnUpdateState(FiniteStateMachine fsm, float deltaTime)
     {
         if (_deadDuration >= 0)
         {
             _deadDuration -= deltaTime;
-            if (_deadDuration <= 0 && fms.enemy.TryGetComponent(out IDamageable enemy))
+            if (_deadDuration <= 0)
             {
-                enemy.TakeHit(enemy.TotalHealthPoints);
+                fsm.gameObject.SetActive(false);
             }
         }
     }
 
-    protected override void OnExitState(FiniteStateMachine fms)
+    protected override void OnExitState(FiniteStateMachine fsm)
     {
     }
 }
