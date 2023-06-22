@@ -34,7 +34,7 @@ public class PatrolPingPongState: State
             _initPos = fsm.enemy.position;
             _endPos = _initPos + new Vector3(fsm.Config.pingPongDistance*moveDirection, 0, 0);
             _turn = true;
-            fsm.Anim.SetBool("isTurningPP", _turn);
+            fsm.BoolAnimation("isTurningPP", _turn);
         }
         else if (!_noCollisionLayers.Contains(fsm.CurrentLayerCollision))
         {
@@ -43,7 +43,7 @@ public class PatrolPingPongState: State
             _initPos = fsm.enemy.position;
             _endPos = _initPos + new Vector3((fsm.Config.pingPongDistance+1)*moveDirection, 0, 0);
             _turn = true;
-            fsm.Anim.SetBool("isTurningPP", _turn);
+            fsm.BoolAnimation("isTurningPP", _turn);
         }
         else if (!_turn)
         {
@@ -58,7 +58,7 @@ public class PatrolPingPongState: State
             {
                 _turn = false;
                 _turnTimer = fsm.Config.pingPongTime;
-                fsm.Anim.SetBool("isTurningPP", _turn);
+                fsm.BoolAnimation("isTurningPP", _turn);
             }
         }
     }

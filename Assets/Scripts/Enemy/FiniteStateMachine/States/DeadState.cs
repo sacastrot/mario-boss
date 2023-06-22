@@ -1,20 +1,32 @@
-﻿public class DeadState: State
+﻿using UnityEngine;
+
+public class DeadState : State
 {
-    public override StateType Type { get; }
-    protected override void OnEnterState(FiniteStateMachine fsm)
+    private float _deadDuration = 0;
+    
+    public DeadState() : base("Dead") { }
+
+    public override StateType Type => StateType.Dead;
+    
+    protected override void OnEnterState(FiniteStateMachine fms)
     {
-        throw new System.NotImplementedException();
+        _deadDuration = fms.Config.DeathDuration;
+        fms.TriggerAnimation("Death");
     }
 
     protected override void OnUpdateState(FiniteStateMachine fms, float deltaTime)
     {
-        throw new System.NotImplementedException();
+        if (_deadDuration >= 0)
+        {
+            _deadDuration -= deltaTime;
+            if (_deadDuration <= 0 && fms.enemy.TryGetComponent(out IDamageable enemy))
+            {
+                enemy.TakeHit(enemy.TotalHealthPoints);
+            }
+        }
     }
 
     protected override void OnExitState(FiniteStateMachine fms)
     {
-        throw new System.NotImplementedException();
     }
-
-    public DeadState(string name) : base("Dead") { }
 }

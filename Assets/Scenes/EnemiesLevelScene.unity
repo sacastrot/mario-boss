@@ -1171,6 +1171,7 @@ MonoBehaviour:
   tauntDuration: 2
   attackDamage: 1
   attackDuration: 2
+  DeathDuration: 0
   initialState: 6
   fsmData:
     States:
@@ -5612,6 +5613,7 @@ MonoBehaviour:
   tauntDuration: 2
   attackDamage: 1
   attackDuration: 2
+  DeathDuration: 0
   initialState: 6
   fsmData:
     States:
@@ -5821,6 +5823,7 @@ MonoBehaviour:
   tauntDuration: 2
   attackDamage: 1
   attackDuration: 2
+  DeathDuration: 0
   initialState: 0
   fsmData:
     States:
@@ -5961,6 +5964,7 @@ MonoBehaviour:
   tauntDuration: 2
   attackDamage: 1
   attackDuration: 2
+  DeathDuration: 0
   initialState: 6
   fsmData:
     States:
@@ -6194,6 +6198,7 @@ GameObject:
   - component: {fileID: 718993614}
   - component: {fileID: 718993613}
   - component: {fileID: 718993612}
+  - component: {fileID: 718993617}
   m_Layer: 0
   m_Name: Koopa
   m_TagString: Untagged
@@ -6214,7 +6219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _anim: {fileID: 846935137}
-  _target: {fileID: 0}
+  _target: {fileID: 730947866}
   rb: {fileID: 718993615}
   enemy: {fileID: 718993616}
   hasRb: 0
@@ -6243,6 +6248,7 @@ MonoBehaviour:
   tauntDuration: 2
   attackDamage: 1
   attackDuration: 2
+  DeathDuration: 0
   initialState: 1
   fsmData:
     States:
@@ -6250,7 +6256,13 @@ MonoBehaviour:
       Transition:
       - TargetState: 3
         Decision: {fileID: 11400000, guid: a247feba571cf714cbfcdf18ebdde8eb, type: 2}
+      - TargetState: 7
+        Decision: {fileID: 11400000, guid: da8cc343cb7194f408f2ea713fe2a1f7, type: 2}
     - StateType: 3
+      Transition:
+      - TargetState: 0
+        Decision: {fileID: 0}
+    - StateType: 7
       Transition:
       - TargetState: 0
         Decision: {fileID: 0}
@@ -6307,6 +6319,19 @@ Transform:
   m_Father: {fileID: 380412538}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &718993617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718993611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e6c75849f7b4d75a29775e6956059bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <TotalHealthPoints>k__BackingField: 1
 --- !u!1 &730947859
 GameObject:
   m_ObjectHideFlags: 0
@@ -6711,6 +6736,7 @@ MonoBehaviour:
   tauntDuration: 2
   attackDamage: 1
   attackDuration: 2
+  DeathDuration: 0
   initialState: 0
   fsmData:
     States:
@@ -6822,7 +6848,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _anim: {fileID: 610878822}
-  _target: {fileID: 0}
+  _target: {fileID: 730947866}
   rb: {fileID: 845049196}
   enemy: {fileID: 845049197}
   hasRb: 0
@@ -6851,6 +6877,7 @@ MonoBehaviour:
   tauntDuration: 2
   attackDamage: 1
   attackDuration: 2
+  DeathDuration: 0
   initialState: 1
   fsmData:
     States:
@@ -6858,7 +6885,13 @@ MonoBehaviour:
       Transition:
       - TargetState: 3
         Decision: {fileID: 11400000, guid: a247feba571cf714cbfcdf18ebdde8eb, type: 2}
+      - TargetState: 7
+        Decision: {fileID: 11400000, guid: da8cc343cb7194f408f2ea713fe2a1f7, type: 2}
     - StateType: 3
+      Transition:
+      - TargetState: 0
+        Decision: {fileID: 0}
+    - StateType: 7
       Transition:
       - TargetState: 0
         Decision: {fileID: 0}
@@ -6907,7 +6940,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 845049192}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.8300009, y: 0.059999943, z: 0}
+  m_LocalPosition: {x: 33.21, y: 1.17, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7957,6 +7990,7 @@ MonoBehaviour:
   tauntDuration: 2
   attackDamage: 1
   attackDuration: 2
+  DeathDuration: 0
   initialState: 6
   fsmData:
     States:
@@ -8141,6 +8175,7 @@ MonoBehaviour:
   tauntDuration: 2
   attackDamage: 1
   attackDuration: 2
+  DeathDuration: 0
   initialState: 6
   fsmData:
     States:
@@ -8627,6 +8662,7 @@ MonoBehaviour:
   tauntDuration: 2
   attackDamage: 1
   attackDuration: 2
+  DeathDuration: 0
   initialState: 0
   fsmData:
     States:
@@ -8750,6 +8786,7 @@ MonoBehaviour:
   tauntDuration: 2
   attackDamage: 1
   attackDuration: 2
+  DeathDuration: 0
   initialState: 6
   fsmData:
     States:
@@ -8915,6 +8952,7 @@ MonoBehaviour:
   tauntDuration: 2
   attackDamage: 1
   attackDuration: 2
+  DeathDuration: 0
   initialState: 1
   fsmData:
     States:
@@ -8971,7 +9009,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1396269072}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -20.12, y: -0.43, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9077,6 +9115,7 @@ MonoBehaviour:
   tauntDuration: 2
   attackDamage: 1
   attackDuration: 2
+  DeathDuration: 0
   initialState: 6
   fsmData:
     States:
@@ -9211,6 +9250,7 @@ MonoBehaviour:
   tauntDuration: 2
   attackDamage: 1
   attackDuration: 2
+  DeathDuration: 0
   initialState: 0
   fsmData:
     States:
@@ -21358,6 +21398,7 @@ MonoBehaviour:
   tauntDuration: 2
   attackDamage: 1
   attackDuration: 2
+  DeathDuration: 0
   initialState: 1
   fsmData:
     States:
@@ -22318,6 +22359,7 @@ MonoBehaviour:
   tauntDuration: 2
   attackDamage: 1
   attackDuration: 2
+  DeathDuration: 0
   initialState: 1
   fsmData:
     States:
@@ -22374,7 +22416,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1939909521}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.79, y: 0.119999886, z: 0}
+  m_LocalPosition: {x: -17.71, y: -0.37, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -22663,6 +22705,7 @@ MonoBehaviour:
   tauntDuration: 2
   attackDamage: 1
   attackDuration: 2
+  DeathDuration: 0
   initialState: 6
   fsmData:
     States:

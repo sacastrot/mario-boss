@@ -84,8 +84,8 @@ public abstract class State
                 return new TauntState();
             case StateType.TauntExit:
                 return new TauntExitState();
-            // case StateType.Dead:
-            //     return new DeadState();
+            case StateType.Dead:
+                return new DeadState();
             // case StateType.Wound:
             //     return new WoundState();
             case StateType.PatrolPingPong:

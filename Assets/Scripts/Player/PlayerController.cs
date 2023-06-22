@@ -4,7 +4,7 @@ using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public enum CollisionSide { None, Top, Bottom, Right, Left }
+// public enum CollisionSide { None, Top, Bottom, Right, Left }
 public class PlayerController : MonoBehaviour
 {
 
@@ -254,8 +254,8 @@ public class PlayerController : MonoBehaviour
 		return actual;
 	}
 	
-	private CollisionSide collisionType;
-	private int currentStayCollision;
+	// private CollisionSide collisionType;
+	// private int currentStayCollision;
 	
 	private bool checkGrounded() {
 		RaycastHit2D hit;
@@ -263,46 +263,46 @@ public class PlayerController : MonoBehaviour
 		return rb.IsTouchingLayers(Ground) && hit;
 	}
 
-	private void OnCollisionEnter2D(Collision2D collision)
-	{
-		Vector2 collisionNormal = collision.contacts[0].normal;
-
-		float angle = Vector2.Angle(collisionNormal, Vector2.up);
-
-		if (angle < 45f)
-		{
-			// Top collision
-			Debug.Log("Bottom collision");
-			collisionType =  CollisionSide.Bottom;
-		}
-		else if (angle > 135f)
-		{
-			// Bottom collision
-			Debug.Log("Top collision");
-			collisionType = CollisionSide.Top;
-		}
-		else if (collisionNormal.x > 0f)
-		{
-			// Right collision
-			Debug.Log("Left collision");
-			collisionType = CollisionSide.Left;
-
-		}
-		else
-		{
-			// Left collision
-			Debug.Log("Right collision");
-			collisionType = CollisionSide.Right;
-		}
-
-		currentStayCollision = collision.gameObject.layer;
-	}
-
-	private void OnCollisionStay2D(Collision2D other) {
-		if (other.gameObject.layer == 6 && currentStayCollision != 6) {
-			if (collisionType != CollisionSide.Bottom) {
-				collisionType = CollisionSide.Bottom;
-			}
-		}
-	}
+	// private void OnCollisionEnter2D(Collision2D collision)
+	// {
+	// 	Vector2 collisionNormal = collision.contacts[0].normal;
+	//
+	// 	float angle = Vector2.Angle(collisionNormal, Vector2.up);
+	//
+	// 	if (angle < 45f)
+	// 	{
+	// 		// Top collision
+	// 		Debug.Log("Bottom collision");
+	// 		collisionType =  CollisionSide.Bottom;
+	// 	}
+	// 	else if (angle > 135f)
+	// 	{
+	// 		// Bottom collision
+	// 		Debug.Log("Top collision");
+	// 		collisionType = CollisionSide.Top;
+	// 	}
+	// 	else if (collisionNormal.x > 0f)
+	// 	{
+	// 		// Right collision
+	// 		Debug.Log("Left collision");
+	// 		collisionType = CollisionSide.Left;
+	//
+	// 	}
+	// 	else
+	// 	{
+	// 		// Left collision
+	// 		Debug.Log("Right collision");
+	// 		collisionType = CollisionSide.Right;
+	// 	}
+	//
+	// 	currentStayCollision = collision.gameObject.layer;
+	// }
+	//
+	// private void OnCollisionStay2D(Collision2D other) {
+	// 	if (other.gameObject.layer == 6 && currentStayCollision != 6) {
+	// 		if (collisionType != CollisionSide.Bottom) {
+	// 			collisionType = CollisionSide.Bottom;
+	// 		}
+	// 	}
+	// }
 }
