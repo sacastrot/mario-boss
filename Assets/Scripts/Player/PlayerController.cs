@@ -21,21 +21,12 @@ public class PlayerController : MonoBehaviour
 	private float maxSpeedWalk = 5f;
 	[Header("Player Run")] [SerializeField]
 	private float moveSpeedRun = 7f;
-	[Header("Max Speed Run")] [SerializeField]
-	private float maxSpeedRun = 10f;
 
-	[Header("Line Ray")]
-	[SerializeField]
-	public LineRenderer lineRend;
-	
-	
 	private const float WalkAcceleration = 0.2f;
-	private const float SpeedAcceleration = 0.04f;
 	private const float ReleaseDecelerationX = 0.3f;
 	private const float SkidTurnAroundSpeedX = 3f;
 	private const float SkidDecelerationX = 0.5f;
 	private const float AirAccelerationX = 0.2f;
-	private const float AirDecelerationX = 0.15f;
 	private const float JumpUpGravity = 2.7888f;
 	private const float JumpDownGravity = 5f;
 	

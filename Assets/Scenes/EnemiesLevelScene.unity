@@ -714,7 +714,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: fbcef9f7df1d39946bc50d5fb9b6c75c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1122,6 +1122,7 @@ GameObject:
   - component: {fileID: 251274525}
   - component: {fileID: 251274524}
   - component: {fileID: 251274523}
+  - component: {fileID: 251274528}
   m_Layer: 7
   m_Name: CharginChuck
   m_TagString: Untagged
@@ -1142,7 +1143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _anim: {fileID: 1842478537}
-  _target: {fileID: 0}
+  _target: {fileID: 730947866}
   rb: {fileID: 251274526}
   enemy: {fileID: 251274527}
   hasRb: 0
@@ -1183,13 +1184,19 @@ MonoBehaviour:
       Transition:
       - TargetState: 2
         Decision: {fileID: 11400000, guid: e1e79d8f0c5cf31439a5921b0b65c542, type: 2}
+      - TargetState: 7
+        Decision: {fileID: 11400000, guid: da8cc343cb7194f408f2ea713fe2a1f7, type: 2}
     - StateType: 2
       Transition:
       - TargetState: 3
         Decision: {fileID: 11400000, guid: a247feba571cf714cbfcdf18ebdde8eb, type: 2}
       - TargetState: 9
         Decision: {fileID: 11400000, guid: da22ffb2d764f924289b70000e673114, type: 2}
+      - TargetState: 7
+        Decision: {fileID: 11400000, guid: da8cc343cb7194f408f2ea713fe2a1f7, type: 2}
     - StateType: 3
+      Transition: []
+    - StateType: 7
       Transition: []
 --- !u!70 &251274525
 CapsuleCollider2D:
@@ -1244,6 +1251,19 @@ Transform:
   m_Father: {fileID: 205897778}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &251274528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 251274522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e6c75849f7b4d75a29775e6956059bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <TotalHealthPoints>k__BackingField: 1
 --- !u!1 &277581431
 GameObject:
   m_ObjectHideFlags: 0
@@ -1423,6 +1443,7 @@ GameObject:
   - component: {fileID: 290533571}
   - component: {fileID: 290533570}
   - component: {fileID: 290533569}
+  - component: {fileID: 290533572}
   m_Layer: 10
   m_Name: SmallPipe (2)
   m_TagString: Untagged
@@ -1441,8 +1462,8 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByEffector: 1
+  m_UsedByComposite: 1
   m_Offset: {x: -0.034026146, y: -0.1490829}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -1523,6 +1544,25 @@ Transform:
   m_Father: {fileID: 1403701818}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!251 &290533572
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290533568}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 360
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &340686540
 GameObject:
   m_ObjectHideFlags: 0
@@ -1534,6 +1574,7 @@ GameObject:
   - component: {fileID: 340686542}
   - component: {fileID: 340686541}
   - component: {fileID: 340686543}
+  - component: {fileID: 340686544}
   m_Layer: 10
   m_Name: LargePipe
   m_TagString: Untagged
@@ -1619,8 +1660,8 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByEffector: 1
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -1634,6 +1675,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 6}
   m_EdgeRadius: 0
+--- !u!251 &340686544
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340686540}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 360
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &352528740
 GameObject:
   m_ObjectHideFlags: 0
@@ -5200,7 +5260,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -2030220205, guid: e9906aacc4052ab4585b787bbed5035c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5239,7 +5299,7 @@ GameObject:
   - component: {fileID: 612890456}
   - component: {fileID: 612890457}
   - component: {fileID: 612890458}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: block5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5436,7 +5496,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -2030220205, guid: e9906aacc4052ab4585b787bbed5035c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6263,9 +6323,7 @@ MonoBehaviour:
       - TargetState: 0
         Decision: {fileID: 0}
     - StateType: 7
-      Transition:
-      - TargetState: 0
-        Decision: {fileID: 0}
+      Transition: []
 --- !u!70 &718993614
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -6386,8 +6444,6 @@ MonoBehaviour:
   moveSpeedWalk: 1
   maxSpeedWalk: 5
   moveSpeedRun: 8
-  maxSpeedRun: 10
-  lineRend: {fileID: 0}
   currentSpeedX: 0
   running: 0
   runningNormalSpeed: 0
@@ -6828,6 +6884,7 @@ GameObject:
   - component: {fileID: 845049195}
   - component: {fileID: 845049194}
   - component: {fileID: 845049193}
+  - component: {fileID: 845049198}
   m_Layer: 0
   m_Name: Koopa (3)
   m_TagString: Untagged
@@ -6892,9 +6949,7 @@ MonoBehaviour:
       - TargetState: 0
         Decision: {fileID: 0}
     - StateType: 7
-      Transition:
-      - TargetState: 0
-        Decision: {fileID: 0}
+      Transition: []
 --- !u!70 &845049195
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -6948,6 +7003,19 @@ Transform:
   m_Father: {fileID: 380412538}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &845049198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845049192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e6c75849f7b4d75a29775e6956059bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <TotalHealthPoints>k__BackingField: 1
 --- !u!1 &846935136
 GameObject:
   m_ObjectHideFlags: 0
@@ -7026,7 +7094,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -2030220205, guid: e9906aacc4052ab4585b787bbed5035c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -7163,7 +7231,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -2030220205, guid: e9906aacc4052ab4585b787bbed5035c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -8903,6 +8971,7 @@ GameObject:
   - component: {fileID: 1396269075}
   - component: {fileID: 1396269074}
   - component: {fileID: 1396269073}
+  - component: {fileID: 1396269078}
   m_Layer: 0
   m_Name: Koopa (1)
   m_TagString: Untagged
@@ -9017,6 +9086,19 @@ Transform:
   m_Father: {fileID: 380412538}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1396269078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1396269072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e6c75849f7b4d75a29775e6956059bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <TotalHealthPoints>k__BackingField: 1
 --- !u!1 &1403701817
 GameObject:
   m_ObjectHideFlags: 0
@@ -21152,6 +21234,7 @@ GameObject:
   - component: {fileID: 1571585224}
   - component: {fileID: 1571585223}
   - component: {fileID: 1571585222}
+  - component: {fileID: 1571585225}
   m_Layer: 10
   m_Name: SmallPipe (3)
   m_TagString: Untagged
@@ -21170,8 +21253,8 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByEffector: 1
+  m_UsedByComposite: 1
   m_Offset: {x: -0.034026146, y: -0.1490829}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -21252,6 +21335,25 @@ Transform:
   m_Father: {fileID: 1403701818}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!251 &1571585225
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571585221}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 360
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &1729123300
 GameObject:
   m_ObjectHideFlags: 0
@@ -21678,7 +21780,7 @@ GameObject:
   - component: {fileID: 1790314882}
   - component: {fileID: 1790314884}
   - component: {fileID: 1790314883}
-  m_Layer: 10
+  m_Layer: 6
   m_Name: block-24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21992,6 +22094,7 @@ GameObject:
   - component: {fileID: 1840407938}
   - component: {fileID: 1840407937}
   - component: {fileID: 1840407939}
+  - component: {fileID: 1840407940}
   m_Layer: 10
   m_Name: SmallPipe
   m_TagString: Untagged
@@ -22077,8 +22180,8 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByEffector: 1
+  m_UsedByComposite: 1
   m_Offset: {x: -0.034026146, y: -0.1490829}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -22092,6 +22195,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.9097424, y: 3.9518342}
   m_EdgeRadius: 0
+--- !u!251 &1840407940
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840407936}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 360
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &1842478536
 GameObject:
   m_ObjectHideFlags: 0
@@ -22821,7 +22943,7 @@ GameObject:
   - component: {fileID: 2082410158}
   - component: {fileID: 2082410159}
   - component: {fileID: 2082410160}
-  m_Layer: 10
+  m_Layer: 6
   m_Name: block9
   m_TagString: Untagged
   m_Icon: {fileID: 0}

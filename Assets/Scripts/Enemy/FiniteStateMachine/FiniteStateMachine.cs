@@ -100,7 +100,7 @@ public class FiniteStateMachine : MonoBehaviour {
                 Debug.Log("Bottom collision");
                 _collisionType = CollisionSide.Bottom;
             }
-            else if (angle > 135f)
+            else if (angle > 120f)
             {
                 // Bottom collision
                 Debug.Log("Top collision");

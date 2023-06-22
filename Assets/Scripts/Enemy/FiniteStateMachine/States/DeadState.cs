@@ -12,6 +12,7 @@ public class DeadState : State
     {
         _deadDuration = fms.Config.DeathDuration;
         fms.TriggerAnimation("Death");
+        Debug.Log("Hereee");
     }
 
     protected override void OnUpdateState(FiniteStateMachine fms, float deltaTime)
