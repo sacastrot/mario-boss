@@ -77,11 +77,14 @@ public class PlayerController : MonoBehaviour {
 		jumpDown = input.JumpDown;
 		running = input.RunOn && directionX != 0;
 		_isChangingDirection = currentSpeedX > 0 && _moveDirection * directionX < 0;
-		IsGrounded = Physics2D.Raycast(transform.position, Vector2.down, 1f);
+		IsGrounded = checkGrounded();
 		// Debug.Log(turn);
-		Debug.Log("IsGrounded " + IsGrounded);
+		// Debug.Log("IsGrounded " + IsGrounded);
 		//This lines was in FixedUpdate
 		VerticalMovement();
+		if(IsGrounded) GroundedMovement();
+		if(!IsGrounded) AirMovement();
+		Debug.Log("Mario " + IsGrounded);
 	}
 
 
@@ -90,8 +93,6 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void FixedUpdate() {
-		if(IsGrounded) GroundedMovement();
-		if(!IsGrounded) AirMovement();
 		setDirection(); //New Function 
 		rb.velocity = new Vector2(_moveDirection * currentSpeedX, rb.velocity.y);
 	}
@@ -107,15 +108,11 @@ public class PlayerController : MonoBehaviour {
 		}
 		
 		if (IsGrounded && jumpDown) {
-			//New lines
-			// runningNormalSpeed = false;
-			// runningMaxSpeed = false;
-			//---
 			jumping = true;
 			rb.velocity = new Vector2(rb.velocity.x, JumpVelocity);
 		}
 
-		if (rb.velocity.y > 0 && input.JumpHold) {
+		if (rb.velocity.y > 0 && input.JumpHold && !IsGrounded) {
 			jumping = true;
 			rb.gravityScale = NormalGravity * JumpUpGravity;
 		}
@@ -126,6 +123,7 @@ public class PlayerController : MonoBehaviour {
 
 	private void AirMovement() {
 	//TODO: Set parameters air movement
+	runningNormalSpeed = false;
 		if (directionX != 0) {
 			if (currentSpeedX == 0) {
 				currentSpeedX = moveSpeedWalk;
@@ -155,9 +153,9 @@ public class PlayerController : MonoBehaviour {
 				{
 					currentSpeedX = IncreaseWithinBound(currentSpeedX, 0.2f, moveSpeedRun);
 				}
-				else if (running && currentSpeedX == moveSpeedRun)
+				else if (currentSpeedX >= moveSpeedRun)
 				{
-					runningNormalSpeed = !jumping;
+					runningNormalSpeed = true;
 				}
 			}
 			else
@@ -243,5 +241,18 @@ public class PlayerController : MonoBehaviour {
 			actual = max;
 		}
 		return actual;
+	}
+	
+	private bool checkGrounded()
+	{
+		RaycastHit2D hit;
+		float raycastDistance = 1.5f; // Adjust this distance based on your player's size
+		hit = Physics2D.Raycast(player.position, Vector2.down, raycastDistance);
+		if (hit.collider != null && hit.collider.gameObject.CompareTag("Ground"))
+		{
+			// Player is touching the ground
+			return true;
+		}
+		return false;
 	}
 }
