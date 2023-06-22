@@ -22,8 +22,13 @@ public class EnemyConfig: MonoBehaviour
     public int attackDamage = 1;
     // Temp
     public float attackDuration = 2f;
+    
+    [Header("Dead")]
+    public float DeathDuration = 0f;
 
     [Header("Finite-State Machine")]
     public StateType initialState;
     public FSMData fsmData;
+    
+    
 }

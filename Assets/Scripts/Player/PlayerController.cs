@@ -1,11 +1,19 @@
+using System;
+using System.Text.RegularExpressions;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class PlayerController : MonoBehaviour {
+// public enum CollisionSide { None, Top, Bottom, Right, Left }
+public class PlayerController : MonoBehaviour
+{
+
+	public LayerMask Ground;
+	
 	// Player
 	[Header("RigidBody2D")] [SerializeField]
 	private Transform player;
-
+	
 	// Movement
 	[Header("Player Walk")] [SerializeField]
 	private float moveSpeedWalk = 1f;
@@ -13,16 +21,12 @@ public class PlayerController : MonoBehaviour {
 	private float maxSpeedWalk = 5f;
 	[Header("Player Run")] [SerializeField]
 	private float moveSpeedRun = 7f;
-	[Header("Max Speed Run")] [SerializeField]
-	private float maxSpeedRun = 10f;
 
 	private const float WalkAcceleration = 0.2f;
-	private const float SpeedAcceleration = 0.04f;
 	private const float ReleaseDecelerationX = 0.3f;
 	private const float SkidTurnAroundSpeedX = 3f;
 	private const float SkidDecelerationX = 0.5f;
 	private const float AirAccelerationX = 0.2f;
-	private const float AirDecelerationX = 0.15f;
 	private const float JumpUpGravity = 2.7888f;
 	private const float JumpDownGravity = 5f;
 	
@@ -78,13 +82,11 @@ public class PlayerController : MonoBehaviour {
 		running = input.RunOn && directionX != 0;
 		_isChangingDirection = currentSpeedX > 0 && _moveDirection * directionX < 0;
 		IsGrounded = checkGrounded();
-		// Debug.Log(turn);
-		// Debug.Log("IsGrounded " + IsGrounded);
 		//This lines was in FixedUpdate
 		VerticalMovement();
 		if(IsGrounded) GroundedMovement();
 		if(!IsGrounded) AirMovement();
-		Debug.Log("Mario " + IsGrounded);
+		Debug.Log("Grounded" + IsGrounded);
 	}
 
 
@@ -243,16 +245,55 @@ public class PlayerController : MonoBehaviour {
 		return actual;
 	}
 	
-	private bool checkGrounded()
-	{
+	// private CollisionSide collisionType;
+	// private int currentStayCollision;
+	
+	private bool checkGrounded() {
 		RaycastHit2D hit;
-		float raycastDistance = 1.5f; // Adjust this distance based on your player's size
-		hit = Physics2D.Raycast(player.position, Vector2.down, raycastDistance);
-		if (hit.collider != null && hit.collider.gameObject.CompareTag("Ground"))
-		{
-			// Player is touching the ground
-			return true;
-		}
-		return false;
+		hit = Physics2D.Raycast(player.position, Vector2.down, 1f, Ground);
+		return rb.IsTouchingLayers(Ground) && hit;
 	}
+
+	// private void OnCollisionEnter2D(Collision2D collision)
+	// {
+	// 	Vector2 collisionNormal = collision.contacts[0].normal;
+	//
+	// 	float angle = Vector2.Angle(collisionNormal, Vector2.up);
+	//
+	// 	if (angle < 45f)
+	// 	{
+	// 		// Top collision
+	// 		Debug.Log("Bottom collision");
+	// 		collisionType =  CollisionSide.Bottom;
+	// 	}
+	// 	else if (angle > 135f)
+	// 	{
+	// 		// Bottom collision
+	// 		Debug.Log("Top collision");
+	// 		collisionType = CollisionSide.Top;
+	// 	}
+	// 	else if (collisionNormal.x > 0f)
+	// 	{
+	// 		// Right collision
+	// 		Debug.Log("Left collision");
+	// 		collisionType = CollisionSide.Left;
+	//
+	// 	}
+	// 	else
+	// 	{
+	// 		// Left collision
+	// 		Debug.Log("Right collision");
+	// 		collisionType = CollisionSide.Right;
+	// 	}
+	//
+	// 	currentStayCollision = collision.gameObject.layer;
+	// }
+	//
+	// private void OnCollisionStay2D(Collision2D other) {
+	// 	if (other.gameObject.layer == 6 && currentStayCollision != 6) {
+	// 		if (collisionType != CollisionSide.Bottom) {
+	// 			collisionType = CollisionSide.Bottom;
+	// 		}
+	// 	}
+	// }
 }

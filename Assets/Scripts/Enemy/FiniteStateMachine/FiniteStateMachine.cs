@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-
+public enum CollisionSide { None, Top, Bottom, Right, Left }
 public class FiniteStateMachine : MonoBehaviour {
     [Space(10)] [SerializeField] private Animator _anim;
 
@@ -13,9 +13,10 @@ public class FiniteStateMachine : MonoBehaviour {
     
     private int _layerCollision;
     private int _currentLayerCollision;
+    private CollisionSide _collisionType = CollisionSide.None;
     public Transform Target => _target;
     public EnemyConfig Config => _config;
-    public Animator Anim => _anim;
+    public CollisionSide CollisionType => _collisionType; 
     public int CurrentLayerCollision => _currentLayerCollision;
 
     public bool hasRb;
@@ -86,10 +87,44 @@ public class FiniteStateMachine : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D col) {
         _layerCollision = col.collider.gameObject.layer;
+
+        if (_layerCollision == 8)
+        {
+            Vector2 collisionNormal = col.contacts[0].normal;
+        
+            float angle = Vector2.Angle(collisionNormal, Vector2.up);
+        
+            if (angle < 45f)
+            {
+                // Top collision
+                Debug.Log("Bottom collision");
+                _collisionType = CollisionSide.Bottom;
+            }
+            else if (angle > 120f)
+            {
+                // Bottom collision
+                Debug.Log("Top collision");
+                _collisionType = CollisionSide.Top;
+            }
+            else if (collisionNormal.x > 0f)
+            {
+                // Right collision
+                Debug.Log("Left collision");
+                _collisionType = CollisionSide.Left;
+        
+            }
+            else
+            {
+                // Left collision
+                Debug.Log("Right collision");
+                _collisionType = CollisionSide.Right;
+            }
+        }
+        
     }
     
     public bool IsGrounded() {
-        float raycastDistance = 1f;
+        float raycastDistance = 1.5f;
         RaycastHit2D hit = Physics2D.Raycast(enemy.position, Vector2.down, raycastDistance);
         return hit.collider != null && hit.collider.gameObject.CompareTag("Ground");
     }
