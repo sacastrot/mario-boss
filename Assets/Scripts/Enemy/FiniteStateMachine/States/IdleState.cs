@@ -1,4 +1,6 @@
-﻿public class IdleState : State
+﻿using UnityEngine;
+
+public class IdleState : State
 {
     public IdleState() : base("Idle")
     {
