@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 32078999}
   m_Layer: 0
   m_Name: RotationPlatform (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -174,7 +174,7 @@ GameObject:
   - component: {fileID: 41291272}
   m_Layer: 0
   m_Name: Rotating Platform
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -498,6 +498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d6a69099073c2243b7384c68f3c1cdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <TotalHealthPoints>k__BackingField: 1
 --- !u!70 &95024868
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -543,7 +544,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 95024863}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.06, y: -1.75, z: 0}
+  m_LocalPosition: {x: -15.28, y: -1.89, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -698,7 +699,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 112291338}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.26, y: -0.01, z: -10}
+  m_LocalPosition: {x: -13.999996, y: -0.10000038, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -832,7 +833,7 @@ GameObject:
   - component: {fileID: 181120924}
   m_Layer: 0
   m_Name: Rotating Platform
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1400,7 +1401,7 @@ GameObject:
   - component: {fileID: 303743341}
   m_Layer: 0
   m_Name: Acoordion Horizontal
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1905,7 +1906,7 @@ GameObject:
   - component: {fileID: 394185528}
   m_Layer: 0
   m_Name: Falling Platform (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2019,7 +2020,7 @@ GameObject:
   - component: {fileID: 416000333}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13618,7 +13619,7 @@ GameObject:
   - component: {fileID: 462765805}
   m_Layer: 0
   m_Name: Ping Pong Platform
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14046,7 +14047,7 @@ GameObject:
   - component: {fileID: 689007513}
   m_Layer: 0
   m_Name: Accordion Vertical
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14178,7 +14179,7 @@ GameObject:
   - component: {fileID: 757234088}
   m_Layer: 0
   m_Name: Accordion Vertical (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15332,7 +15333,7 @@ GameObject:
   - component: {fileID: 1411711183}
   m_Layer: 0
   m_Name: Falling Platform (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15447,7 +15448,7 @@ GameObject:
   - component: {fileID: 1442808585}
   m_Layer: 0
   m_Name: Falling Platform
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15558,7 +15559,7 @@ GameObject:
   - component: {fileID: 1495132081}
   m_Layer: 0
   m_Name: RotationPlatform
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15819,7 +15820,7 @@ GameObject:
   - component: {fileID: 1629007827}
   m_Layer: 0
   m_Name: Acoordion Horizontal (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16650,7 +16651,7 @@ GameObject:
   - component: {fileID: 1985283125}
   m_Layer: 0
   m_Name: Falling Platform (3)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16948,7 +16949,7 @@ GameObject:
   - component: {fileID: 2093609391}
   m_Layer: 0
   m_Name: Falling Platform (4)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
