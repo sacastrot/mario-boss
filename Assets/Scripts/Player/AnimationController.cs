@@ -32,6 +32,8 @@ public class AnimationController : MonoBehaviour {
 			_anim.SetBool("isJump", _playerController.jumping);
 			_anim.SetBool("isFall", _playerController.falling);
 			_anim.SetBool("isRunNormal", _playerController.runningNormalSpeed);
+			Debug.Log("From animator: " + _playerController.invensible);
+			_anim.SetBool("invensiblePowerUp", _playerController.invensible);
 			// _anim.SetBool("isRunMax", _playerController.runningMaxSpeed);
 			// _anim.speed = 
 		}

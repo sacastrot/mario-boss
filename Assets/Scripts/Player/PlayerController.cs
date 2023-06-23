@@ -83,6 +83,7 @@ public class PlayerController : MonoBehaviour
 			{
 				invensible = false;
 				_attackController.invensible = false;
+				
 				_timerInvensible = timeInvensible;
 			}
 				
