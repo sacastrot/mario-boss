@@ -5240,6 +5240,83 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &656306183
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6711335453637749915, guid: 5b0c8d9c0e1083846903d4129d38feb4, type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711335453637749916, guid: 5b0c8d9c0e1083846903d4129d38feb4, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711335453637749916, guid: 5b0c8d9c0e1083846903d4129d38feb4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -13.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711335453637749916, guid: 5b0c8d9c0e1083846903d4129d38feb4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711335453637749916, guid: 5b0c8d9c0e1083846903d4129d38feb4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.063987836
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711335453637749916, guid: 5b0c8d9c0e1083846903d4129d38feb4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711335453637749916, guid: 5b0c8d9c0e1083846903d4129d38feb4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711335453637749916, guid: 5b0c8d9c0e1083846903d4129d38feb4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711335453637749916, guid: 5b0c8d9c0e1083846903d4129d38feb4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711335453637749916, guid: 5b0c8d9c0e1083846903d4129d38feb4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711335453637749916, guid: 5b0c8d9c0e1083846903d4129d38feb4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711335453637749916, guid: 5b0c8d9c0e1083846903d4129d38feb4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711335453637749917, guid: 5b0c8d9c0e1083846903d4129d38feb4, type: 3}
+      propertyPath: m_Name
+      value: Cube (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711335453637749917, guid: 5b0c8d9c0e1083846903d4129d38feb4, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711335453637749927, guid: 5b0c8d9c0e1083846903d4129d38feb4, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 730947866}
+    - target: {fileID: 6711335453637749927, guid: 5b0c8d9c0e1083846903d4129d38feb4, type: 3}
+      propertyPath: powerUp
+      value: 
+      objectReference: {fileID: 7319842190695827223, guid: ae4d0c73fd6600d4ab9185b44d93126c, type: 3}
+    - target: {fileID: 8303537633746270698, guid: 5b0c8d9c0e1083846903d4129d38feb4, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5b0c8d9c0e1083846903d4129d38feb4, type: 3}
 --- !u!1 &671380230
 GameObject:
   m_ObjectHideFlags: 0
@@ -5403,10 +5480,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee76f7dfc687d4be993b76367dc873b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 730947866}
   Ground:
     serializedVersion: 2
     m_Bits: 3136
-  player: {fileID: 730947866}
   moveSpeedWalk: 1
   maxSpeedWalk: 5
   moveSpeedRun: 8
@@ -5421,14 +5498,10 @@ MonoBehaviour:
   directionX: 0
   directionHead: 0
   jumpDown: 0
+  timeInvensible: 20000000
   input: {fileID: 0}
-  velocity: {x: 0, y: 0}
   rb: {fileID: 0}
-  feetPos: {fileID: 0}
-  checkRadius: 0
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 0
+  invensible: 0
 --- !u!114 &730947862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5519,10 +5592,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58c0f4e7be8d4ef0a5ed3084eaa3c0c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemies:
+  enemies:
     serializedVersion: 2
     m_Bits: 245760
-  DamageAttack: 1
+  damageAttack: 1
+  invensible: 0
   player: {fileID: 0}
 --- !u!1 &749967090
 GameObject:

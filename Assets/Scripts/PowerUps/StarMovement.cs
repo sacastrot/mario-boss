@@ -1,12 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class StarMovement : MonoBehaviour
 {
-    
+
+    public LayerMask collisionLayers;
     private bool IsGrounded { get; set; }
     public float speed;
     public float jumpForce;
@@ -16,6 +18,8 @@ public class StarMovement : MonoBehaviour
     public BoxCollider2D bc;
     private Rigidbody2D rb;
     
+    public PlayerController playerController;
+    private float _currentSpeed;
     
     // Start is called before the first frame update
     void Start()
@@ -24,7 +28,8 @@ public class StarMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         bc.enabled = false;
         born = true;
-        moveLeft = moveLeft = RandomBoolean();
+        moveLeft = RandomBoolean();
+        _currentSpeed = speed;
     }
 
     // Update is called once per frame
@@ -33,7 +38,7 @@ public class StarMovement : MonoBehaviour
         if (born)
         {
             animator.SetBool("Born", born);
-            speed = 0;
+            _currentSpeed = 0;
             StartCoroutine(Move());
             rb.bodyType = RigidbodyType2D.Kinematic;
         }
@@ -42,11 +47,11 @@ public class StarMovement : MonoBehaviour
         IsGrounded = Physics2D.Raycast(transform.position, Vector2.down, 0.4f);
         if (moveLeft)
         {
-            transform.Translate(-2* Time.deltaTime* speed, 0, 0);
+            transform.Translate(-2* Time.deltaTime* _currentSpeed, 0, 0);
         }
         else
         {
-            transform.Translate(2* Time.deltaTime* speed, 0, 0);
+            transform.Translate(2* Time.deltaTime* _currentSpeed, 0, 0);
         }
 
         if (IsGrounded)
@@ -57,7 +62,7 @@ public class StarMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.collider.gameObject.layer==8)
+        if ((collisionLayers.value & 1<<col.gameObject.layer) == 1<<col.gameObject.layer)
         {
             if (moveLeft)
             {
@@ -69,9 +74,9 @@ public class StarMovement : MonoBehaviour
             }
         }
 
-        if (col.collider.gameObject.layer == 30)
+        if (col.collider.gameObject.layer == 8)
         {
-            print("dakdajdlakdjadlakjd");
+            playerController.invensible = true;
             Destroy(gameObject);
         }
     }
@@ -87,7 +92,7 @@ public class StarMovement : MonoBehaviour
         born = false;
         animator.SetBool("Born", born);
         bc.enabled = true;
-        speed = 3f;
+        _currentSpeed = speed;
         rb.bodyType = RigidbodyType2D.Dynamic;
         StopCoroutine(Move());
     }
