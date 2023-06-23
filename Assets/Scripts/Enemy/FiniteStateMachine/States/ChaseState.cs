@@ -11,7 +11,7 @@ public class ChaseState : State {
     
     protected override void OnEnterState(FiniteStateMachine fsm)
     {
-        Vector3 position = (fsm.Target.position - fsm.transform.position).normalized;
+        Vector3 position = (fsm.target.position - fsm.transform.position).normalized;
         _moveDirection = position.x;
         _turnTimer = fsm.Config.turnTimerChase;
         fsm.BoolAnimation("isTurningPP", false);
@@ -19,7 +19,7 @@ public class ChaseState : State {
 
     protected override void OnUpdateState(FiniteStateMachine fsm, float deltaTime) {
         //Chase
-        Vector3 position = (fsm.Target.position - fsm.transform.position).normalized;
+        Vector3 position = (fsm.target.position - fsm.transform.position).normalized;
         _chaseSpeed = IncreaseWithinBound(Mathf.Abs(fsm.rb.velocity.x), fsm.Config.chaseAcceleration,
             fsm.Config.maximumChaseSpeed);
         _turn = _moveDirection * position.x < 0;

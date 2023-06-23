@@ -25,8 +25,8 @@ public class PatrolState : State
 
     protected override void OnUpdateState(FiniteStateMachine fsm, float deltaTime)
     {
-        if (fsm.CurrentLayerCollision == 10) 
-        {
+        if ((fsm.Config.patrolLayer & 1 << fsm.CurrentLayerCollision) == 1 << fsm.CurrentLayerCollision) {
+            
             moveDirection *= -1;
             fsm.TriggerAnimation("isTurning");
             fsm.enemy.localScale = new Vector2(moveDirection, 1);

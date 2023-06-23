@@ -18,7 +18,7 @@ public class AttackController : MonoBehaviour
 			Enemy target = collision.gameObject.GetComponent<Enemy>();
 			Vector2 collisionNormal = collision.contacts[0].normal;
 			float angle = Vector2.Angle(collisionNormal, Vector2.up);
-			if (angle < target.Config.Angle)
+			if (angle < target.Config.AngleDamage)
 				Attack(collision.transform);
 		}
 		

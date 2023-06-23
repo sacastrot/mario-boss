@@ -5,7 +5,7 @@ public class FieldOfViewCheck: StateDecision
 {
     public override bool Check(FiniteStateMachine fms)
     {
-        Vector3 direction = (fms.Target.position - fms.transform.position);
+        Vector3 direction = (fms.target.position - fms.transform.position);
         float distance = direction.magnitude;
         if (distance <= fms.Config.detectionRange)
         {

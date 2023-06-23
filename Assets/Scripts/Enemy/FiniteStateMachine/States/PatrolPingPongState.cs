@@ -11,7 +11,7 @@ public class PatrolPingPongState: State
     private Vector3 _endPos;
     private bool _turn;
     private float _turnTimer; //EnemyConfig
-    private int[] _noCollisionLayers = {8, 6, 0};
+    private int[] _noCollisionLayers = {6, 0};
     public PatrolPingPongState() : base("PatrolPingPong") { }
 
     protected override void OnEnterState(FiniteStateMachine fsm)

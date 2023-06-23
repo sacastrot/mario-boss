@@ -1,5 +1,6 @@
-﻿public class Enemy : LivingEntity
-{
+﻿using UnityEngine.Serialization;
+
+public class Enemy : LivingEntity {
     private FiniteStateMachine _fsm;
     private EnemyConfig _config;
     public EnemyConfig Config => _config;
