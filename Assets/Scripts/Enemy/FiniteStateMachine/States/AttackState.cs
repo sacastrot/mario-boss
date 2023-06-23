@@ -9,7 +9,7 @@ public class AttackState : State {
     }
 
     protected override void OnUpdateState(FiniteStateMachine fms, float deltaTime) {
-        if (fms.Target.TryGetComponent(out IDamageable target)) {
+        if (fms.target.TryGetComponent(out IDamageable target)) {
             target.TakeHit(fms.Config.attackDamage);
         }
     }

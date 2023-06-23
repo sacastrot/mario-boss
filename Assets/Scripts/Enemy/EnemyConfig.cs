@@ -26,9 +26,16 @@ public class EnemyConfig: MonoBehaviour
     [Header("Dead")]
     public float DeathDuration = 0f;
 
+    [Header("Angle Damage")]
+    public float AngleDamage = 60f;
+    [Header("Angle Top Collision")]
+    public float AngleTop = 110f;
+    
+    [Header("Patrol Layer Collisions")]
+    public LayerMask patrolLayer;
+    
     [Header("Finite-State Machine")]
     public StateType initialState;
     public FSMData fsmData;
-    
     
 }

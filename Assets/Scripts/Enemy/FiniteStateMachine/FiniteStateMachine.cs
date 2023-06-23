@@ -1,11 +1,13 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
+
 public enum CollisionSide { None, Top, Bottom, Right, Left }
 public class FiniteStateMachine : MonoBehaviour {
     [Space(10)] [SerializeField] private Animator _anim;
 
-    [Space(10)] [SerializeField] private Transform _target;
+    [Space(10)] [SerializeField] public Transform target;
 
     [Space(10)] [SerializeField] public Rigidbody2D rb;
 
@@ -14,7 +16,6 @@ public class FiniteStateMachine : MonoBehaviour {
     private int _layerCollision;
     private int _currentLayerCollision;
     private CollisionSide _collisionType = CollisionSide.None;
-    public Transform Target => _target;
     public EnemyConfig Config => _config;
     public CollisionSide CollisionType => _collisionType; 
     public int CurrentLayerCollision => _currentLayerCollision;
@@ -100,7 +101,7 @@ public class FiniteStateMachine : MonoBehaviour {
                 Debug.Log("Bottom collision");
                 _collisionType = CollisionSide.Bottom;
             }
-            else if (angle > 120f)
+            else if (angle > _config.AngleTop)
             {
                 // Bottom collision
                 Debug.Log("Top collision");
