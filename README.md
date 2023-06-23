@@ -1,27 +1,13 @@
-# Platformer 2D (Super Mario Boss) Requerimientos minimos:
+# Super Mario Boss
+Super Mario Boss es un Platformer 2D inspirado en el famoso juego Super Mario World de las años 90. Las caracteristicas que emulamos en este juego son las siguientes:
+- Movimiento de Mario
+- Enemigos (Banzai, Koopa, Monty, ChargingChuck) 
+- Power-ups (Hongo de crecimiento, Estrella invencible)
+- Obstacles (Cajas de items, Abismos, Tubos, Bloques)
+- Plataformas (Plataforma que se comprime y descomprime, Plataforma de rotación, Plataforma flotante con movimiento)
+- Monedas y puntaje
 
-IDEA: Crear dos niveles cortos: 1. Con los enemigos y sus comportamientos 2. Con plataformas y abismos
+### Versión de Unity Utilizada: <code>2021.3.17f1</code>
 
-## Movimiento:
-- Saltar
-- Collider con mario agachado
-- Movimiento con Yoshi (opcional)
-## Obstáculos:
-- Cajas de items
-- Abismos
-- Tubos - con subterraneo
-- Bloques
-## Coins y puntaje
-## Enemigos
-- Bala gigante
-- Tortuga caparazón rojo
-- Jugador de rugby
-- Perro-topo
-- Boss (Opcional)
-## Power-ups
-- Hongo de crecimiento
-- Estrella invencible
-## Plataformas:
-- Plataforma que se comprime y descomprime (Huffman)
-- Plataforma de rotación
-- Plataforma flotante con movimiento
+### Gameplay
+link al video de youtube :D
