@@ -10,19 +10,33 @@ public class Star_Movement : MonoBehaviour
     public float speed;
     public float jumpForce;
     public bool moveLeft;
-    
+    private bool born;
+    private Animator animator;
+    public BoxCollider2D bc;
     private Rigidbody2D rb;
     
     
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        bc.enabled = false;
+        born = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (born)
+        {
+            animator.SetBool("Born", born);
+            speed = 0;
+            StartCoroutine(Move());
+            rb.bodyType = RigidbodyType2D.Kinematic;
+        }
+
+
         IsGrounded = Physics2D.Raycast(transform.position, Vector2.down, 0.4f);
         if (moveLeft)
         {
@@ -63,5 +77,16 @@ public class Star_Movement : MonoBehaviour
     private void starJump()
     {
         rb.velocity= Vector2.up * jumpForce;
+    }
+
+    private IEnumerator Move()
+    {
+        yield return new WaitForSeconds(1f);
+        born = false;
+        animator.SetBool("Born", born);
+        bc.enabled = true;
+        speed = 3f;
+        rb.bodyType = RigidbodyType2D.Dynamic;
+        StopCoroutine(Move());
     }
 }
