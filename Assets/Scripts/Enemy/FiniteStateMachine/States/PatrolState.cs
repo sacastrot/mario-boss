@@ -8,7 +8,6 @@ public class PatrolState : State
     public float currentSpeed;
     public int moveDirection;
 
-
     public PatrolState() : base("Patrol")
     {
     }
