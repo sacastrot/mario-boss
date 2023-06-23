@@ -2,16 +2,16 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
-public class Star_Movement : MonoBehaviour
+public class MushroomMovement : MonoBehaviour
 {
     
     private bool IsGrounded { get; set; }
     public float speed;
-    public float jumpForce;
     public bool moveLeft;
     private bool born;
-    private Animator animator;
+    public Animator animator;
     public BoxCollider2D bc;
     private Rigidbody2D rb;
     
@@ -19,10 +19,10 @@ public class Star_Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        animator = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody2D>();
         bc.enabled = false;
         born = true;
+        moveLeft = RandomBoolean();
     }
 
     // Update is called once per frame
@@ -30,7 +30,7 @@ public class Star_Movement : MonoBehaviour
     {
         if (born)
         {
-            animator.SetBool("Born", born);
+            animator.SetBool("BornMushroom", born);
             speed = 0;
             StartCoroutine(Move());
             rb.bodyType = RigidbodyType2D.Kinematic;
@@ -46,11 +46,12 @@ public class Star_Movement : MonoBehaviour
         {
             transform.Translate(2* Time.deltaTime* speed, 0, 0);
         }
-
+        
         if (IsGrounded)
         {
             starJump();
         }
+        
     }
 
     private void OnCollisionEnter2D(Collision2D col)
@@ -73,20 +74,25 @@ public class Star_Movement : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
+    
     private void starJump()
     {
-        rb.velocity= Vector2.up * jumpForce;
+        rb.velocity= Vector2.up * 1;
     }
 
     private IEnumerator Move()
     {
         yield return new WaitForSeconds(1f);
         born = false;
-        animator.SetBool("Born", born);
+        animator.SetBool("BornMushroom", born);
         bc.enabled = true;
         speed = 3f;
         rb.bodyType = RigidbodyType2D.Dynamic;
         StopCoroutine(Move());
+    }
+
+    private bool RandomBoolean()
+    {
+        return (Random.value > 0.5f);
     }
 }
