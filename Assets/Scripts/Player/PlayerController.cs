@@ -67,7 +67,6 @@ public class PlayerController : MonoBehaviour
 
 	// Update is called once per frame
 	void Update() {
-		Debug.Log("Invensible " + invensible);
 		if (invensible)
 		{
 			_timerInvensible -= Time.deltaTime;

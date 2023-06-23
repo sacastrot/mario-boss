@@ -152,10 +152,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27d602b7389f69b4283b0dded18e1abf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  collisionLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  speed: 2
   moveLeft: 0
   animator: {fileID: 1271851751}
   bc: {fileID: 8973275532211438406}
+  playerController: {fileID: 0}
 --- !u!61 &8973275532211438406
 BoxCollider2D:
   m_ObjectHideFlags: 0
