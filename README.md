@@ -10,4 +10,4 @@ Super Mario Boss es un Platformer 2D inspirado en el famoso juego Super Mario Wo
 ### Versión de Unity Utilizada: <code>2021.3.17f1</code>
 
 ### Gameplay
-link al video de youtube :D
+[![Alt text](https://img.youtube.com/vi/Dxtb-wYSBUY/0.jpg)](https://www.youtube.com/watch?v=Dxtb-wYSBUY)
