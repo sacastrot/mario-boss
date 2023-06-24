@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 
 public class Player : LivingEntity
@@ -16,11 +17,14 @@ public class Player : LivingEntity
     protected override void OnTakeDamage()
     {
         base.OnTakeDamage();
-        //TODO: 
+        Debug.Log("Take damage");
+        gameObject.TryGetComponent(out PlayerController controller);
+        controller.grownUp = false;
     }
 
     protected override void OnDeath() {
         base.OnDeath();
-        gameObject.SetActive(false);
+        // gameObject.SetActive(false);
+        Debug.Log("isDeath");
     }
 }

@@ -71,10 +71,9 @@ public class MushroomMovement : MonoBehaviour
             }
         }
 
-        if (col.collider.gameObject.layer == 8)
-        {
+        if (col.collider.gameObject.layer == 8) {
+            playerController.grownUp = true;
             Destroy(gameObject);
-            
         }
     }
     
