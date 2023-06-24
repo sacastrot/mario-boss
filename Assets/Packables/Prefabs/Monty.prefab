@@ -153,7 +153,7 @@ GameObject:
   - component: {fileID: 1153948535725594227}
   m_Layer: 16
   m_Name: Monty
-  m_TagString: Untagged
+  m_TagString: Monty
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -295,6 +295,7 @@ MonoBehaviour:
   target: {fileID: 0}
   rb: {fileID: 1153948535725594225}
   enemy: {fileID: 1153948535725594226}
+  _collisionType: 0
   hasRb: 0
 --- !u!114 &1153948535725594227
 MonoBehaviour:

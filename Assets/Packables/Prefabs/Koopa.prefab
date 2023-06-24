@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 525895486505296401}
   m_Layer: 14
   m_Name: Koopa
-  m_TagString: Untagged
+  m_TagString: Koopa
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -239,6 +239,7 @@ MonoBehaviour:
   target: {fileID: 0}
   rb: {fileID: 0}
   enemy: {fileID: 0}
+  _collisionType: 0
   hasRb: 0
 --- !u!114 &525895486505296401
 MonoBehaviour:
