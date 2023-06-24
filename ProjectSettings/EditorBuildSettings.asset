@@ -9,14 +9,14 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 49a9e6214514bfc43851adb5cdf4ceb2
+  - enabled: 1
     path: Assets/Scenes/EnemiesLevelScene.unity
     guid: dc00475228830264e9f5d35b60b64314
   - enabled: 1
     path: Assets/Scenes/PlatformLevelScene.unity
     guid: d6da9e6fec57b62478956ab5d4bbe138
-  - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: 49a9e6214514bfc43851adb5cdf4ceb2
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 46fb7e12641aabb4a9df2f50af923b7e

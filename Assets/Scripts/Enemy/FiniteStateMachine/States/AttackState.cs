@@ -21,7 +21,19 @@ public class AttackState : State {
             }
             else
             {
-                fms.ToState(StateType.Patrol);
+                if (fms.enemy.gameObject.CompareTag("Koopa") || fms.enemy.gameObject.CompareTag("Banzai") )
+                {
+                    fms.ToState(StateType.Patrol);
+                }
+                else if (fms.enemy.gameObject.CompareTag("Chargin"))
+                {
+                    fms.ToState(StateType.PatrolPingPong);
+                }
+                if (fms.enemy.gameObject.CompareTag("Monty"))
+                {
+                    fms.ToState(StateType.Chase);
+                }
+                
             }
             
         }

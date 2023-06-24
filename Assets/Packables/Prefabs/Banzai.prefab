@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6475137577478660361}
   m_Layer: 17
   m_Name: Banzai
-  m_TagString: Untagged
+  m_TagString: Banzai
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150,6 +150,7 @@ MonoBehaviour:
   target: {fileID: 0}
   rb: {fileID: 5524820003560840116}
   enemy: {fileID: 5524820003560840117}
+  _collisionType: 0
   hasRb: 0
 --- !u!114 &6475137577478660361
 MonoBehaviour:

@@ -77,8 +77,8 @@ public class PlayerController : MonoBehaviour {
             _timerInvensible -= Time.deltaTime;
             //TODO: put animation 
             moveSpeedWalk = 7f;
-            maxSpeedWalk = 10f;
-            moveSpeedRun = 13f;
+            maxSpeedWalk = 9f;
+            moveSpeedRun = 11f;
             WalkAcceleration = 0.5f;
             _attackController.invensible = true;
 

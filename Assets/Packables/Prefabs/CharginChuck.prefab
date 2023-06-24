@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 8737458441429646562}
   m_Layer: 15
   m_Name: CharginChuck
-  m_TagString: Untagged
+  m_TagString: Chargin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -247,6 +247,7 @@ MonoBehaviour:
   target: {fileID: 0}
   rb: {fileID: 8737458441429646556}
   enemy: {fileID: 8737458441429646557}
+  _collisionType: 0
   hasRb: 0
 --- !u!114 &8737458441429646562
 MonoBehaviour:
