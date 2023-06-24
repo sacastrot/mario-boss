@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : LivingEntity
 {
+    public int lifesValue = -1;
+    public Transform spawnPoint;
     void Start()
     {
         InitHealth();
@@ -21,6 +24,23 @@ public class Player : LivingEntity
 
     protected override void OnDeath() {
         base.OnDeath();
-        gameObject.SetActive(false);
+        if (ScoreManager.instance.totalLifes > 0)
+        {
+            ScoreManager.instance.ChangeLifesScore(lifesValue);
+            ScoreManager.instance.ResetTotalScore();
+            // DontDestroyOnLoad(ScoreManager);
+            SceneManager.LoadScene("EnemiesLevelScene");
+            // camera.transform.position = spawnPoint.position;
+            // this.gameObject.transform.position = spawnPoint.position;
+            // this.gameObject.SetActive(true);
+        }
+        else
+        {   
+            ScoreManager.instance.ChangeLifesScore(lifesValue);
+            ScoreManager.instance.ResetLifesScore();
+            SceneManager.LoadScene("GameOver");
+            // gameObject.SetActive(false);
+        }
+        
     }
 }
