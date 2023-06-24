@@ -6,7 +6,7 @@ using Random = UnityEngine.Random;
 
 public class MushroomMovement : MonoBehaviour
 {
-    
+    public LayerMask collisionLayers;
     private bool IsGrounded { get; set; }
     public float speed;
     public bool moveLeft;
@@ -56,7 +56,7 @@ public class MushroomMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.collider.gameObject.layer==8)
+        if ((collisionLayers.value & 1<<col.gameObject.layer) == 1<<col.gameObject.layer)
         {
             if (moveLeft)
             {
@@ -68,10 +68,10 @@ public class MushroomMovement : MonoBehaviour
             }
         }
 
-        if (col.collider.gameObject.layer == 30)
+        if (col.collider.gameObject.layer == 8)
         {
-            print("dakdajdlakdjadlakjd");
             Destroy(gameObject);
+            
         }
     }
     

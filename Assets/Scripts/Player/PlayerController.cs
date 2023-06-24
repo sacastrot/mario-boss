@@ -4,13 +4,12 @@ using UnityEngine.Serialization;
 // public enum CollisionSide { None, Top, Bottom, Right, Left }
 public class PlayerController : MonoBehaviour
 {
-
-	public LayerMask Ground;
 	
 	// Player
 	[Header("RigidBody2D")] [SerializeField]
 	private Transform player;
 	
+	public LayerMask Ground;
 	// Movement
 	[Header("Player Walk")] [SerializeField]
 	private float moveSpeedWalk = 1f;
@@ -18,8 +17,8 @@ public class PlayerController : MonoBehaviour
 	private float maxSpeedWalk = 5f;
 	[Header("Player Run")] [SerializeField]
 	private float moveSpeedRun = 7f;
+	private float WalkAcceleration = 0.2f;
 
-	private const float WalkAcceleration = 0.2f;
 	private const float ReleaseDecelerationX = 0.3f;
 	private const float SkidTurnAroundSpeedX = 3f;
 	private const float SkidDecelerationX = 0.5f;
@@ -27,12 +26,14 @@ public class PlayerController : MonoBehaviour
 	private const float JumpUpGravity = 2.7888f;
 	private const float JumpDownGravity = 5f;
 	
+	// Physics
+	private const float NormalGravity = 1;
+	private const float JumpVelocity = 15f;
+
 	public float currentSpeedX;
 	private float _moveDirection;
 	private bool _isChangingDirection;
-
-	// Physics
-	private const float NormalGravity = 1;
+	private AttackController _attackController;
 
 	// Flags
 	// public bool Running => Mathf.Abs(velocity.x) > maxSpeedWalk || Mathf.Abs(input.Move.x) > maxSpeedWalk;
@@ -46,33 +47,54 @@ public class PlayerController : MonoBehaviour
 	public bool isHeadUp;
 	public bool isDuck;
 
-
-	private const float JumpVelocity = 15f;
-	
-	private float _turnTimer;
 	public float directionX;
 	public float directionHead;
 	public bool jumpDown;
-	
-
+	public float timeInvensible;
+	private float _timerInvensible;
 	public PlayerInput input;
-	public Vector2 velocity;
 	public Rigidbody2D rb;
 
-	//Ground Check
-	public Transform feetPos;
-	public float checkRadius;
-	public LayerMask whatIsGround;
-	private float _jumpTimeCounter;
+	public bool invensible = false;
 
 	void Start() {
 		input = GetComponent<PlayerInput>();
 		_hasRb = player.TryGetComponent(out rb);
 		rb.gravityScale = NormalGravity;
+		_attackController = GetComponent<AttackController>();
+		_timerInvensible = timeInvensible;
 	}
 
 	// Update is called once per frame
 	void Update() {
+		Debug.Log("Invensible " + invensible);
+		if (invensible)
+		{
+			_timerInvensible -= Time.deltaTime;
+			//TODO: put animation 
+			moveSpeedWalk = 7f;
+			maxSpeedWalk = 10f;
+			moveSpeedRun = 13f;
+			WalkAcceleration = 0.5f;
+			_attackController.invensible = true;
+			
+			
+			if (_timerInvensible <= 0)
+			{
+				invensible = false;
+				_attackController.invensible = false;
+				_timerInvensible = timeInvensible;
+			}
+				
+		}
+		else
+		{
+			moveSpeedWalk = 1f;
+			maxSpeedWalk = 5f;
+			moveSpeedRun = 7f;
+			WalkAcceleration = 0.2f;
+
+		}
 		directionX = input.Move.x;
 		directionHead = input.Move.y;
 		jumpDown = input.JumpDown;
@@ -83,13 +105,8 @@ public class PlayerController : MonoBehaviour
 		VerticalMovement();
 		if(IsGrounded) GroundedMovement();
 		if(!IsGrounded) AirMovement();
-		Debug.Log("Grounded" + IsGrounded);
 	}
-
-
-	private void OnEnable() {
-		velocity = Vector2.zero;
-	}
+	
 
 	void FixedUpdate() {
 		setDirection(); //New Function 
