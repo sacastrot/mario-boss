@@ -41,6 +41,7 @@ public class QuestionBlock : MonoBehaviour
                 GameObject mushroom = Instantiate(powerUp, objectSpawn.position, objectSpawn.rotation);
                 MushroomMovement mushroomMovement = mushroom.GetComponent<MushroomMovement>();
                 mushroomMovement.playerController = player.GetComponent<PlayerController>();
+                mushroomMovement.player = player.GetComponent<Player>();
             }
             Destroy(gameObject);
         }

@@ -14,6 +14,7 @@ public class MushroomMovement : MonoBehaviour
     public Animator animator;
     public BoxCollider2D bc;
     private Rigidbody2D rb;
+    public Player player;
     
     public PlayerController playerController;
     private float _currentSpeed;
@@ -73,6 +74,7 @@ public class MushroomMovement : MonoBehaviour
 
         if (col.collider.gameObject.layer == 8) {
             playerController.grownUp = true;
+            player.HealthPoints = 2;
             Destroy(gameObject);
         }
     }

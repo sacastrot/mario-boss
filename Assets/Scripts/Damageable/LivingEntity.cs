@@ -4,7 +4,7 @@ using UnityEngine;
 public class LivingEntity : MonoBehaviour, IDamageable
 {
     [field: SerializeField] public int TotalHealthPoints { get; protected set; }
-    public int HealthPoints { get; private set; }
+    public int HealthPoints { get; set; }
     
     public void TakeHit(int damage)
     {
@@ -13,8 +13,6 @@ public class LivingEntity : MonoBehaviour, IDamageable
             
         }
         HealthPoints -= damage;
-        Debug.Log("HealthPoints" + HealthPoints);
-        Debug.Log("damage"+ damage);
         OnTakeDamage();
         
         if (HealthPoints <= 0)

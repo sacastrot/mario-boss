@@ -4,24 +4,35 @@ public class AttackState : State {
     public override StateType Type { get; }
     public AttackState() : base("Attack") { }
 
-    private float _timeToPatrol = 2;
-    private float _timer;
+    public bool canAttack = true;
 
     protected override void OnEnterState(FiniteStateMachine fsm) {
         SetStateDuration(fsm.Config.attackDuration);
-        _timer = _timeToPatrol;
+        canAttack = true;
     }
 
     protected override void OnUpdateState(FiniteStateMachine fms, float deltaTime) {
-        if (fms.target.TryGetComponent(out IDamageable target) && _timer == _timeToPatrol) {
-            target.TakeHit(fms.Config.attackDamage);
-            fms.rb.velocity = Vector2.zero;
+        if (fms.target.TryGetComponent(out IDamageable target)) {
+            if (canAttack)
+            {
+                target.TakeHit(fms.Config.attackDamage);
+                fms.rb.velocity.Set(0f, 0f);
+                canAttack = false;
+            }
+            else
+            {
+                fms.ToState(StateType.Patrol);
+            }
+            
         }
-        else if (_timer <= 0){
-            fms.ToState(StateType.Patrol);
-        }
-        _timer -= Time.deltaTime;
+  
+        // if (fms.target.TryGetComponent(out IDamageable target)) {
+        //     target.TakeHit(fms.Config.attackDamage);
+        // }
     }
 
-    protected override void OnExitState(FiniteStateMachine fms) { }
+    protected override void OnExitState(FiniteStateMachine fms)
+    {
+        Debug.Log("Attack On exit");
+    }
 }

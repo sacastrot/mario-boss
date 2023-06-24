@@ -154,11 +154,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collisionLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   speed: 2
   moveLeft: 0
   animator: {fileID: 1271851751}
   bc: {fileID: 8973275532211438406}
+  player: {fileID: 0}
   playerController: {fileID: 0}
 --- !u!61 &8973275532211438406
 BoxCollider2D:
