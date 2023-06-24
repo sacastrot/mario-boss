@@ -3,14 +3,15 @@ using UnityEngine;
 
 public class LivingEntity : MonoBehaviour, IDamageable
 {
-    [field: SerializeField] public int TotalHealthPoints { get; protected set; } = 1;
-    public int HealthPoints { get; private set; }
+    [field: SerializeField] public int TotalHealthPoints { get; protected set; }
+    public int HealthPoints { get; set; }
     
     public void TakeHit(int damage)
     {
-        if(HealthPoints <= 0)
+        if (HealthPoints <= 0) {
             return;
-    
+            
+        }
         HealthPoints -= damage;
         OnTakeDamage();
         

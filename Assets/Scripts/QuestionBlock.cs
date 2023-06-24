@@ -28,9 +28,21 @@ public class QuestionBlock : MonoBehaviour
         if (col.gameObject.layer == 8 && col.contacts[0].normal.y > 0.5f)
         {
             Instantiate(block, objectSpawn.position, objectSpawn.rotation);
-            GameObject star = Instantiate(powerUp, objectSpawn.position, objectSpawn.rotation);
-            StarMovement starMovement = star.GetComponent<StarMovement>();
-            starMovement.playerController = player.GetComponent<PlayerController>();
+            if (powerUp.name.Equals("Star"))
+            {
+                Debug.Log("Soy Star");
+                GameObject star = Instantiate(powerUp, objectSpawn.position, objectSpawn.rotation);
+                StarMovement starMovement = star.GetComponent<StarMovement>();
+                starMovement.playerController = player.GetComponent<PlayerController>();
+            } 
+            else if (powerUp.name.Equals("Mushroom"))
+            {
+                Debug.Log("Soy Mushroom");
+                GameObject mushroom = Instantiate(powerUp, objectSpawn.position, objectSpawn.rotation);
+                MushroomMovement mushroomMovement = mushroom.GetComponent<MushroomMovement>();
+                mushroomMovement.playerController = player.GetComponent<PlayerController>();
+                mushroomMovement.player = player.GetComponent<Player>();
+            }
             Destroy(gameObject);
         }
     }

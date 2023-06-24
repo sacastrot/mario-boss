@@ -15,7 +15,7 @@ public class FiniteStateMachine : MonoBehaviour {
     
     private int _layerCollision;
     private int _currentLayerCollision;
-    private CollisionSide _collisionType = CollisionSide.None;
+    public CollisionSide _collisionType = CollisionSide.None;
     public EnemyConfig Config => _config;
     public CollisionSide CollisionType => _collisionType; 
     public int CurrentLayerCollision => _currentLayerCollision;
@@ -70,6 +70,8 @@ public class FiniteStateMachine : MonoBehaviour {
         if (_statesDic.ContainsKey(_currentState)) {
             _statesDic[_currentState].OnEnter(this);
         }
+
+        Debug.Log("CurrentState " + _currentState);
     }
 
     private void Bind(FSMData fsmData) {

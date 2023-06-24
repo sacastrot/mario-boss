@@ -14,8 +14,11 @@ public class MushroomMovement : MonoBehaviour
     public Animator animator;
     public BoxCollider2D bc;
     private Rigidbody2D rb;
+    public Player player;
     
-    
+    public PlayerController playerController;
+    private float _currentSpeed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +26,7 @@ public class MushroomMovement : MonoBehaviour
         bc.enabled = false;
         born = true;
         moveLeft = RandomBoolean();
+        _currentSpeed = speed;
     }
 
     // Update is called once per frame
@@ -31,7 +35,7 @@ public class MushroomMovement : MonoBehaviour
         if (born)
         {
             animator.SetBool("BornMushroom", born);
-            speed = 0;
+            _currentSpeed = 0;
             StartCoroutine(Move());
             rb.bodyType = RigidbodyType2D.Kinematic;
         }
@@ -40,11 +44,11 @@ public class MushroomMovement : MonoBehaviour
         IsGrounded = Physics2D.Raycast(transform.position, Vector2.down, 0.4f);
         if (moveLeft)
         {
-            transform.Translate(-2* Time.deltaTime* speed, 0, 0);
+            transform.Translate(-2* Time.deltaTime* _currentSpeed, 0, 0);
         }
         else
         {
-            transform.Translate(2* Time.deltaTime* speed, 0, 0);
+            transform.Translate(2* Time.deltaTime* _currentSpeed, 0, 0);
         }
         
         if (IsGrounded)
@@ -68,10 +72,10 @@ public class MushroomMovement : MonoBehaviour
             }
         }
 
-        if (col.collider.gameObject.layer == 8)
-        {
+        if (col.collider.gameObject.layer == 8) {
+            playerController.grownUp = true;
+            player.HealthPoints = 2;
             Destroy(gameObject);
-            
         }
     }
     
@@ -86,7 +90,7 @@ public class MushroomMovement : MonoBehaviour
         born = false;
         animator.SetBool("BornMushroom", born);
         bc.enabled = true;
-        speed = 3f;
+        _currentSpeed = speed;
         rb.bodyType = RigidbodyType2D.Dynamic;
         StopCoroutine(Move());
     }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,6 +8,7 @@ public class Player : LivingEntity
 {
     public int lifesValue = -1;
     public Transform spawnPoint;
+    
     void Start()
     {
         InitHealth();
@@ -19,7 +21,9 @@ public class Player : LivingEntity
     protected override void OnTakeDamage()
     {
         base.OnTakeDamage();
-        //TODO: 
+        Debug.Log("Take damage");
+        gameObject.TryGetComponent(out PlayerController controller);
+        controller.grownUp = false;
     }
 
     protected override void OnDeath() {

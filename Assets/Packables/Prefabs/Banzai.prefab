@@ -114,7 +114,7 @@ MonoBehaviour:
   detectionRange: 5
   tauntDuration: 2
   attackDamage: 1
-  attackDuration: 2
+  attackDuration: 0
   DeathDuration: 0
   AngleDamage: 45
   AngleTop: 135
@@ -129,7 +129,9 @@ MonoBehaviour:
       - TargetState: 3
         Decision: {fileID: 11400000, guid: a247feba571cf714cbfcdf18ebdde8eb, type: 2}
     - StateType: 3
-      Transition: []
+      Transition:
+      - TargetState: 1
+        Decision: {fileID: 0}
     - StateType: 7
       Transition: []
 --- !u!114 &5524820003560840009
