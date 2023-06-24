@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5526336142860542682}
   - component: {fileID: 5526336142860542686}
   - component: {fileID: 5526336142860542687}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 1000
 --- !u!61 &5526336142860542687
 BoxCollider2D:
   m_ObjectHideFlags: 0

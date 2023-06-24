@@ -154,7 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collisionLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 1088
   speed: 2
   moveLeft: 0
   animator: {fileID: 1271851751}
