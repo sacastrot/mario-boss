@@ -41,7 +41,7 @@ public class CameraFollow : MonoBehaviour
 
         Vector3 newPosition = positon;
 
-        if (xDifference >= _threshold.x)
+        if (Math.Abs(xDifference) >= _threshold.x)
         {
             newPosition.x = follow.x;
         }
